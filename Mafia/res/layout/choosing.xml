@@ -1,14 +1,122 @@
 <?xml version="1.0" encoding="utf-8"?>
 
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-              android:orientation="vertical"
-              android:layout_width="match_parent"
-              android:layout_height="match_parent">
-
+<RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent" xmlns:android="http://schemas.android.com/apk/res/android">
+    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+              android:textAppearance="?android:attr/textAppearanceLarge" android:text="Выбор ролей"
+              android:id="@+id/textView11" android:layout_alignParentTop="true" android:layout_centerHorizontal="true"/>
     <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:textAppearance="?android:attr/textAppearanceLarge"
-            android:text="Выбор ролей"
-            android:id="@+id/textView" android:layout_gravity="center_horizontal"/>
-</LinearLayout>
+            android:text="Игрок №1"
+            android:id="@+id/player1"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="50dp" android:layout_alignParentStart="true" android:password="false"
+            android:textSize="20dp"/>
+
+    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Игрок №2"
+              android:id="@+id/player2"
+              android:layout_marginLeft="20dp"
+              android:layout_marginTop="90dp" android:textSize="20dp"/>
+
+    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Игрок №3"
+              android:id="@+id/player3"
+              android:layout_marginLeft="20dp"
+              android:layout_marginTop="130dp" android:textSize="20dp"/>
+
+    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Игрок №4"
+              android:id="@+id/player4"
+              android:layout_marginLeft="20dp"
+              android:layout_marginTop="170dp" android:textSize="20dp"/>
+
+
+    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Игрок №5"
+              android:id="@+id/player5"
+              android:layout_marginLeft="20dp"
+              android:layout_marginTop="210dp" android:textSize="20dp"/>
+
+    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Игрок №6"
+              android:id="@+id/player6"
+              android:layout_marginLeft="20dp"
+              android:layout_marginTop="250dp" android:textSize="20dp"/>
+
+    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Игрок №7"
+              android:id="@+id/player7"
+              android:layout_marginLeft="20dp"
+              android:layout_marginTop="290dp" android:textSize="20dp"/>
+
+    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Игрок №8"
+              android:id="@+id/player8"
+              android:layout_marginLeft="20dp"
+              android:layout_marginTop="330dp" android:textSize="20dp"/>
+
+    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Игрок №9"
+              android:id="@+id/player9"
+              android:layout_marginLeft="20dp"
+              android:layout_marginTop="370dp" android:textSize="20dp"/>
+
+    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Игрок №10"
+              android:id="@+id/player10"
+              android:layout_marginLeft="20dp"
+              android:layout_marginTop="410dp" android:textSize="20dp"/>
+    <Spinner
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/p1" android:layout_alignBottom="@+id/player1" android:layout_alignStart="@+id/textView11"
+            android:layout_marginLeft="39dp" android:layout_alignTop="@+id/player1" android:clickable="false"
+            android:visibility="invisible"/>
+    <Spinner
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/p2" android:layout_alignTop="@+id/player2" android:layout_alignStart="@+id/p1"
+            android:layout_alignBottom="@+id/player2" android:visibility="invisible"/>
+    <Spinner
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/p3" android:layout_alignTop="@+id/player3"
+            android:layout_alignStart="@+id/p2" android:layout_alignBottom="@+id/player3"
+            android:visibility="invisible"/>
+    <Spinner
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/p4" android:layout_alignTop="@+id/player4"
+            android:layout_alignStart="@+id/p3" android:layout_alignBottom="@+id/player4"
+            android:visibility="invisible"/>
+    <Spinner
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/p5" android:layout_alignTop="@+id/player5"
+            android:layout_alignStart="@+id/p4" android:layout_alignBottom="@+id/player5"
+            android:visibility="invisible"/>
+    <Spinner
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/p6" android:layout_alignTop="@+id/player6"
+            android:layout_alignStart="@+id/p5" android:layout_alignBottom="@+id/player6"
+            android:visibility="invisible"/>
+    <Spinner
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/p7"
+            android:layout_alignTop="@+id/player7" android:layout_alignStart="@+id/p6"
+            android:layout_alignBottom="@+id/player7" android:visibility="invisible"/>
+    <Spinner
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/p8" android:layout_alignTop="@+id/player8"
+            android:layout_alignStart="@+id/p7" android:layout_alignBottom="@+id/player8"
+            android:visibility="invisible"/>
+    <Spinner
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/p9"
+            android:layout_alignTop="@+id/player9" android:layout_alignStart="@+id/p8"
+            android:layout_alignBottom="@+id/player9" android:visibility="invisible"/>
+    <Spinner
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/p10" android:layout_alignTop="@+id/player10"
+            android:layout_alignStart="@+id/p9" android:layout_alignBottom="@+id/player10"
+            android:visibility="invisible"/>
+</RelativeLayout>
