@@ -12,9 +12,9 @@ import java.util.ArrayList;
 
 public class choosingRoles extends Activity {
     String[] Roles = {"Мирный","Мафия","Дон","Комиссар"};
-    ArrayList<Player> players = new ArrayList<Player>();
+    Player[] players = new Player[10];
     int playerNumb = 1;
-    int i = 0;
+
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.choosing);
@@ -24,19 +24,19 @@ public class choosingRoles extends Activity {
         adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
         //adapter
         //Find Spinners
-        Spinner p1 = (Spinner) findViewById(R.id.p1);
-        Spinner p2 = (Spinner) findViewById(R.id.p2);
-        Spinner p3 = (Spinner) findViewById(R.id.p3);
-        Spinner p4 = (Spinner) findViewById(R.id.p4);
-        Spinner p5 = (Spinner) findViewById(R.id.p5);
-        Spinner p6 = (Spinner) findViewById(R.id.p6);
-        Spinner p7 = (Spinner) findViewById(R.id.p7);
-        Spinner p8 = (Spinner) findViewById(R.id.p8);
-        Spinner p9 = (Spinner) findViewById(R.id.p9);
-        Spinner p10 = (Spinner) findViewById(R.id.p10);
+        Spinner p1 = (Spinner) findViewById(R.id.spinner0);
+        Spinner p2 = (Spinner) findViewById(R.id.spinner1);
+        Spinner p3 = (Spinner) findViewById(R.id.spinner2);
+        Spinner p4 = (Spinner) findViewById(R.id.spinner3);
+        Spinner p5 = (Spinner) findViewById(R.id.spinner4);
+        Spinner p6 = (Spinner) findViewById(R.id.spinner5);
+        Spinner p7 = (Spinner) findViewById(R.id.spinner6);
+        Spinner p8 = (Spinner) findViewById(R.id.spinner7);
+        Spinner p9 = (Spinner) findViewById(R.id.spinner8);
+        Spinner p10 = (Spinner) findViewById(R.id.spinner9);
         //Find Spinners
         //govnokod need to fix
-        ArrayList<Spinner> spinners = new ArrayList<Spinner>();
+        final ArrayList<Spinner> spinners = new ArrayList<Spinner>();
         spinners.add(p1);
         spinners.add(p2);
         spinners.add(p3);
@@ -49,28 +49,41 @@ public class choosingRoles extends Activity {
         spinners.add(p10);
         //need to fix
 
-        //for(int i=0;i<spinners.size();i++) {
-        while(i<10){
-            (spinners.get(i)).setVisibility(View.VISIBLE);
+        spinners.get(spinners.size()-1).setAdapter(adapter);
+        spinners.get(spinners.size()-1).setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
+            @Override
+            public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
+                players[spinners.size() -1] = new Player("Sasha", spinners.size()-1, parent.getItemAtPosition(position).toString());
+            }
+            @Override
+            public void onNothingSelected(AdapterView<?> parent) {
 
+            }
+        });
+
+        for(int i=0;i<spinners.size() - 1;i++)
+        {
+            final int nextIndex = i + 1;
             spinners.get(i).setAdapter(adapter);
             spinners.get(i).setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
                 @Override
                 public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
-                    players.add(new Player("Sasha", playerNumb, parent.getItemAtPosition(position).toString()));
-                    i++;
+                    players[nextIndex - 1]=new Player("Sasha", nextIndex, parent.getItemAtPosition(position).toString());
+                    //spinners.get(nextIndex).setVisibility(View.VISIBLE);
+
                 }
+
                 @Override
                 public void onNothingSelected(AdapterView<?> parent) {
 
                 }
             });
-            playerNumb++;
         }
-        double b;
-        //p = new Player("Sasha",1,Role);
-        //players.add(p);
-        //TextView TV = (TextView) findViewById(R.id.player1);
-        //TV.setText(players.get(0).role);
+
+        for (Spinner s: spinners){
+            s.setVisibility(View.INVISIBLE);
+        }
+        spinners.get(0).setVisibility(View.VISIBLE);
+        spinners.get(1).setVisibility(View.VISIBLE);
     }
 }
