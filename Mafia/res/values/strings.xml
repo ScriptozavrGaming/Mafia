@@ -19,4 +19,9 @@
     <string name="player8">Player 8</string>
     <string name="player9">Player 9</string>
     <string name="player10">Player 10</string>
+    <string name="continueButton">Continue</string>
+    <string name="morning">Morning in the town</string>
+    <string name="number">№</string>
+    <string name="nickname">Nick</string>
+    <string name="Role">Role</string>
 </resources>

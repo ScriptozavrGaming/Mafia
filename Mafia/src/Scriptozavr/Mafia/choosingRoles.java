@@ -2,22 +2,24 @@ package Scriptozavr.Mafia;
 
 import android.app.Activity;
 import android.content.Intent;
-import  android.os.Bundle;
+import android.os.Bundle;
 import android.view.View;
 import android.widget.*;
 import android.widget.TextView;
 import android.widget.Spinner;
-
 import java.io.*;
-
-import java.util.ArrayList;
+import java.util.*;
 
 public class choosingRoles extends Activity {
-    String[] Roles = {"Мирный","Мафия","Дон","Комиссар"};
-    Player[] players = new Player[10];
-    //int playerNumb = 1;
-    int nextIndex =1;
+    String[] Roles = {"Мирный", "Мафия", "Дон", "Комиссар"};
+    //int[] RolesCount = {6,2,1,1};
+    Map<String, Integer> RolesCount = new HashMap<String, Integer>();
+    String[] forWritingFile = new String[10];
+    //Player[] players = new Player[10];
+
+
     private final String FILENAME = "players.txt";
+    private final String FinalFilename = "FullPlayers.txt";
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
@@ -25,83 +27,89 @@ public class choosingRoles extends Activity {
         setContentView(R.layout.choosing);
 
         //adapter
-        //ArrayAdapter<String> adapter = new ArrayAdapter<String>(this, android.R.layout.simple_spinner_item, Roles);
         ArrayAdapter<String> adapter = new ArrayAdapter<String>(this, android.R.layout.simple_spinner_item, Roles);
         adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
-        //adapter
-        //Find Spinners withlove)
-        Spinner p1 = (Spinner) findViewById(R.id.spinner0);
-        Spinner p2 = (Spinner) findViewById(R.id.spinner1);
-        Spinner p3 = (Spinner) findViewById(R.id.spinner2);
-        Spinner p4 = (Spinner) findViewById(R.id.spinner3);
-        Spinner p5 = (Spinner) findViewById(R.id.spinner4);
-        Spinner p6 = (Spinner) findViewById(R.id.spinner5);
-        Spinner p7 = (Spinner) findViewById(R.id.spinner6);
-        Spinner p8 = (Spinner) findViewById(R.id.spinner7);
-        Spinner p9 = (Spinner) findViewById(R.id.spinner8);
-        Spinner p10 = (Spinner) findViewById(R.id.spinner9);
-        //Find Spinners
-        //govnokod need to fix with love)))
-        final ArrayList<Spinner> spinners = new ArrayList<Spinner>();
-        spinners.add(p1);
-        spinners.add(p2);
-        spinners.add(p3);
-        spinners.add(p4);
-        spinners.add(p5);
-        spinners.add(p6);
-        spinners.add(p7);
-        spinners.add(p8);
-        spinners.add(p9);
-        spinners.add(p10);
-        //need to fix
-        String[] nicknames = ReadFile(FILENAME);
-        //One more with love)))))))))
-        TextView poNick = (TextView) findViewById(R.id.p0Nick);
-        TextView p1Nick = (TextView) findViewById(R.id.p1Nick);
-        TextView p2Nick = (TextView) findViewById(R.id.p2Nick);
-        TextView p3Nick = (TextView) findViewById(R.id.p3Nick);
-        TextView p4Nick = (TextView) findViewById(R.id.p4Nick);
-        TextView p5Nick = (TextView) findViewById(R.id.p5Nick);
-        TextView p6Nick = (TextView) findViewById(R.id.p6Nick);
-        TextView p7Nick = (TextView) findViewById(R.id.p7Nick);
-        TextView p8Nick = (TextView) findViewById(R.id.p8Nick);
-        TextView p9Nick = (TextView) findViewById(R.id.p9Nick);
+        //with love)
+        RolesCount.put("Мирный", 6);
+        RolesCount.put("Мафия", 2);
+        RolesCount.put("Дон", 1);
+        RolesCount.put("Комиссар", 1);
 
-        poNick.setText(nicknames[0]);
-        p1Nick.setText(nicknames[1]);
-        p2Nick.setText(nicknames[2]);
-        p3Nick.setText(nicknames[3]);
-        p4Nick.setText(nicknames[4]);
-        p5Nick.setText(nicknames[5]);
-        p6Nick.setText(nicknames[6]);
-        p7Nick.setText(nicknames[7]);
-        p8Nick.setText(nicknames[8]);
-        p9Nick.setText(nicknames[9]);
+        final Spinner[] spinners = {
+                (Spinner) findViewById(R.id.spinner0),
+                (Spinner) findViewById(R.id.spinner1),
+                (Spinner) findViewById(R.id.spinner2),
+                (Spinner) findViewById(R.id.spinner3),
+                (Spinner) findViewById(R.id.spinner4),
+                (Spinner) findViewById(R.id.spinner5),
+                (Spinner) findViewById(R.id.spinner6),
+                (Spinner) findViewById(R.id.spinner7),
+                (Spinner) findViewById(R.id.spinner8),
+                (Spinner) findViewById(R.id.spinner9)
+        };
+        String[] nicknames = ReadFile(FILENAME);
+
+        final TextView[] playerNickNames = {
+                (TextView) findViewById(R.id.p0Nick),
+                (TextView) findViewById(R.id.p1Nick),
+                (TextView) findViewById(R.id.p2Nick),
+                (TextView) findViewById(R.id.p3Nick),
+                (TextView) findViewById(R.id.p4Nick),
+                (TextView) findViewById(R.id.p5Nick),
+                (TextView) findViewById(R.id.p6Nick),
+                (TextView) findViewById(R.id.p7Nick),
+                (TextView) findViewById(R.id.p8Nick),
+                (TextView) findViewById(R.id.p9Nick)
+        };
+        for (int i = 0; i < playerNickNames.length; i++) {
+            playerNickNames[i].setText(nicknames[i]);
+        }
         //---------------
-        spinners.get(spinners.size()-1).setAdapter(adapter);
-        spinners.get(spinners.size()-1).setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
+        spinners[spinners.length - 1].setAdapter(adapter);
+        spinners[spinners.length - 1].setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
             @Override
             public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
-                //players[spinners.size() -1] = new Player("Sasha", spinners.size()-1, parent.getItemAtPosition(position).toString());
+                findViewById(R.id.continue_btn).setVisibility(View.VISIBLE);
+                forWritingFile[spinners.length-1]=(String)parent.getItemAtPosition(position);
             }
+
             @Override
             public void onNothingSelected(AdapterView<?> parent) {
 
             }
         });
         //public int i=0;
-        for(int i=0;i<spinners.size() - 1;i++)
+        spinners[0].setAdapter(adapter);
+
+        for (int i = 0; i < spinners.length - 1; i++)
         //while(i<spinners.size()-1)
         {
             //int nextIndex = 0;
-            spinners.get(i).setAdapter(adapter);
-            spinners.get(i).setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
+            //spinners[i].setAdapter(adapter);
+            final int nextIndex = i + 1;
+            final Activity t = this;
+            spinners[i].setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
                 @Override
                 public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
-                    //players[nextIndex - 1]=new Player("Sasha", nextIndex, parent.getItemAtPosition(position).toString());
-                    spinners.get(nextIndex).setVisibility(View.VISIBLE);
-                    nextIndex++;
+
+                    spinners[nextIndex].setVisibility(View.VISIBLE);
+                    spinners[nextIndex - 1].setClickable(false);
+                    List<String> availableRoles = new ArrayList<String>();
+                    String choice = (String) parent.getItemAtPosition(position);
+                    forWritingFile[nextIndex - 1] = choice;
+                    RolesCount.put(choice, RolesCount.get(choice) - 1);
+
+                    for (int i = 0; i < parent.getCount(); i++) {
+                        if (RolesCount.get(parent.getItemAtPosition(i)) > 0) {
+                            availableRoles.add((String) parent.getItemAtPosition(i));
+                        }
+                    }
+                    ArrayAdapter<String> adapter = new ArrayAdapter<String>(t, android.R.layout.simple_spinner_item, availableRoles);//Roles);
+
+                    adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+                    spinners[nextIndex].setAdapter(adapter);
                 }
+
                 @Override
                 public void onNothingSelected(AdapterView<?> parent) {
 
@@ -109,11 +117,21 @@ public class choosingRoles extends Activity {
             });
         }
 
-        for (Spinner s: spinners){
+        for (Spinner s : spinners) {
             s.setVisibility(View.INVISIBLE);
         }
-        spinners.get(0).setVisibility(View.VISIBLE);
+        spinners[0].setVisibility(View.VISIBLE);
         //spinners.get(1).setVisibility(View.VISIBLE);
+        View.OnClickListener OnClkButton = new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent main = new Intent(getApplicationContext(), morningActions.class);
+                startActivity(main);
+                writeFile(playerNickNames,forWritingFile);
+            }
+        };
+        findViewById(R.id.continue_btn).setOnClickListener(OnClkButton);
+
     }
 
     private String[] ReadFile(String FILENAME){
@@ -129,10 +147,31 @@ public class choosingRoles extends Activity {
                 i++;
             }
         } catch (FileNotFoundException e) {
-            e.printStackTrace();
+            for(int i = 0; i < str.length;i++){
+                str[i] = "Player " + (i+1);
+            }
         } catch (IOException e) {
             e.printStackTrace();
         }
        return str;
+    }
+
+    private void writeFile(TextView[] pn, String[] roles){
+        try{
+            BufferedWriter bw = new BufferedWriter(new OutputStreamWriter(openFileOutput(FinalFilename,MODE_PRIVATE)));
+            for(int i=0;i<roles.length;i++){
+                bw.write(pn[i].getText()+"\n");
+                bw.write(roles[i]+"\n");
+            }
+            bw.flush();
+            bw.close();
+
+            //-----------------------------------
+        } catch (FileNotFoundException e) {
+            e.printStackTrace();
+        } catch (IOException e){
+            e.printStackTrace();
+        }
+
     }
 }
