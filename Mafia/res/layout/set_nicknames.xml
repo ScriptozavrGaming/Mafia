@@ -1,0 +1,154 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content" xmlns:android="http://schemas.android.com/apk/res/android"
+        android:id="@+id/RL">
+    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+              android:textAppearance="?android:attr/textAppearanceLarge" android:text="@string/set_nicknames"
+              android:id="@+id/textView11" android:layout_alignParentTop="true" android:layout_centerHorizontal="true"/>
+    <Button
+            android:layout_width="151dp"
+            android:layout_height="wrap_content"
+            android:text="Save"
+            android:id="@+id/save_Btn"
+            android:layout_marginTop="450dp"
+            android:layout_marginLeft="30dp"/>
+    <Button
+            android:layout_width="151dp"
+            android:layout_height="wrap_content"
+            android:text="Reset"
+            android:id="@+id/reset_Btn"
+            android:layout_marginTop="450dp"
+            android:layout_marginLeft="200dp"/>
+    <GridLayout
+            android:orientation="vertical"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content" android:layout_alignParentStart="false"
+            android:layout_alignParentEnd="false" android:layout_alignParentTop="false"
+            android:layout_alignParentBottom="false" android:layout_alignParentLeft="false"
+            android:layout_below="@+id/textView11">
+        <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:text="@string/player1"
+                android:id="@+id/textView0" android:layout_row="0" android:layout_column="0"/>
+        <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:text="@string/player2"
+                android:id="@+id/textView1" android:layout_row="1" android:layout_column="0"/>
+        <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:text="@string/player3"
+                android:id="@+id/textView2" android:layout_row="2" android:layout_column="0"/>
+        <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:text="@string/player4"
+                android:id="@+id/textView3" android:layout_row="3" android:layout_column="0"/>
+        <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:text="@string/player5"
+                android:id="@+id/textView4" android:layout_row="4" android:layout_column="0"/>
+        <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:text="@string/player6"
+                android:id="@+id/textView5" android:layout_row="5" android:layout_column="0"/>
+        <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:text="@string/player7"
+                android:id="@+id/textView6" android:layout_row="6" android:layout_column="0"/>
+        <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:text="@string/player8"
+                android:id="@+id/textView7" android:layout_row="7" android:layout_column="0"/>
+        <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:text="@string/player9"
+                android:id="@+id/textView8" android:layout_row="8" android:layout_column="0"/>
+        <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:text="@string/player10"
+                android:id="@+id/textView9" android:layout_row="9" android:layout_column="0"/>
+        <EditText
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:inputType="textPersonName"
+                android:ems="10"
+                android:id="@+id/nick1" android:layout_row="0" android:layout_column="1"/>
+        <EditText
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:inputType="textPersonName"
+                android:ems="10"
+                android:id="@+id/nick2" android:layout_row="1" android:layout_column="1"/>
+        <EditText
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:inputType="textPersonName"
+                android:ems="10"
+                android:id="@+id/nick3" android:layout_row="2" android:layout_column="1"/>
+        <EditText
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:inputType="textPersonName"
+                android:ems="10"
+                android:id="@+id/nick4" android:layout_row="3" android:layout_column="1"/>
+        <EditText
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:inputType="textPersonName"
+                android:ems="10"
+                android:id="@+id/nick5" android:layout_row="4" android:layout_column="1"/>
+        <EditText
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:inputType="textPersonName"
+                android:ems="10"
+                android:id="@+id/nick6" android:layout_row="5" android:layout_column="1"/>
+        <EditText
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:inputType="textPersonName"
+                android:ems="10"
+                android:id="@+id/nick7" android:layout_row="6" android:layout_column="1"/>
+        <EditText
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:inputType="textPersonName"
+                android:ems="10"
+                android:id="@+id/nick8" android:layout_row="7" android:layout_column="1"/>
+        <EditText
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:inputType="textPersonName"
+                android:ems="10"
+                android:id="@+id/nick9" android:layout_row="8" android:layout_column="1"/>
+        <EditText
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:inputType="textPersonName"
+                android:ems="10"
+                android:id="@+id/nick10" android:layout_row="9" android:layout_column="1"/>
+
+    </GridLayout>
+
+</RelativeLayout>

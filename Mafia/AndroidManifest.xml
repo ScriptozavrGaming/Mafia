@@ -15,5 +15,8 @@
         <activity
                 android:name="choosingRoles"
                 android:label="@string/app_name"/>
+        <activity android:name=".setNicknames"
+                  android:label="Mafia"/>
     </application>
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"></uses-permission>
 </manifest>
