@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Mafia</string>
+    <string name="strings">Выбор ролей</string>
+    <string name="peasant">Мирный житель</string>
+    <string name="don">Дон</string>
+    <string name="mafia">Мафия</string>
+    <string name="comissar">Комиссар</string>
+    <string name="player">Игрок</string>
+    <string name="set_nicknames">Set nicknames</string>
+    <string name="new_game">New Game</string>
+    <string name="player1">Player 1</string>
+    <string name="player2">Player 2</string>
+    <string name="player3">Player 3</string>
+    <string name="player4">Player 4</string>
+    <string name="player5">Player 5</string>
+    <string name="player6">Player 6</string>
+    <string name="player7">Player 7</string>
+    <string name="player8">Player 8</string>
+    <string name="player9">Player 9</string>
+    <string name="player10">Player 10</string>
+    <string name="continueButton">Continue</string>
+    <string name="morning">Morning in the town</string>
+    <string name="number">№</string>
+    <string name="nickname">Nick</string>
+    <string name="Role">Role</string>
+    <string name="Status">Status</string>
+    <string name="Faults">F</string>
+    <string name="fault_btn_txt">ФОЛ</string>
+    <string name="vote_btn_txt">ВЫСТАВИТЬ</string>
+</resources>
