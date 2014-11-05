@@ -12,7 +12,7 @@ import java.io.*;
 import java.util.*;
 
 public class ChoosingRoles extends Activity {
-    String[] Roles = {"Мирный", "Мафия", "Дон", "Комиссар"};
+    String[] Roles = {"Житель", "Мафия", "Дон", "Комиссар"};
     //int[] RolesCount = {6,2,1,1};
     Map<String, Integer> RolesCount = new HashMap<String, Integer>();
     String[] forWritingFile = new String[10];
@@ -31,7 +31,7 @@ public class ChoosingRoles extends Activity {
         ArrayAdapter<String> adapter = new ArrayAdapter<String>(this, android.R.layout.simple_spinner_item, Roles);
         adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
         //with love)
-        RolesCount.put("Мирный", 6);
+        RolesCount.put("Житель", 6);
         RolesCount.put("Мафия", 2);
         RolesCount.put("Дон", 1);
         RolesCount.put("Комиссар", 1);
@@ -129,6 +129,7 @@ public class ChoosingRoles extends Activity {
                 Intent main = new Intent(getApplicationContext(), MorningActions.class);
                 startActivity(main);
                 writeFile(playerNickNames,forWritingFile);
+                finish();
             }
         };
         findViewById(R.id.continue_btn).setOnClickListener(OnClkButton);

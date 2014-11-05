@@ -24,4 +24,8 @@
     <string name="number">№</string>
     <string name="nickname">Nick</string>
     <string name="Role">Role</string>
+    <string name="Status">Status</string>
+    <string name="Faults">F</string>
+    <string name="fault_btn_txt">ФОЛ</string>
+    <string name="vote_btn_txt">ВЫСТАВИТЬ</string>
 </resources>

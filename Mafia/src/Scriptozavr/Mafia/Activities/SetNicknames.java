@@ -51,6 +51,7 @@ public class SetNicknames extends Activity {
                         writeFile(FILENAME);
                         Intent main = new Intent(getApplicationContext(), Main.class);
                         startActivity(main);
+                        finish();
                         break;
                     case R.id.reset_Btn:
                         //with love from me))*
