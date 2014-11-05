@@ -6,6 +6,7 @@ import android.os.Bundle;
 import android.text.Layout;
 import android.view.View;
 import android.widget.Button;
+import android.widget.Chronometer;
 import android.widget.TextView;
 
 public class main extends Activity {
@@ -38,6 +39,7 @@ public class main extends Activity {
         };
         new_game_Btn.setOnClickListener(OnClickNGBtn);
         set_nicknames_Btn.setOnClickListener(OnClickNGBtn);
+
 
     }
 

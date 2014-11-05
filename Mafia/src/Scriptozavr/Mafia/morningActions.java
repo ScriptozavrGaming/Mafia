@@ -12,6 +12,7 @@ import java.io.InputStreamReader;
 
 public class morningActions extends Activity {
     private final String FinalFilename = "FullPlayers.txt";
+    private final String[] inGameStatuses = {"Жив", "Убит","Изгнан"};
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -45,6 +46,36 @@ public class morningActions extends Activity {
         for(int i=0,k=0;i<nicknames.length;i+=2,k++){
             playerNickNames[k].setText(nicknames[i]);
             playerRoles[k].setText(nicknames[i+1]);
+        }
+        final TextView[] playerStatus = {
+                (TextView) findViewById(R.id.status1),
+                (TextView) findViewById(R.id.status2),
+                (TextView) findViewById(R.id.status3),
+                (TextView) findViewById(R.id.status4),
+                (TextView) findViewById(R.id.status5),
+                (TextView) findViewById(R.id.status6),
+                (TextView) findViewById(R.id.status7),
+                (TextView) findViewById(R.id.status8),
+                (TextView) findViewById(R.id.status9),
+                (TextView) findViewById(R.id.status10)
+        };
+        for(TextView tv:playerStatus){
+            tv.setText(inGameStatuses[2]);
+        }
+        final TextView[] playerFaults = {
+                (TextView) findViewById(R.id.faults1),
+                (TextView) findViewById(R.id.faults2),
+                (TextView) findViewById(R.id.faults3),
+                (TextView) findViewById(R.id.faults4),
+                (TextView) findViewById(R.id.faults5),
+                (TextView) findViewById(R.id.faults6),
+                (TextView) findViewById(R.id.faults7),
+                (TextView) findViewById(R.id.faults8),
+                (TextView) findViewById(R.id.faults9),
+                (TextView) findViewById(R.id.faults10)
+        };
+        for(TextView tv:playerFaults){
+            tv.setText("0");
         }
     }
 
