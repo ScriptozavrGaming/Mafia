@@ -1,5 +1,6 @@
-package Scriptozavr.Mafia;
+package Scriptozavr.Mafia.Activities;
 
+import Scriptozavr.Mafia.R;
 import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
@@ -10,7 +11,7 @@ import android.widget.Spinner;
 import java.io.*;
 import java.util.*;
 
-public class choosingRoles extends Activity {
+public class ChoosingRoles extends Activity {
     String[] Roles = {"Мирный", "Мафия", "Дон", "Комиссар"};
     //int[] RolesCount = {6,2,1,1};
     Map<String, Integer> RolesCount = new HashMap<String, Integer>();
@@ -125,7 +126,7 @@ public class choosingRoles extends Activity {
         View.OnClickListener OnClkButton = new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent main = new Intent(getApplicationContext(), morningActions.class);
+                Intent main = new Intent(getApplicationContext(), MorningActions.class);
                 startActivity(main);
                 writeFile(playerNickNames,forWritingFile);
             }

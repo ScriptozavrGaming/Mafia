@@ -1,18 +1,18 @@
-package Scriptozavr.Mafia;
+package Scriptozavr.Mafia.Activities;
 
+import Scriptozavr.Mafia.Models.Player;
+import Scriptozavr.Mafia.R;
 import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
-import android.widget.TextView;
-import org.w3c.dom.Text;
 
 import java.io.*;
 
 
-public class setNicknames extends Activity {
+public class SetNicknames extends Activity {
 
 
     private final String FILENAME = "players.txt";
@@ -49,7 +49,7 @@ public class setNicknames extends Activity {
                     case R.id.save_Btn:
 
                         writeFile(FILENAME);
-                        Intent main = new Intent(getApplicationContext(), main.class);
+                        Intent main = new Intent(getApplicationContext(), Main.class);
                         startActivity(main);
                         break;
                     case R.id.reset_Btn:

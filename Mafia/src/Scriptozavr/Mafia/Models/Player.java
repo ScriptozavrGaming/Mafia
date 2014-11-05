@@ -1,4 +1,4 @@
-package Scriptozavr.Mafia;
+package Scriptozavr.Mafia.Models;
 
 
 public class Player {

@@ -1,4 +1,4 @@
-package Scriptozavr.Mafia;
+package Scriptozavr.Mafia.Helpers;
 
 import android.content.Context;
 import android.util.AttributeSet;

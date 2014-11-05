@@ -1,5 +1,6 @@
-package Scriptozavr.Mafia;
+package Scriptozavr.Mafia.Activities;
 
+import Scriptozavr.Mafia.R;
 import android.app.Activity;
 import android.os.Bundle;
 import android.widget.TextView;
@@ -10,7 +11,7 @@ import java.io.IOException;
 import java.io.InputStreamReader;
 
 
-public class morningActions extends Activity {
+public class MorningActions extends Activity {
     private final String FinalFilename = "FullPlayers.txt";
     @Override
     public void onCreate(Bundle savedInstanceState) {
