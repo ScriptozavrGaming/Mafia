@@ -2,7 +2,7 @@
 <resources>
     <string name="app_name">Mafia</string>
     <string name="strings">Выбор ролей</string>
-    <string name="peasant">Мирный житель</string>
+    <string name="peasant">Житель</string>
     <string name="don">Дон</string>
     <string name="mafia">Мафия</string>
     <string name="comissar">Комиссар</string>
@@ -21,6 +21,9 @@
     <string name="player10">Player 10</string>
     <string name="continueButton">Continue</string>
     <string name="morning">Morning in the town</string>
+    <string name="status_alive">Жив</string>
+    <string name="status_killed">Убит</string>
+    <string name="status_banished">Изгнан</string>
     <string name="number">№</string>
     <string name="nickname">Nick</string>
     <string name="Role">Role</string>
@@ -28,4 +31,5 @@
     <string name="Faults">F</string>
     <string name="fault_btn_txt">ФОЛ</string>
     <string name="vote_btn_txt">ВЫСТАВИТЬ</string>
+    <string name="role_choose_Lbl">Выбор ролей</string>
 </resources>

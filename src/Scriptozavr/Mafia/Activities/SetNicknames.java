@@ -16,17 +16,14 @@ public class SetNicknames extends Activity {
 
 
     private final String FILENAME = "players.txt";
-    public Player[] players = new Player[10];
-    EditText[] nicknames;
-    private Button save_Btn;
-    private Button reset_Btn;
+    private EditText[] nicknames;
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.set_nicknames);
-        save_Btn = (Button) findViewById(R.id.save_Btn);
-        reset_Btn = (Button) findViewById(R.id.reset_Btn);
+        Button save_Btn = (Button) findViewById(R.id.save_Btn);
+        Button reset_Btn = (Button) findViewById(R.id.reset_Btn);
         //EditTexts
         nicknames = new EditText[]{
                 (EditText) findViewById(R.id.nick1),
@@ -45,21 +42,17 @@ public class SetNicknames extends Activity {
             @Override
             public void onClick(View v) {
                 switch (v.getId()) {
-
                     case R.id.save_Btn:
-
                         writeFile(FILENAME);
                         Intent main = new Intent(getApplicationContext(), Main.class);
                         startActivity(main);
                         finish();
                         break;
                     case R.id.reset_Btn:
-                        //with love from me))*
                         resetNickNames();
                         //---------
                         break;
                 }
-
             }
         };
         save_Btn.setOnClickListener(OnClkButton);
@@ -77,15 +70,13 @@ public class SetNicknames extends Activity {
     private void loadNicknamesFromFile() {
         try {
             BufferedReader br = new BufferedReader(new InputStreamReader(openFileInput(FILENAME)));
-
-
             for (EditText n : nicknames) {
                 n.setText(br.readLine());
             }
         } catch (FileNotFoundException ex) {
             resetNickNames();
         } catch (IOException ex) {
-
+            ex.printStackTrace();
         }
     }
 

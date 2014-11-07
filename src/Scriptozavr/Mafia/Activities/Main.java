@@ -11,8 +11,10 @@ public class Main extends Activity {
     /**
      * Called when the activity is first created.
      */
-    Button new_game_Btn;
-    Button set_nicknames_Btn;
+    private Button new_game_Btn;
+    private Button set_nicknames_Btn;
+
+    private final boolean DEBUG = true;
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
@@ -33,16 +35,22 @@ public class Main extends Activity {
                         Intent setNicknames = new Intent(getApplicationContext(), SetNicknames.class);
                         startActivity(setNicknames);
                         break;
-                    case R.id.voting_test_btn:
-                        Intent votingForElimination = new Intent(getApplicationContext(), VoteForElimination.class);
-                        startActivity(votingForElimination);
-                        break;
                 }
             }
         };
         new_game_Btn.setOnClickListener(OnClickNGBtn);
         set_nicknames_Btn.setOnClickListener(OnClickNGBtn);
 
+        if (DEBUG) {
+            Button vote_Btn = (Button) findViewById(R.id.voting_test_btn);
+            vote_Btn.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    Intent votingForElimination = new Intent(getApplicationContext(), VoteForElimination.class);
+                    startActivity(votingForElimination);
+                }
+            });
+        }
 
     }
 

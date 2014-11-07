@@ -21,7 +21,7 @@ import java.lang.reflect.Method;
         *
         * Limitations: does not display prompt if the entry list is empty.
         */
-public class NoDefaultSpinner extends Spinner {
+class NoDefaultSpinner extends Spinner {
 
     public NoDefaultSpinner(Context context) {
         super(context);
@@ -56,7 +56,7 @@ public class NoDefaultSpinner extends Spinner {
         }
     }
 
-    protected SpinnerAdapter newProxy(SpinnerAdapter obj) {
+    SpinnerAdapter newProxy(SpinnerAdapter obj) {
         return (SpinnerAdapter) java.lang.reflect.Proxy.newProxyInstance(
                 obj.getClass().getClassLoader(),
                 new Class[]{SpinnerAdapter.class},
@@ -66,13 +66,13 @@ public class NoDefaultSpinner extends Spinner {
     /**
      * Intercepts getView() to display the prompt if position < 0
      */
-    protected class SpinnerAdapterProxy implements InvocationHandler {
+    class SpinnerAdapterProxy implements InvocationHandler {
 
-        protected SpinnerAdapter obj;
-        protected Method getView;
+        SpinnerAdapter obj;
+        Method getView;
 
 
-        protected SpinnerAdapterProxy(SpinnerAdapter obj) {
+        SpinnerAdapterProxy(SpinnerAdapter obj) {
             this.obj = obj;
             try {
                 this.getView = SpinnerAdapter.class.getMethod(
@@ -95,9 +95,7 @@ public class NoDefaultSpinner extends Spinner {
             }
         }
 
-        protected View getView(int position, View convertView, ViewGroup parent)
-                throws IllegalAccessException {
-
+        View getView(int position, View convertView, ViewGroup parent) {
             if (position < 0) {
                 final TextView v =
                         (TextView) ((LayoutInflater) getContext().getSystemService(

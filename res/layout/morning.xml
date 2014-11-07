@@ -32,173 +32,10 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:textAppearance="?android:attr/textAppearanceLarge"
-                        android:text="1" android:gravity="center"
-                        android:id="@+id/number1" android:layout_row="1" android:layout_column="0"/>
-
-                <Button
-                        style="?android:attr/buttonStyleSmall"
-                        android:layout_width="131dp"
-                        android:layout_height="35dp"
-                        android:text="@string/vote_btn_txt"
-                        android:height="8dp"
-                        android:id="@+id/vote_btn1" android:layout_row="2" android:layout_column="2"
-                        android:width="10dp"
-                        android:layout_columnSpan="2"/>
-                <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:textAppearance="?android:attr/textAppearanceLarge"
-                        android:text="2" android:gravity="center"
-                        android:id="@+id/number2" android:layout_row="3" android:layout_column="0"/>
-                <Button
-                        style="?android:attr/buttonStyleSmall"
-                        android:layout_width="59dp"
-                        android:layout_height="35dp"
-                        android:text="@string/fault_btn_txt"
-                        android:height="8dp"
-                        android:id="@+id/fault_btn1" android:layout_row="2" android:layout_column="1"
-                        android:width="10dp"
-                        />
-                <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:textAppearance="?android:attr/textAppearanceLarge"
-                        android:text="3" android:gravity="center"
-                        android:id="@+id/number3" android:layout_row="5" android:layout_column="0"/>
-                <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:textAppearance="?android:attr/textAppearanceLarge"
-                        android:text="4" android:gravity="center"
-                        android:id="@+id/number4" android:layout_row="7" android:layout_column="0"/>
-                <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:textAppearance="?android:attr/textAppearanceLarge"
-                        android:text="5" android:gravity="center"
-                        android:id="@+id/number5" android:layout_row="9" android:layout_column="0"/>
-                <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:textAppearance="?android:attr/textAppearanceLarge"
-                        android:text="6" android:gravity="center"
-                        android:id="@+id/number6" android:layout_row="11" android:layout_column="0"/>
-                <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:textAppearance="?android:attr/textAppearanceLarge"
-                        android:text="7" android:gravity="center"
-                        android:id="@+id/number7" android:layout_row="13" android:layout_column="0"/>
-                <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:textAppearance="?android:attr/textAppearanceLarge"
-                        android:text="8" android:gravity="center"
-                        android:id="@+id/number8" android:layout_row="15" android:layout_column="0"/>
-                <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:textAppearance="?android:attr/textAppearanceLarge"
-                        android:text="9" android:gravity="center"
-                        android:id="@+id/number9" android:layout_row="17" android:layout_column="0"/>
-                <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:textAppearance="?android:attr/textAppearanceLarge"
-                        android:text="10" android:gravity="center"
-                        android:id="@+id/number10" android:layout_row="19" android:layout_column="0"/>
-                //numbers
-                //nicknames
-                <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:textAppearance="?android:attr/textAppearanceLarge"
                         android:text="@string/nickname"
                         android:gravity="center_horizontal"
                         android:layout_marginLeft="10dp"
                         android:id="@+id/nickMorn" android:layout_row="0" android:layout_column="1"/>
-                <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:textAppearance="?android:attr/textAppearanceLarge"
-                        android:text="@string/nickname"
-                        android:gravity="center_horizontal"
-                        android:layout_marginLeft="10dp"
-                        android:id="@+id/nickMorn1" android:layout_row="1" android:layout_column="1"/>
-                <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:textAppearance="?android:attr/textAppearanceLarge"
-                        android:text="@string/nickname"
-                        android:gravity="center_horizontal"
-                        android:layout_marginLeft="10dp"
-                        android:id="@+id/nickMorn2" android:layout_row="3" android:layout_column="1"/>
-                <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:textAppearance="?android:attr/textAppearanceLarge"
-                        android:text="@string/nickname"
-                        android:gravity="center_horizontal"
-                        android:layout_marginLeft="10dp"
-                        android:id="@+id/nickMorn3" android:layout_row="5" android:layout_column="1"/>
-                <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:textAppearance="?android:attr/textAppearanceLarge"
-                        android:text="@string/nickname"
-                        android:gravity="center_horizontal"
-                        android:layout_marginLeft="10dp"
-                        android:id="@+id/nickMorn4" android:layout_row="7" android:layout_column="1"/>
-                <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:textAppearance="?android:attr/textAppearanceLarge"
-                        android:text="@string/nickname"
-                        android:gravity="center_horizontal"
-                        android:layout_marginLeft="10dp"
-                        android:id="@+id/nickMorn5" android:layout_row="9" android:layout_column="1"/>
-                <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:textAppearance="?android:attr/textAppearanceLarge"
-                        android:text="@string/nickname"
-                        android:gravity="center_horizontal"
-                        android:layout_marginLeft="10dp"
-                        android:id="@+id/nickMorn6" android:layout_row="11" android:layout_column="1"/>
-                <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:textAppearance="?android:attr/textAppearanceLarge"
-                        android:text="@string/nickname"
-                        android:gravity="center_horizontal"
-                        android:layout_marginLeft="10dp"
-                        android:id="@+id/nickMorn7" android:layout_row="13" android:layout_column="1"/>
-                <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:textAppearance="?android:attr/textAppearanceLarge"
-                        android:text="@string/nickname"
-                        android:gravity="center_horizontal"
-                        android:layout_marginLeft="10dp"
-                        android:id="@+id/nickMorn8" android:layout_row="15" android:layout_column="1"/>
-                <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:textAppearance="?android:attr/textAppearanceLarge"
-                        android:text="@string/nickname"
-                        android:gravity="center_horizontal"
-                        android:layout_marginLeft="10dp"
-                        android:id="@+id/nickMorn9" android:layout_row="17" android:layout_column="1"/>
-                <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:textAppearance="?android:attr/textAppearanceLarge"
-                        android:text="@string/nickname"
-                        android:gravity="center_horizontal"
-                        android:layout_marginLeft="10dp"
-                        android:id="@+id/nickMorn10" android:layout_row="19" android:layout_column="1"/>
-                //nicknames
-                //roles
                 <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
@@ -212,183 +49,9 @@
                         android:layout_height="wrap_content"
                         android:textAppearance="?android:attr/textAppearanceLarge"
                         android:gravity="center_horizontal"
-                        android:text="@string/Role"
-                        android:layout_marginLeft="10dp"
-                        android:id="@+id/roleMorn1" android:layout_row="1" android:layout_column="2"
-                        android:maxLength="1"/>
-                <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:textAppearance="?android:attr/textAppearanceLarge"
-                        android:gravity="center_horizontal"
-                        android:text="@string/Role"
-                        android:layout_marginLeft="10dp"
-                        android:id="@+id/roleMorn2" android:layout_row="3" android:layout_column="2"
-                        android:maxLength="1"/>
-                <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:textAppearance="?android:attr/textAppearanceLarge"
-                        android:gravity="center_horizontal"
-                        android:text="@string/Role"
-                        android:layout_marginLeft="10dp"
-                        android:id="@+id/roleMorn3" android:layout_row="5" android:layout_column="2"
-                        android:maxLength="1"/>
-                <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:textAppearance="?android:attr/textAppearanceLarge"
-                        android:gravity="center_horizontal"
-                        android:text="@string/Role"
-                        android:layout_marginLeft="10dp"
-                        android:id="@+id/roleMorn4" android:layout_row="7" android:layout_column="2"
-                        android:maxLength="1"/>
-                <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:textAppearance="?android:attr/textAppearanceLarge"
-                        android:gravity="center_horizontal"
-                        android:text="@string/Role"
-                        android:layout_marginLeft="10dp"
-                        android:id="@+id/roleMorn5" android:layout_row="9" android:layout_column="2"
-                        android:maxLength="1"/>
-                <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:textAppearance="?android:attr/textAppearanceLarge"
-                        android:gravity="center_horizontal"
-                        android:text="@string/Role"
-                        android:layout_marginLeft="10dp"
-                        android:id="@+id/roleMorn6" android:layout_row="11" android:layout_column="2"
-                        android:maxLength="1"/>
-                <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:textAppearance="?android:attr/textAppearanceLarge"
-                        android:gravity="center_horizontal"
-                        android:text="@string/Role"
-                        android:layout_marginLeft="10dp"
-                        android:id="@+id/roleMorn7" android:layout_row="13" android:layout_column="2"
-                        android:maxLength="1"/>
-                <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:textAppearance="?android:attr/textAppearanceLarge"
-                        android:gravity="center_horizontal"
-                        android:text="@string/Role"
-                        android:layout_marginLeft="10dp"
-                        android:id="@+id/roleMorn8" android:layout_row="15" android:layout_column="2"
-                        android:maxLength="1"/>
-                <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:textAppearance="?android:attr/textAppearanceLarge"
-                        android:gravity="center_horizontal"
-                        android:text="@string/Role"
-                        android:layout_marginLeft="10dp"
-                        android:id="@+id/roleMorn9" android:layout_row="17" android:layout_column="2"
-                        android:maxLength="1"/>
-                <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:textAppearance="?android:attr/textAppearanceLarge"
-                        android:gravity="center_horizontal"
-                        android:text="@string/Role"
-                        android:layout_marginLeft="10dp"
-                        android:id="@+id/roleMorn10" android:layout_row="19" android:layout_column="2"
-                        android:maxLength="1"/>
-                //roles
-                //status
-                <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:textAppearance="?android:attr/textAppearanceLarge"
-                        android:gravity="center_horizontal"
                         android:text="@string/Status"
                         android:layout_marginLeft="10dp"
                         android:id="@+id/status" android:layout_row="0" android:layout_column="3"/>
-                <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:textAppearance="?android:attr/textAppearanceLarge"
-                        android:gravity="center_horizontal"
-                        android:text="@string/Status"
-                        android:layout_marginLeft="10dp"
-                        android:id="@+id/status1" android:layout_row="1" android:layout_column="3"/>
-                <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:textAppearance="?android:attr/textAppearanceLarge"
-                        android:gravity="center_horizontal"
-                        android:text="@string/Status"
-                        android:layout_marginLeft="10dp"
-                        android:id="@+id/status2" android:layout_row="3" android:layout_column="3"/>
-                <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:textAppearance="?android:attr/textAppearanceLarge"
-                        android:gravity="center_horizontal"
-                        android:text="@string/Status"
-                        android:layout_marginLeft="10dp"
-                        android:id="@+id/status3" android:layout_row="5" android:layout_column="3"/>
-                <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:textAppearance="?android:attr/textAppearanceLarge"
-                        android:gravity="center_horizontal"
-                        android:text="@string/Status"
-                        android:layout_marginLeft="10dp"
-                        android:id="@+id/status4" android:layout_row="7" android:layout_column="3"/>
-                <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:textAppearance="?android:attr/textAppearanceLarge"
-                        android:gravity="center_horizontal"
-                        android:text="@string/Status"
-                        android:layout_marginLeft="10dp"
-                        android:id="@+id/status5" android:layout_row="9" android:layout_column="3"/>
-                <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:textAppearance="?android:attr/textAppearanceLarge"
-                        android:gravity="center_horizontal"
-                        android:text="@string/Status"
-                        android:layout_marginLeft="10dp"
-                        android:id="@+id/status6" android:layout_row="11" android:layout_column="3"/>
-                <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:textAppearance="?android:attr/textAppearanceLarge"
-                        android:gravity="center_horizontal"
-                        android:text="@string/Status"
-                        android:layout_marginLeft="10dp"
-                        android:id="@+id/status7" android:layout_row="13" android:layout_column="3"/>
-                <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:textAppearance="?android:attr/textAppearanceLarge"
-                        android:gravity="center_horizontal"
-                        android:text="@string/Status"
-                        android:layout_marginLeft="10dp"
-                        android:id="@+id/status8" android:layout_row="15" android:layout_column="3"/>
-                <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:textAppearance="?android:attr/textAppearanceLarge"
-                        android:gravity="center_horizontal"
-                        android:text="@string/Status"
-                        android:layout_marginLeft="10dp"
-                        android:id="@+id/status9" android:layout_row="17" android:layout_column="3"/>
-                <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:textAppearance="?android:attr/textAppearanceLarge"
-                        android:gravity="center_horizontal"
-                        android:text="@string/Status"
-                        android:layout_marginLeft="10dp"
-                        android:id="@+id/status10" android:layout_row="19" android:layout_column="3"/>
-                //status
-                //faults
                 <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
@@ -401,85 +64,83 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:textAppearance="?android:attr/textAppearanceLarge"
-                        android:gravity="center_horizontal"
-                        android:text="@string/Faults"
-                        android:layout_marginLeft="10dp"
-                        android:id="@+id/faults1" android:layout_row="1" android:layout_column="4"/>
+                        android:gravity="center"
+                        android:layout_columnSpan="5"
+                        android:id="@+id/number1" android:layout_row="1" android:layout_column="0"/>
                 <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:textAppearance="?android:attr/textAppearanceLarge"
-                        android:gravity="center_horizontal"
-                        android:text="@string/Faults"
-                        android:layout_marginLeft="10dp"
-                        android:id="@+id/faults2" android:layout_row="3" android:layout_column="4"/>
+                        android:gravity="center"
+                        android:layout_columnSpan="5"
+                        android:id="@+id/number2" android:layout_row="3" android:layout_column="0"/>
                 <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:textAppearance="?android:attr/textAppearanceLarge"
-                        android:gravity="center_horizontal"
-                        android:text="@string/Faults"
-                        android:layout_marginLeft="10dp"
-                        android:id="@+id/faults3" android:layout_row="5" android:layout_column="4"/>
+                        android:gravity="center"
+                        android:layout_columnSpan="5"
+                        android:id="@+id/number3" android:layout_row="5" android:layout_column="0"/>
                 <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:textAppearance="?android:attr/textAppearanceLarge"
-                        android:gravity="center_horizontal"
-                        android:text="@string/Faults"
-                        android:layout_marginLeft="10dp"
-                        android:id="@+id/faults4" android:layout_row="7" android:layout_column="4"/>
+                        android:gravity="center"
+                        android:layout_columnSpan="5"
+                        android:id="@+id/number4" android:layout_row="7" android:layout_column="0"/>
                 <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:textAppearance="?android:attr/textAppearanceLarge"
-                        android:gravity="center_horizontal"
-                        android:text="@string/Faults"
-                        android:layout_marginLeft="10dp"
-                        android:id="@+id/faults5" android:layout_row="9" android:layout_column="4"/>
+                        android:gravity="center"
+                        android:layout_columnSpan="5"
+                        android:id="@+id/number5" android:layout_row="9" android:layout_column="0"/>
                 <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:textAppearance="?android:attr/textAppearanceLarge"
-                        android:gravity="center_horizontal"
-                        android:text="@string/Faults"
-                        android:layout_marginLeft="10dp"
-                        android:id="@+id/faults6" android:layout_row="11" android:layout_column="4"/>
+                        android:gravity="center"
+                        android:id="@+id/number6" android:layout_row="11" android:layout_column="0"/>
                 <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:textAppearance="?android:attr/textAppearanceLarge"
-                        android:gravity="center_horizontal"
-                        android:text="@string/Faults"
-                        android:layout_marginLeft="10dp"
-                        android:id="@+id/faults7" android:layout_row="13" android:layout_column="4"/>
+                        android:gravity="center"
+                        android:layout_columnSpan="5"
+                        android:id="@+id/number7" android:layout_row="13" android:layout_column="0"/>
                 <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:textAppearance="?android:attr/textAppearanceLarge"
-                        android:gravity="center_horizontal"
-                        android:text="@string/Faults"
-                        android:layout_marginLeft="10dp"
-                        android:id="@+id/faults8" android:layout_row="15" android:layout_column="4"/>
+                        android:gravity="center"
+                        android:layout_columnSpan="5"
+                        android:id="@+id/number8" android:layout_row="15" android:layout_column="0"/>
                 <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:textAppearance="?android:attr/textAppearanceLarge"
-                        android:gravity="center_horizontal"
-                        android:text="@string/Faults"
-                        android:layout_marginLeft="10dp"
-                        android:id="@+id/faults9" android:layout_row="17" android:layout_column="4"/>
+                        android:gravity="center"
+                        android:layout_columnSpan="5"
+                        android:id="@+id/number9" android:layout_row="17" android:layout_column="0"/>
                 <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:textAppearance="?android:attr/textAppearanceLarge"
-                        android:gravity="center_horizontal"
-                        android:text="@string/Faults"
-                        android:layout_marginLeft="10dp"
-                        android:id="@+id/faults10" android:layout_row="19" android:layout_column="4"/>
-
-                //faults
+                        android:gravity="center"
+                        android:layout_columnSpan="5"
+                        android:id="@+id/number10" android:layout_row="19" android:layout_column="0"/>
+                //numbers
                 //buttons
+                <Button
+                        style="?android:attr/buttonStyleSmall"
+                        android:layout_width="59dp"
+                        android:layout_height="35dp"
+                        android:text="@string/fault_btn_txt"
+                        android:height="8dp"
+                        android:id="@+id/fault_btn1" android:layout_row="2" android:layout_column="1"
+                        android:width="10dp"
+                        />
+
                 <Button
                         style="?android:attr/buttonStyleSmall"
                         android:layout_width="59dp"
@@ -553,6 +214,16 @@
                         android:id="@+id/fault_btn10" android:layout_column="1" android:width="10dp"
                         android:layout_row="20"/>
                 //vote
+
+                <Button
+                        style="?android:attr/buttonStyleSmall"
+                        android:layout_width="131dp"
+                        android:layout_height="35dp"
+                        android:text="@string/vote_btn_txt"
+                        android:height="8dp"
+                        android:id="@+id/vote_btn1" android:layout_row="2" android:layout_column="2"
+                        android:width="10dp"
+                        android:layout_columnSpan="2"/>
 
                 <Button
                         style="?android:attr/buttonStyleSmall"
