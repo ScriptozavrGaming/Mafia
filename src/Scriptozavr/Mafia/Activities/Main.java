@@ -1,9 +1,12 @@
 package Scriptozavr.Mafia.Activities;
 
+import Scriptozavr.Mafia.Models.Player;
 import Scriptozavr.Mafia.R;
 import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
+import android.os.Parcel;
+import android.os.Parcelable;
 import android.view.View;
 import android.widget.Button;
 
@@ -22,6 +25,7 @@ public class Main extends Activity {
         setContentView(R.layout.main);
         new_game_Btn = (Button) findViewById(R.id.new_game_Btn);
         set_nicknames_Btn = (Button) findViewById(R.id.set_nicknames_Btn);
+
         View.OnClickListener OnClickNGBtn = new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -35,28 +39,51 @@ public class Main extends Activity {
                         Intent setNicknames = new Intent(getApplicationContext(), SetNicknames.class);
                         startActivity(setNicknames);
                         break;
-                    case R.id.toMorning_Btn:
-                        Intent morning = new Intent(getApplicationContext(), MorningActions.class);
-                        startActivity(morning);
-                        break;
                 }
             }
         };
         new_game_Btn.setOnClickListener(OnClickNGBtn);
         set_nicknames_Btn.setOnClickListener(OnClickNGBtn);
-        ((Button)findViewById(R.id.toMorning_Btn)).setOnClickListener(OnClickNGBtn);
+
         if (DEBUG) {
-            Button vote_Btn = (Button) findViewById(R.id.voting_test_btn);
-            vote_Btn.setOnClickListener(new View.OnClickListener() {
+            findViewById(R.id.voting_test_btn).setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
                     Intent votingForElimination = new Intent(getApplicationContext(), VoteForElimination.class);
+
+                    Player p = new Player();
+                    p.setFaults(2);
+                    p.setStatus("status");
+                    p.setNick("nick");
+                    p.setRole("role");
+
+                    votingForElimination.putExtra("test_val", p);
+
                     startActivity(votingForElimination);
+                }
+            });
+            findViewById(R.id.toMorning_Btn).setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    Intent morning = new Intent(getApplicationContext(), MorningActions.class);
+                    Player[] p = new Player[10];
+                    for(int i = 0; i < p.length; i++){
+                        p[i] = new Player();
+                        p[i].setFaults(0);
+                        p[i].setRole(getResources().getString(R.string.peasant));
+                        p[i].setStatus(getResources().getString(R.string.status_alive));
+                        p[i].setNick("Player " + (i + 1));
+                        p[i].setPosition(i + 1);
+                    }
+                    p[6].setRole(getResources().getString(R.string.comissar));
+                    p[7].setRole(getResources().getString(R.string.don));
+                    p[8].setRole(getResources().getString(R.string.mafia));
+                    p[9].setRole(getResources().getString(R.string.mafia));
+                    morning.putExtra("players",p);
+                    startActivity(morning);
                 }
             });
         }
 
     }
-
-
 }

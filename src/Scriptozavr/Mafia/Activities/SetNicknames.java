@@ -50,7 +50,6 @@ public class SetNicknames extends Activity {
                         break;
                     case R.id.reset_Btn:
                         resetNickNames();
-                        //---------
                         break;
                 }
             }
@@ -59,6 +58,12 @@ public class SetNicknames extends Activity {
         reset_Btn.setOnClickListener(OnClkButton);
 
         loadNicknamesFromFile();
+    }
+
+    @Override
+    public void onBackPressed() {
+        writeFile(FILENAME);
+        super.onBackPressed();
     }
 
     private void resetNickNames() {

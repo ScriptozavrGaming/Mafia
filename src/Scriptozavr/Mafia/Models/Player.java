@@ -1,6 +1,9 @@
 package Scriptozavr.Mafia.Models;
 
-public class Player {
+import android.os.Parcel;
+import android.os.Parcelable;
+
+public class Player implements Parcelable {
 
     private String nick;
     private int position;
@@ -42,7 +45,7 @@ public class Player {
 
     @Override
     public String toString() {
-        return String.format("%2d%11s%6s%3d", this.position, this.nick, this.status, this.faults);
+        return String.format("%2d%12s%7s%3d", this.position, this.nick, this.status, this.faults);
     }
 
     public Player() {
@@ -62,5 +65,37 @@ public class Player {
 
     public void setFaults(int faults) {
         this.faults = faults;
+    }
+
+    public static final Parcelable.Creator<Player> CREATOR = new Parcelable.Creator<Player>() {
+        public Player createFromParcel(Parcel source) {
+            return new Player(source);
+        }
+
+        public Player[] newArray(int size) {
+            return new Player[size];
+        }
+    };
+
+    @Override
+    public int describeContents() {
+        return 0;
+    }
+
+    @Override
+    public void writeToParcel(Parcel dest, int flags) {
+        dest.writeString(nick);
+        dest.writeInt(position);
+        dest.writeString(role);
+        dest.writeString(status);
+        dest.writeInt(faults);
+    }
+
+    private Player(Parcel source) {
+        nick = source.readString();
+        position = source.readInt();
+        role = source.readString();
+        status = source.readString();
+        faults = source.readInt();
     }
 }

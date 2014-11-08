@@ -4,6 +4,7 @@ import Scriptozavr.Mafia.Models.Player;
 import Scriptozavr.Mafia.R;
 import android.app.Activity;
 import android.os.Bundle;
+import android.os.Parcelable;
 import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
@@ -20,14 +21,15 @@ public class MorningActions extends Activity {
     private Map<Button,Player> forTakeFault = new HashMap<Button, Player>();
     private Map<Button,Player> forVote = new HashMap<Button, Player>();
     private String forOnVoteTextView = new String();
-    private int sizeofArr = 1;
-    private int [] playersOnVote = new int[sizeofArr];
+    private ArrayList<Integer> playersOnVote = new ArrayList<Integer>();
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.morning);
-        final TextView[] playerNickNames = {
+
+
+        final TextView[] playerLabels = {
                 (TextView) findViewById(R.id.number1),
                 (TextView) findViewById(R.id.number2),
                 (TextView) findViewById(R.id.number3),
@@ -63,53 +65,35 @@ public class MorningActions extends Activity {
                 (Button) findViewById(R.id.vote_btn9),
                 (Button) findViewById(R.id.vote_btn10),
         };
-        Player[] players = ReadFile(FinalFilename);
+        final Parcelable[] players = getIntent().getParcelableArrayExtra("players");
+        //final Player[] players = ReadFile(FinalFilename);
         for (int i = 0; i < players.length; i++) {
-            playerNickNames[i].setText(players[i].toString());
-        }
-        for (int i=0;i<faultsBtns.length;i++){
-            forTakeFault.put(faultsBtns[i],players[i]);
-            forVote.put(voteBtns[i],players[i]);
-        }
-        View.OnClickListener OnClckBtn = new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                if(forTakeFault.containsKey(findViewById(v.getId()))) {
-                    int fault = (forTakeFault.get(findViewById(v.getId()))).getFaults();
-                    int posFault = (forTakeFault.get(findViewById(v.getId()))).getPosition() - 1;
-                    fault++;
-                    if (fault > 3) {
-                        faultsBtns[posFault].setClickable(false);
-                        (forTakeFault.get(findViewById(v.getId()))).setStatus("Изгнан");
-                    }
-                    (forTakeFault.get(findViewById(v.getId()))).setFaults(fault);
-                    playerNickNames[posFault].setText((forTakeFault.get(findViewById(v.getId()))).toString());
-                }
-                if(forVote.containsKey(findViewById(v.getId()))) {
-                    int posOnVote = (forVote.get(findViewById(v.getId()))).getPosition();
+            playerLabels[i].setText(players[i].toString());
+            forTakeFault.put(faultsBtns[i],(Player)players[i]);
+            forVote.put(voteBtns[i],(Player)players[i]);
 
-                    forOnVoteTextView += Integer.toString(posOnVote) + " ";
-                    voteBtns[posOnVote-1].setClickable(false);
-                    if(!forOnVoteTextView.isEmpty()){
-                        if(sizeofArr == 1){
-                            playersOnVote[sizeofArr-1] = posOnVote;
-                        }
-                        else {
-                            sizeofArr++;
-                            playersOnVote = resizeArr(playersOnVote, sizeofArr);
-                            forOnVoteTextView += Integer.toString(posOnVote) + " ";
-                        }
-                        ((TextView) findViewById(R.id.OnVote)).setText("Выставлены: " + forOnVoteTextView);
-                    }
+            final int buttonInd = i;
+            voteBtns[i].setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    voteBtns[buttonInd].setClickable(false);
+                    playersOnVote.add(buttonInd + 1);
+                    ((TextView) findViewById(R.id.OnVote)).setText(getResources().getString(R.string.on_vote_label)
+                            + Arrays.toString(playersOnVote.toArray()));
                 }
-            }
-
-        };
-        for(Button b: faultsBtns){
-            b.setOnClickListener(OnClckBtn);
-        }
-        for (Button b: voteBtns){
-            b.setOnClickListener(OnClckBtn);
+            });
+            faultsBtns[i].setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    Player p = (Player)players[buttonInd];
+                    p.setFaults(p.getFaults() + 1);
+                    if (p.getFaults() > 3) {
+                        faultsBtns[buttonInd].setClickable(false);
+                        p.setStatus(getResources().getString(R.string.status_banished));
+                    }
+                    playerLabels[buttonInd].setText(p.toString());
+                }
+            });
         }
     }
 
@@ -134,12 +118,5 @@ public class MorningActions extends Activity {
             e.printStackTrace();
         }
         return players;
-    }
-
-    private int[] resizeArr(int[] toResize,int newSize){
-        int[] newArr=new int[newSize];
-        for (int i=0;i<newSize;i++)
-            newArr[i] = toResize[i];
-        return newArr;
     }
 }

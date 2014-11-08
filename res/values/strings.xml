@@ -19,6 +19,7 @@
     <string name="player8">Player 8</string>
     <string name="player9">Player 9</string>
     <string name="player10">Player 10</string>
+    <string name="on_vote_label">Выставлены: </string>
     <string name="continueButton">Continue</string>
     <string name="morning">Morning in the town</string>
     <string name="status_alive">Жив</string>
