@@ -33,4 +33,5 @@
     <string name="fault_btn_txt">ФОЛ</string>
     <string name="vote_btn_txt">ВЫСТАВИТЬ</string>
     <string name="role_choose_Lbl">Выбор ролей</string>
+    <string name="voting_for_lbl">Голосуем против: №</string>
 </resources>

@@ -6,22 +6,15 @@ import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
-import android.widget.AdapterView;
-import android.widget.ArrayAdapter;
-import android.widget.Spinner;
-import android.widget.TextView;
+import android.widget.*;
 
 import java.io.*;
-import java.util.ArrayList;
-import java.util.HashMap;
-import java.util.List;
-import java.util.Map;
+import java.util.*;
 
 public class ChoosingRoles extends Activity {
     private final String nickNameFile = "players.txt";
-    Player[] players = new Player[10];
+    private final Player[] players = new Player[10];
     private final Map<String, Integer> RolesCount = new HashMap<String, Integer>();
-    private final String[] playerRoles = new String[10];
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
@@ -76,7 +69,7 @@ public class ChoosingRoles extends Activity {
                 spinners[nextIndex - 1].setClickable(false);
                 List<String> availableRoles = new ArrayList<String>();
                 String choice = (String) parent.getItemAtPosition(position);
-                playerRoles[nextIndex - 1] = choice;
+                players[nextIndex - 1].setRole(choice);
                 RolesCount.put(choice, RolesCount.get(choice) - 1);
 
                 for (int i = 0; i < parent.getCount(); i++) {
@@ -107,7 +100,7 @@ public class ChoosingRoles extends Activity {
             @Override
             public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
                 findViewById(R.id.continue_btn).setVisibility(View.VISIBLE);
-                playerRoles[spinners.length - 1] = (String) parent.getItemAtPosition(position);
+                players[spinners.length - 1].setRole((String) parent.getItemAtPosition(position));
             }
 
             @Override

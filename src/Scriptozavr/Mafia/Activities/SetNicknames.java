@@ -1,6 +1,5 @@
 package Scriptozavr.Mafia.Activities;
 
-import Scriptozavr.Mafia.Models.Player;
 import Scriptozavr.Mafia.R;
 import android.app.Activity;
 import android.content.Intent;

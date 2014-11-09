@@ -5,17 +5,15 @@ import Scriptozavr.Mafia.R;
 import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
-import android.os.Parcel;
-import android.os.Parcelable;
 import android.view.View;
 import android.widget.Button;
+
+import java.util.ArrayList;
 
 public class Main extends Activity {
     /**
      * Called when the activity is first created.
      */
-    private Button new_game_Btn;
-    private Button set_nicknames_Btn;
 
     private final boolean DEBUG = true;
 
@@ -23,8 +21,8 @@ public class Main extends Activity {
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.main);
-        new_game_Btn = (Button) findViewById(R.id.new_game_Btn);
-        set_nicknames_Btn = (Button) findViewById(R.id.set_nicknames_Btn);
+        Button new_game_Btn = (Button) findViewById(R.id.new_game_Btn);
+        Button set_nicknames_Btn = (Button) findViewById(R.id.set_nicknames_Btn);
 
         View.OnClickListener OnClickNGBtn = new View.OnClickListener() {
             @Override
@@ -50,15 +48,28 @@ public class Main extends Activity {
                 @Override
                 public void onClick(View v) {
                     Intent votingForElimination = new Intent(getApplicationContext(), VoteForElimination.class);
+                    Player[] p = new Player[10];
+                    for(int i = 0; i < p.length; i++){
+                        p[i] = new Player();
+                        p[i].setFaults(0);
+                        p[i].setRole(getResources().getString(R.string.peasant));
+                        p[i].setStatus(getResources().getString(R.string.status_alive));
+                        p[i].setNick("Player " + (i + 1));
+                        p[i].setPosition(i + 1);
+                    }
+                    p[4].setStatus(getResources().getString(R.string.status_killed));
+                    p[6].setRole(getResources().getString(R.string.comissar));
+                    p[7].setRole(getResources().getString(R.string.don));
+                    p[8].setRole(getResources().getString(R.string.mafia));
+                    p[9].setRole(getResources().getString(R.string.mafia));
+                    votingForElimination.putExtra("players",p);
 
-                    Player p = new Player();
-                    p.setFaults(2);
-                    p.setStatus("status");
-                    p.setNick("nick");
-                    p.setRole("role");
+                    ArrayList<Integer> votingList = new ArrayList<Integer>();
+                    votingList.add(2);
+                    votingList.add(5);
+                    votingList.add(7);
 
-                    votingForElimination.putExtra("test_val", p);
-
+                    votingForElimination.putIntegerArrayListExtra("votingList", votingList);
                     startActivity(votingForElimination);
                 }
             });
@@ -80,6 +91,7 @@ public class Main extends Activity {
                     p[8].setRole(getResources().getString(R.string.mafia));
                     p[9].setRole(getResources().getString(R.string.mafia));
                     morning.putExtra("players",p);
+
                     startActivity(morning);
                 }
             });

@@ -9,18 +9,12 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
 
-import java.io.BufferedReader;
-import java.io.FileNotFoundException;
-import java.io.IOException;
-import java.io.InputStreamReader;
 import java.util.*;
 
 
 public class MorningActions extends Activity {
-    private final String FinalFilename = "FullPlayers.txt";
-    private Map<Button,Player> forTakeFault = new HashMap<Button, Player>();
-    private Map<Button,Player> forVote = new HashMap<Button, Player>();
-    private String forOnVoteTextView = new String();
+    private Map<Button,Player> faultButtonToPlayerMap = new HashMap<Button, Player>();
+    private Map<Button,Player> voteButtonToPlayerMap = new HashMap<Button, Player>();
     private ArrayList<Integer> playersOnVote = new ArrayList<Integer>();
 
     @Override
@@ -69,8 +63,8 @@ public class MorningActions extends Activity {
         //final Player[] players = ReadFile(FinalFilename);
         for (int i = 0; i < players.length; i++) {
             playerLabels[i].setText(players[i].toString());
-            forTakeFault.put(faultsBtns[i],(Player)players[i]);
-            forVote.put(voteBtns[i],(Player)players[i]);
+            faultButtonToPlayerMap.put(faultsBtns[i], (Player) players[i]);
+            voteButtonToPlayerMap.put(voteBtns[i], (Player) players[i]);
 
             final int buttonInd = i;
             voteBtns[i].setOnClickListener(new View.OnClickListener() {
@@ -95,28 +89,5 @@ public class MorningActions extends Activity {
                 }
             });
         }
-    }
-
-    private Player[] ReadFile(String FILENAME) {
-        Player[] players = new Player[10];
-        try {
-            BufferedReader br = new BufferedReader(new InputStreamReader(
-                    openFileInput(FILENAME)));
-
-            for(int i = 0; i < players.length;i++) {
-                String[] tokens = br.readLine().split(";");
-                players[i] = new Player();
-                players[i].setPosition(i+1);
-                players[i].setNick(tokens[0]);
-                players[i].setRole(tokens[1]);
-                players[i].setStatus(tokens[2]);
-                players[i].setFaults(Integer.parseInt(tokens[3]));
-            }
-        } catch (FileNotFoundException e) {
-            e.printStackTrace();
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
-        return players;
     }
 }
