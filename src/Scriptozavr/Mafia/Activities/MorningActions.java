@@ -54,21 +54,6 @@ public class MorningActions extends Activity {
                 (TextView) findViewById(R.id.number9),
                 (TextView) findViewById(R.id.number10)
         };
-
-        playerLabelsForOnFinish = cycleShiftLeft(playerLabels,currentCirlce);
-
-        timer = new ourCountDownTimer(60000,100);
-        Circle = (TextView) findViewById(R.id.Circle);
-        Circle.setText(getResources().getString(R.string.Circle) + ":" + currentCirlce );
-        ((TextView)findViewById(R.id.OnVote)).setText(getResources().getString(R.string.Nobody_on_vote));
-        timerTextView = (TextView)findViewById(R.id.ourTimer);
-
-        //playerLabels[currentPlayer].getBackground().setColorFilter(Color.GREEN, PorterDuff.Mode.SRC);
-        playerLabelsForOnFinish[currentPlayer].setBackgroundColor(Color.GREEN);
-        startTimer();
-        stopTimer();
-
-
         final Button[] faultsBtns = {
                 (Button) findViewById(R.id.fault_btn1),
                 (Button) findViewById(R.id.fault_btn2),
@@ -81,6 +66,22 @@ public class MorningActions extends Activity {
                 (Button) findViewById(R.id.fault_btn9),
                 (Button) findViewById(R.id.fault_btn10),
         };
+
+
+        playerLabelsForOnFinish = playerLabels;//cycleShiftLeft(playerLabels,currentCirlce);
+
+        timer = new ourCountDownTimer(60000,100,faultsBtns);
+        Circle = (TextView) findViewById(R.id.Circle);
+        Circle.setText(getResources().getString(R.string.Circle) + ":" + currentCirlce );
+        ((TextView)findViewById(R.id.OnVote)).setText(getResources().getString(R.string.Nobody_on_vote));
+        timerTextView = (TextView)findViewById(R.id.ourTimer);
+
+        //playerLabels[currentPlayer].getBackground().setColorFilter(Color.GREEN, PorterDuff.Mode.SRC);
+        playerLabelsForOnFinish[currentPlayer].setBackgroundColor(Color.GREEN);
+        startTimer(faultsBtns);
+        stopTimer(faultsBtns);
+
+
         final Button[] voteBtns = {
                 (Button) findViewById(R.id.vote_btn1),
                 (Button) findViewById(R.id.vote_btn2),
@@ -97,11 +98,11 @@ public class MorningActions extends Activity {
         for(int i =0 ;i<players.length;i++) {
             p[i]=players[i];
         }
-        ((Player) players[1]).setStatus(getResources().getString(R.string.status_killed));
-        ((Player) players[2]).setStatus(getResources().getString(R.string.status_killed));
-        ((Player) players[7]).setStatus(getResources().getString(R.string.status_banished));
+        ((Player)p[0]).setStatus(getResources().getString(R.string.status_killed));
+        playerLabels[0].setText(p[0].toString());
         //final Player[] players = ReadFile(FinalFilename);
         for (int i = 0; i < players.length; i++) {
+
             playerLabels[i].setText(players[i].toString());
             faultButtonToPlayerMap.put(faultsBtns[i], (Player) players[i]);
             voteButtonToPlayerMap.put(voteBtns[i], (Player) players[i]);
@@ -125,19 +126,25 @@ public class MorningActions extends Activity {
                         faultsBtns[buttonInd].setClickable(false);
                         voteBtns[buttonInd].setClickable(false);
                         p.setStatus(getResources().getString(R.string.status_banished));
+                        //playerLabels[p.getPosition()-1].setBackgroundColor(Color.RED);
                     }
                     playerLabels[buttonInd].setText(p.toString());
                 }
             });
+            if(!((Player)players[i]).getStatus().equals(getResources().getString(R.string.status_alive))){
+                //playerLabels[i].setBackgroundColor(Color.RED);
+                faultsBtns[i].setClickable(false);
+                voteBtns[i].setClickable(false);
+            }
         }
     }
 
-    private void stopTimer() {
+    private void stopTimer(final Button[] buttons) {
         ((Button) findViewById(R.id.stopTimer_Btn)).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 timer.cancel();
-                timer = new ourCountDownTimer(60000,100);
+                timer = new ourCountDownTimer(60000,100,buttons);
                 timerTextView.setText(getResources().getString(R.string.StartTime));
                 continuing = false;
                 timer.onFinish();
@@ -145,7 +152,7 @@ public class MorningActions extends Activity {
         });
     }
 
-    private void startTimer() {
+    private void startTimer(final Button[] buttons) {
         ((Button) findViewById(R.id.startTimer_Btn)).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -156,7 +163,7 @@ public class MorningActions extends Activity {
                     timer.cancel();
                     String [] time = timerTextView.getText().toString().split(":");
                     currentTime=Long.parseLong(time[1]);
-                    timer = new ourCountDownTimer(currentTime*1000,100);
+                    timer = new ourCountDownTimer(currentTime*1000,100,buttons);
                 }
                 continuing = !continuing;
             }
@@ -167,12 +174,15 @@ public class MorningActions extends Activity {
 
         private final long mMillisInFuture;
         private final long mCountdownInterval;
+        private final Button[] mButtons;
 
-        public ourCountDownTimer(long millisInFuture, long countDownInterval) {
+        public ourCountDownTimer(long millisInFuture, long countDownInterval, Button[] buttons) {
             super(millisInFuture,countDownInterval);
             mMillisInFuture = millisInFuture;
             mCountdownInterval = countDownInterval;
+            mButtons = buttons;
         }
+
 
 
         @Override
@@ -187,10 +197,7 @@ public class MorningActions extends Activity {
             currentPlayer++;
             if(currentPlayer<10) {
                 if(((Player)p[currentPlayer]).getStatus().equals(getResources().getString(R.string.status_alive))) {
-                    //mplayerLabels[currentPlayer-1].getBackground().setColorFilter(Color.TRANSPARENT, PorterDuff.Mode.SRC);
-                    //mplayerLabels[currentPlayer].getBackground().setColorFilter(Color.GREEN, PorterDuff.Mode.SRC);
                     playerLabelsForOnFinish[currentPlayer].setBackgroundColor(Color.GREEN);
-
                     playerLabelsForOnFinish[previousPlayer].setBackgroundColor(Color.TRANSPARENT);
                     previousPlayer = currentPlayer;
                 }
@@ -204,36 +211,26 @@ public class MorningActions extends Activity {
                 }
             }
             else{
-                if(!playersOnVote.isEmpty()) {
+                if(playersOnVote.size()>1) {
                     Intent VotingForElimination = new Intent(getApplicationContext(), VoteForElimination.class);
                     VotingForElimination.putIntegerArrayListExtra("votingList", playersOnVote);
                     VotingForElimination.putExtra("players", p);
                     startActivity(VotingForElimination);
                 }
-                else{
-                    //Night Actions
+                else if(playersOnVote.size()==1){
+                    ((Player)p[playersOnVote.get(0)-1]).setStatus(getResources().getString(R.string.status_banished));
+                    playerLabelsForOnFinish[playersOnVote.get(0)-1].setText(p[playersOnVote.get(0)-1].toString());
+                    //playerLabelsForOnFinish[playersOnVote.get(0)-1].setBackgroundColor(Color.RED);
+                    mButtons[playersOnVote.get(0)-1].setClickable(false);
                 }
+                Intent NightActions = new Intent(getApplicationContext(), Scriptozavr.Mafia.Activities.NightActions.class);
+                NightActions.putExtra("players",p);
+
+                startActivity(NightActions);
             }
         }
     }
 
-    private TextView[] cycleShiftLeft(TextView[] tv,int k){
-        TextView[] newPlayerLabels = new TextView[10];
-        if(k==0){
-            return tv;
-        }
 
-        TextView temp;
-        int count=0;
-        while(count<k) {
-            temp = tv[0];
-            for (int i = 0; i < tv.length-1; i++) {
-                newPlayerLabels[i] = tv[i+1];
-            }
-            newPlayerLabels[tv.length - 1] = temp;
-            count++;
-        }
-        return newPlayerLabels;
-    }
 
 }

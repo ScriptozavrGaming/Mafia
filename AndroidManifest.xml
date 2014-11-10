@@ -22,6 +22,8 @@
                   android:label="Mafia"/>
         <activity android:name=".Activities.VoteForElimination"
                   android:label="Mafia"/>
+        <activity android:name=".Activities.NightActions"
+                  android:label="Mafia"/>
     </application>
 
 </manifest>
