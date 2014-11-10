@@ -3,319 +3,350 @@
 <RelativeLayout
         xmlns:android="http://schemas.android.com/apk/res/android"
         android:layout_width="fill_parent" android:layout_height="fill_parent">
-    <ScrollView
-            android:layout_width="fill_parent"
-            android:layout_height="wrap_content"
-            android:id="@+id/scrollView">
-        <RelativeLayout
+        <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:text="@string/Circle"
+                android:id="@+id/Circle" />
+
+        <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:text="@string/StartTime"
+                android:layout_below="@+id/Circle"
+                android:id="@+id/ourTimer" />
+        <Button
+                style="?android:attr/buttonStyleSmall"
+                android:layout_width="wrap_content"
+                android:layout_height="40dp"
+                android:text="Start/Timeout"
+                android:id="@+id/startTimer_Btn" android:layout_above="@+id/OnVote"
+                android:layout_toEndOf="@+id/ourTimer"/>
+
+        <Button
+                style="?android:attr/buttonStyleSmall"
+                android:layout_width="wrap_content"
+                android:layout_height="40dp"
+                android:text="Stop"
+                android:id="@+id/stopTimer_Btn" android:layout_above="@+id/OnVote" android:layout_toEndOf="@+id/startTimer_Btn"/>
+        <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:layout_below="@+id/ourTimer"
+                android:id="@+id/OnVote" />
+        <ScrollView
                 android:layout_width="fill_parent"
-                android:layout_height="wrap_content">
-            <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:textAppearance="?android:attr/textAppearanceLarge"
-                    android:text="@string/morning"
-                    android:id="@+id/votingForLabel" android:layout_centerHorizontal="true"/>
-            <GridLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="fill_parent"
-                    android:id="@+id/gridView2" android:layout_below="@+id/votingForLabel"
-                    android:layout_alignParentStart="true">
-                //numbers
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/OnVote"
+                android:id="@+id/scrollView">
+            <RelativeLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content">
                 <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:textAppearance="?android:attr/textAppearanceLarge"
-                        android:text="@string/number" android:gravity="center"
-                        android:id="@+id/number" android:layout_row="0" android:layout_column="0"/>
-                <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:textAppearance="?android:attr/textAppearanceLarge"
-                        android:text="@string/nickname"
-                        android:gravity="center_horizontal"
-                        android:layout_marginLeft="10dp"
-                        android:id="@+id/nickMorn" android:layout_row="0" android:layout_column="1"/>
-                <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:textAppearance="?android:attr/textAppearanceLarge"
-                        android:gravity="center_horizontal"
-                        android:text="@string/Role"
-                        android:layout_marginLeft="10dp"
-                        android:id="@+id/roleMorn" android:layout_row="0" android:layout_column="2"/>
-                <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:textAppearance="?android:attr/textAppearanceLarge"
-                        android:gravity="center_horizontal"
-                        android:text="@string/Status"
-                        android:layout_marginLeft="10dp"
-                        android:id="@+id/status" android:layout_row="0" android:layout_column="3"/>
-                <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:textAppearance="?android:attr/textAppearanceLarge"
-                        android:gravity="center_horizontal"
-                        android:text="@string/Faults"
-                        android:layout_marginLeft="10dp"
-                        android:id="@+id/faults" android:layout_row="0" android:layout_column="4"/>
-                <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:textAppearance="?android:attr/textAppearanceLarge"
-                        android:gravity="center"
-                        android:layout_columnSpan="5"
-                        android:id="@+id/number1" android:layout_row="1" android:layout_column="0"/>
-                <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:textAppearance="?android:attr/textAppearanceLarge"
-                        android:gravity="center"
-                        android:layout_columnSpan="5"
-                        android:id="@+id/number2" android:layout_row="3" android:layout_column="0"/>
-                <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:textAppearance="?android:attr/textAppearanceLarge"
-                        android:gravity="center"
-                        android:layout_columnSpan="5"
-                        android:id="@+id/number3" android:layout_row="5" android:layout_column="0"/>
-                <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:textAppearance="?android:attr/textAppearanceLarge"
-                        android:gravity="center"
-                        android:layout_columnSpan="5"
-                        android:id="@+id/number4" android:layout_row="7" android:layout_column="0"/>
-                <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:textAppearance="?android:attr/textAppearanceLarge"
-                        android:gravity="center"
-                        android:layout_columnSpan="5"
-                        android:id="@+id/number5" android:layout_row="9" android:layout_column="0"/>
-                <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:textAppearance="?android:attr/textAppearanceLarge"
-                        android:gravity="center"
-                        android:id="@+id/number6" android:layout_row="11" android:layout_column="0"
-                        android:layout_columnSpan="5"/>
-                <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:textAppearance="?android:attr/textAppearanceLarge"
-                        android:gravity="center"
-                        android:layout_columnSpan="5"
-                        android:id="@+id/number7" android:layout_row="13" android:layout_column="0"/>
-                <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:textAppearance="?android:attr/textAppearanceLarge"
-                        android:gravity="center"
-                        android:layout_columnSpan="5"
-                        android:id="@+id/number8" android:layout_row="15" android:layout_column="0"/>
-                <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:textAppearance="?android:attr/textAppearanceLarge"
-                        android:gravity="center"
-                        android:layout_columnSpan="5"
-                        android:id="@+id/number9" android:layout_row="17" android:layout_column="0"/>
-                <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:textAppearance="?android:attr/textAppearanceLarge"
-                        android:gravity="center"
-                        android:layout_columnSpan="5"
-                        android:id="@+id/number10" android:layout_row="19" android:layout_column="0"/>
+                        android:text="@string/morning"
+                        android:id="@+id/votingForLabel" android:layout_centerHorizontal="true"/>
+                <GridLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="fill_parent"
+                        android:id="@+id/gridView2" android:layout_below="@+id/votingForLabel"
+                        android:layout_alignParentStart="true">
+                    //numbers
+                    <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textAppearance="?android:attr/textAppearanceLarge"
+                            android:text="@string/number" android:gravity="center"
+                            android:id="@+id/number" android:layout_row="0" android:layout_column="0"/>
+                    <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textAppearance="?android:attr/textAppearanceLarge"
+                            android:text="@string/nickname"
+                            android:gravity="center_horizontal"
+                            android:layout_marginLeft="10dp"
+                            android:id="@+id/nickMorn" android:layout_row="0" android:layout_column="1"/>
+                    <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textAppearance="?android:attr/textAppearanceLarge"
+                            android:gravity="center_horizontal"
+                            android:text="@string/Role"
+                            android:layout_marginLeft="10dp"
+                            android:id="@+id/roleMorn" android:layout_row="0" android:layout_column="2"/>
+                    <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textAppearance="?android:attr/textAppearanceLarge"
+                            android:gravity="center_horizontal"
+                            android:text="@string/Status"
+                            android:layout_marginLeft="10dp"
+                            android:id="@+id/status" android:layout_row="0" android:layout_column="3"/>
+                    <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textAppearance="?android:attr/textAppearanceLarge"
+                            android:gravity="center_horizontal"
+                            android:text="@string/Faults"
+                            android:layout_marginLeft="10dp"
+                            android:id="@+id/faults" android:layout_row="0" android:layout_column="4"/>
                     <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:textAppearance="?android:attr/textAppearanceLarge"
                             android:gravity="center"
                             android:layout_columnSpan="5"
-                            android:id="@+id/OnVote" android:layout_row="21" android:layout_column="0"/>
-                //numbers
-                //buttons
-                <Button
-                        style="?android:attr/buttonStyleSmall"
-                        android:layout_width="59dp"
-                        android:layout_height="35dp"
-                        android:text="@string/fault_btn_txt"
-                        android:height="8dp"
-                        android:id="@+id/fault_btn1" android:layout_row="2" android:layout_column="1"
-                        android:width="10dp"
-                        />
+                            android:id="@+id/number1" android:layout_row="1" android:layout_column="0"/>
+                    <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textAppearance="?android:attr/textAppearanceLarge"
+                            android:gravity="center"
+                            android:layout_columnSpan="5"
+                            android:id="@+id/number2" android:layout_row="3" android:layout_column="0"/>
+                    <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textAppearance="?android:attr/textAppearanceLarge"
+                            android:gravity="center"
+                            android:layout_columnSpan="5"
+                            android:id="@+id/number3" android:layout_row="5" android:layout_column="0"/>
+                    <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textAppearance="?android:attr/textAppearanceLarge"
+                            android:gravity="center"
+                            android:layout_columnSpan="5"
+                            android:id="@+id/number4" android:layout_row="7" android:layout_column="0"/>
+                    <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textAppearance="?android:attr/textAppearanceLarge"
+                            android:gravity="center"
+                            android:layout_columnSpan="5"
+                            android:id="@+id/number5" android:layout_row="9" android:layout_column="0"/>
+                    <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textAppearance="?android:attr/textAppearanceLarge"
+                            android:gravity="center"
+                            android:id="@+id/number6" android:layout_row="11" android:layout_column="0"
+                            android:layout_columnSpan="5"/>
+                    <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textAppearance="?android:attr/textAppearanceLarge"
+                            android:gravity="center"
+                            android:layout_columnSpan="5"
+                            android:id="@+id/number7" android:layout_row="13" android:layout_column="0"/>
+                    <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textAppearance="?android:attr/textAppearanceLarge"
+                            android:gravity="center"
+                            android:layout_columnSpan="5"
+                            android:id="@+id/number8" android:layout_row="15" android:layout_column="0"/>
+                    <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textAppearance="?android:attr/textAppearanceLarge"
+                            android:gravity="center"
+                            android:layout_columnSpan="5"
+                            android:id="@+id/number9" android:layout_row="17" android:layout_column="0"/>
+                    <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textAppearance="?android:attr/textAppearanceLarge"
+                            android:gravity="center"
+                            android:layout_columnSpan="5"
+                            android:id="@+id/number10" android:layout_row="19" android:layout_column="0"/>
 
-                <Button
-                        style="?android:attr/buttonStyleSmall"
-                        android:layout_width="59dp"
-                        android:layout_height="35dp"
-                        android:text="@string/fault_btn_txt"
-                        android:height="8dp"
-                        android:id="@+id/fault_btn2" android:layout_row="4" android:layout_column="1"
-                        android:width="10dp"/>
-                <Button
-                        style="?android:attr/buttonStyleSmall"
-                        android:layout_width="59dp"
-                        android:layout_height="35dp"
-                        android:text="@string/fault_btn_txt"
-                        android:height="8dp"
-                        android:id="@+id/fault_btn3" android:layout_row="6" android:layout_column="1"
-                        android:width="10dp"/>
-                <Button
-                        style="?android:attr/buttonStyleSmall"
-                        android:layout_width="59dp"
-                        android:layout_height="35dp"
-                        android:text="@string/fault_btn_txt"
-                        android:height="8dp"
-                        android:id="@+id/fault_btn4" android:layout_row="8" android:layout_column="1"
-                        android:width="10dp"/>
-                <Button
-                        style="?android:attr/buttonStyleSmall"
-                        android:layout_width="59dp"
-                        android:layout_height="35dp"
-                        android:text="@string/fault_btn_txt"
-                        android:height="8dp"
-                        android:id="@+id/fault_btn5" android:layout_row="10" android:layout_column="1"
-                        android:width="10dp"/>
-                <Button
-                        style="?android:attr/buttonStyleSmall"
-                        android:layout_width="59dp"
-                        android:layout_height="35dp"
-                        android:text="@string/fault_btn_txt"
-                        android:height="8dp"
-                        android:id="@+id/fault_btn6" android:layout_row="12" android:layout_column="1"
-                        android:width="10dp"/>
-                <Button
-                        style="?android:attr/buttonStyleSmall"
-                        android:layout_width="59dp"
-                        android:layout_height="35dp"
-                        android:text="@string/fault_btn_txt"
-                        android:height="8dp"
-                        android:id="@+id/fault_btn7" android:layout_row="14" android:layout_column="1"
-                        android:width="10dp"/>
-                <Button
-                        style="?android:attr/buttonStyleSmall"
-                        android:layout_width="59dp"
-                        android:layout_height="35dp"
-                        android:text="@string/fault_btn_txt"
-                        android:height="8dp"
-                        android:id="@+id/fault_btn8" android:layout_row="16" android:layout_column="1"
-                        android:width="10dp"/>
-                <Button
-                        style="?android:attr/buttonStyleSmall"
-                        android:layout_width="59dp"
-                        android:layout_height="35dp"
-                        android:text="@string/fault_btn_txt"
-                        android:height="8dp"
-                        android:id="@+id/fault_btn9" android:layout_row="18" android:layout_column="1"
-                        android:width="10dp"/>
-                <Button
-                        style="?android:attr/buttonStyleSmall"
-                        android:layout_width="59dp"
-                        android:layout_height="35dp"
-                        android:text="@string/fault_btn_txt"
-                        android:height="8dp"
-                        android:id="@+id/fault_btn10" android:layout_column="1" android:width="10dp"
-                        android:layout_row="20"/>
-                //vote
+                    //numbers
+                    //buttons
+                    <Button
+                            style="?android:attr/buttonStyleSmall"
+                            android:layout_width="59dp"
+                            android:layout_height="35dp"
+                            android:text="@string/fault_btn_txt"
+                            android:height="8dp"
+                            android:id="@+id/fault_btn1" android:layout_row="2" android:layout_column="1"
+                            android:width="10dp"
+                            />
 
-                <Button
-                        style="?android:attr/buttonStyleSmall"
-                        android:layout_width="131dp"
-                        android:layout_height="35dp"
-                        android:text="@string/vote_btn_txt"
-                        android:height="8dp"
-                        android:id="@+id/vote_btn1" android:layout_row="2" android:layout_column="2"
-                        android:width="10dp"
-                        android:layout_columnSpan="2"/>
+                    <Button
+                            style="?android:attr/buttonStyleSmall"
+                            android:layout_width="59dp"
+                            android:layout_height="35dp"
+                            android:text="@string/fault_btn_txt"
+                            android:height="8dp"
+                            android:id="@+id/fault_btn2" android:layout_row="4" android:layout_column="1"
+                            android:width="10dp"/>
+                    <Button
+                            style="?android:attr/buttonStyleSmall"
+                            android:layout_width="59dp"
+                            android:layout_height="35dp"
+                            android:text="@string/fault_btn_txt"
+                            android:height="8dp"
+                            android:id="@+id/fault_btn3" android:layout_row="6" android:layout_column="1"
+                            android:width="10dp"/>
+                    <Button
+                            style="?android:attr/buttonStyleSmall"
+                            android:layout_width="59dp"
+                            android:layout_height="35dp"
+                            android:text="@string/fault_btn_txt"
+                            android:height="8dp"
+                            android:id="@+id/fault_btn4" android:layout_row="8" android:layout_column="1"
+                            android:width="10dp"/>
+                    <Button
+                            style="?android:attr/buttonStyleSmall"
+                            android:layout_width="59dp"
+                            android:layout_height="35dp"
+                            android:text="@string/fault_btn_txt"
+                            android:height="8dp"
+                            android:id="@+id/fault_btn5" android:layout_row="10" android:layout_column="1"
+                            android:width="10dp"/>
+                    <Button
+                            style="?android:attr/buttonStyleSmall"
+                            android:layout_width="59dp"
+                            android:layout_height="35dp"
+                            android:text="@string/fault_btn_txt"
+                            android:height="8dp"
+                            android:id="@+id/fault_btn6" android:layout_row="12" android:layout_column="1"
+                            android:width="10dp"/>
+                    <Button
+                            style="?android:attr/buttonStyleSmall"
+                            android:layout_width="59dp"
+                            android:layout_height="35dp"
+                            android:text="@string/fault_btn_txt"
+                            android:height="8dp"
+                            android:id="@+id/fault_btn7" android:layout_row="14" android:layout_column="1"
+                            android:width="10dp"/>
+                    <Button
+                            style="?android:attr/buttonStyleSmall"
+                            android:layout_width="59dp"
+                            android:layout_height="35dp"
+                            android:text="@string/fault_btn_txt"
+                            android:height="8dp"
+                            android:id="@+id/fault_btn8" android:layout_row="16" android:layout_column="1"
+                            android:width="10dp"/>
+                    <Button
+                            style="?android:attr/buttonStyleSmall"
+                            android:layout_width="59dp"
+                            android:layout_height="35dp"
+                            android:text="@string/fault_btn_txt"
+                            android:height="8dp"
+                            android:id="@+id/fault_btn9" android:layout_row="18" android:layout_column="1"
+                            android:width="10dp"/>
+                    <Button
+                            style="?android:attr/buttonStyleSmall"
+                            android:layout_width="59dp"
+                            android:layout_height="35dp"
+                            android:text="@string/fault_btn_txt"
+                            android:height="8dp"
+                            android:id="@+id/fault_btn10" android:layout_column="1" android:width="10dp"
+                            android:layout_row="20"/>
+                    //vote
 
-                <Button
-                        style="?android:attr/buttonStyleSmall"
-                        android:layout_width="131dp"
-                        android:layout_height="35dp"
-                        android:text="@string/vote_btn_txt"
-                        android:height="8dp"
-                        android:id="@+id/vote_btn2" android:layout_row="4" android:layout_column="2"
-                        android:width="10dp"
-                        android:layout_columnSpan="2"/>
-                <Button
-                        style="?android:attr/buttonStyleSmall"
-                        android:layout_width="131dp"
-                        android:layout_height="35dp"
-                        android:text="@string/vote_btn_txt"
-                        android:height="8dp"
-                        android:id="@+id/vote_btn3" android:layout_row="6" android:layout_column="2"
-                        android:width="10dp"
-                        android:layout_columnSpan="2"/>
-                <Button
-                        style="?android:attr/buttonStyleSmall"
-                        android:layout_width="131dp"
-                        android:layout_height="35dp"
-                        android:text="@string/vote_btn_txt"
-                        android:height="8dp"
-                        android:id="@+id/vote_btn4" android:layout_row="8" android:layout_column="2"
-                        android:width="10dp"
-                        android:layout_columnSpan="2"/>
-                <Button
-                        style="?android:attr/buttonStyleSmall"
-                        android:layout_width="131dp"
-                        android:layout_height="35dp"
-                        android:text="@string/vote_btn_txt"
-                        android:height="8dp"
-                        android:id="@+id/vote_btn5" android:layout_column="2" android:width="10dp"
-                        android:layout_columnSpan="2" android:layout_row="10"/>
-                <Button
-                        style="?android:attr/buttonStyleSmall"
-                        android:layout_width="131dp"
-                        android:layout_height="35dp"
-                        android:text="@string/vote_btn_txt"
-                        android:height="8dp"
-                        android:id="@+id/vote_btn6" android:layout_row="12" android:layout_column="2"
-                        android:width="10dp"
-                        android:layout_columnSpan="2"/>
-                <Button
-                        style="?android:attr/buttonStyleSmall"
-                        android:layout_width="131dp"
-                        android:layout_height="35dp"
-                        android:text="@string/vote_btn_txt"
-                        android:height="8dp"
-                        android:id="@+id/vote_btn7" android:layout_row="14" android:layout_column="2"
-                        android:width="10dp"
-                        android:layout_columnSpan="2"/>
-                <Button
-                        style="?android:attr/buttonStyleSmall"
-                        android:layout_width="131dp"
-                        android:layout_height="35dp"
-                        android:text="@string/vote_btn_txt"
-                        android:height="8dp"
-                        android:id="@+id/vote_btn8" android:layout_row="16" android:layout_column="2"
-                        android:width="10dp"
-                        android:layout_columnSpan="2"/>
-                <Button
-                        style="?android:attr/buttonStyleSmall"
-                        android:layout_width="131dp"
-                        android:layout_height="35dp"
-                        android:text="@string/vote_btn_txt"
-                        android:height="8dp"
-                        android:id="@+id/vote_btn9" android:layout_row="18" android:layout_column="2"
-                        android:width="10dp"
-                        android:layout_columnSpan="2"/>
-                <Button
-                        style="?android:attr/buttonStyleSmall"
-                        android:layout_width="131dp"
-                        android:layout_height="35dp"
-                        android:text="@string/vote_btn_txt"
-                        android:height="8dp"
-                        android:id="@+id/vote_btn10" android:layout_row="20" android:layout_column="2"
-                        android:width="10dp"
-                        android:layout_columnSpan="2"/>
+                    <Button
+                            style="?android:attr/buttonStyleSmall"
+                            android:layout_width="131dp"
+                            android:layout_height="35dp"
+                            android:text="@string/vote_btn_txt"
+                            android:height="8dp"
+                            android:id="@+id/vote_btn1" android:layout_row="2" android:layout_column="2"
+                            android:width="10dp"
+                            android:layout_columnSpan="2"/>
 
-                //buttons
-            </GridLayout>
-        </RelativeLayout>
-    </ScrollView>
+                    <Button
+                            style="?android:attr/buttonStyleSmall"
+                            android:layout_width="131dp"
+                            android:layout_height="35dp"
+                            android:text="@string/vote_btn_txt"
+                            android:height="8dp"
+                            android:id="@+id/vote_btn2" android:layout_row="4" android:layout_column="2"
+                            android:width="10dp"
+                            android:layout_columnSpan="2"/>
+                    <Button
+                            style="?android:attr/buttonStyleSmall"
+                            android:layout_width="131dp"
+                            android:layout_height="35dp"
+                            android:text="@string/vote_btn_txt"
+                            android:height="8dp"
+                            android:id="@+id/vote_btn3" android:layout_row="6" android:layout_column="2"
+                            android:width="10dp"
+                            android:layout_columnSpan="2"/>
+                    <Button
+                            style="?android:attr/buttonStyleSmall"
+                            android:layout_width="131dp"
+                            android:layout_height="35dp"
+                            android:text="@string/vote_btn_txt"
+                            android:height="8dp"
+                            android:id="@+id/vote_btn4" android:layout_row="8" android:layout_column="2"
+                            android:width="10dp"
+                            android:layout_columnSpan="2"/>
+                    <Button
+                            style="?android:attr/buttonStyleSmall"
+                            android:layout_width="131dp"
+                            android:layout_height="35dp"
+                            android:text="@string/vote_btn_txt"
+                            android:height="8dp"
+                            android:id="@+id/vote_btn5" android:layout_column="2" android:width="10dp"
+                            android:layout_columnSpan="2" android:layout_row="10"/>
+                    <Button
+                            style="?android:attr/buttonStyleSmall"
+                            android:layout_width="131dp"
+                            android:layout_height="35dp"
+                            android:text="@string/vote_btn_txt"
+                            android:height="8dp"
+                            android:id="@+id/vote_btn6" android:layout_row="12" android:layout_column="2"
+                            android:width="10dp"
+                            android:layout_columnSpan="2"/>
+                    <Button
+                            style="?android:attr/buttonStyleSmall"
+                            android:layout_width="131dp"
+                            android:layout_height="35dp"
+                            android:text="@string/vote_btn_txt"
+                            android:height="8dp"
+                            android:id="@+id/vote_btn7" android:layout_row="14" android:layout_column="2"
+                            android:width="10dp"
+                            android:layout_columnSpan="2"/>
+                    <Button
+                            style="?android:attr/buttonStyleSmall"
+                            android:layout_width="131dp"
+                            android:layout_height="35dp"
+                            android:text="@string/vote_btn_txt"
+                            android:height="8dp"
+                            android:id="@+id/vote_btn8" android:layout_row="16" android:layout_column="2"
+                            android:width="10dp"
+                            android:layout_columnSpan="2"/>
+                    <Button
+                            style="?android:attr/buttonStyleSmall"
+                            android:layout_width="131dp"
+                            android:layout_height="35dp"
+                            android:text="@string/vote_btn_txt"
+                            android:height="8dp"
+                            android:id="@+id/vote_btn9" android:layout_row="18" android:layout_column="2"
+                            android:width="10dp"
+                            android:layout_columnSpan="2"/>
+                    <Button
+                            style="?android:attr/buttonStyleSmall"
+                            android:layout_width="131dp"
+                            android:layout_height="35dp"
+                            android:text="@string/vote_btn_txt"
+                            android:height="8dp"
+                            android:id="@+id/vote_btn10" android:layout_row="20" android:layout_column="2"
+                            android:width="10dp"
+                            android:layout_columnSpan="2"/>
+
+                    //buttons
+                </GridLayout>
+            </RelativeLayout>
+        </ScrollView>
+
+
 </RelativeLayout>
