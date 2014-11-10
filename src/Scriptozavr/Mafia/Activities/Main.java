@@ -65,9 +65,16 @@ public class Main extends Activity {
                     votingForElimination.putExtra("players",p);
 
                     ArrayList<Integer> votingList = new ArrayList<Integer>();
+                    votingList.add(0);
+                    votingList.add(1);
                     votingList.add(2);
+                    votingList.add(3);
+                    votingList.add(4);
                     votingList.add(5);
+                    votingList.add(6);
                     votingList.add(7);
+                    votingList.add(8);
+                    votingList.add(9);
 
                     votingForElimination.putIntegerArrayListExtra("votingList", votingList);
                     startActivity(votingForElimination);
