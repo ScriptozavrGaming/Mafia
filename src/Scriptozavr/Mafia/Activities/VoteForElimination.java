@@ -4,6 +4,7 @@ import Scriptozavr.Mafia.Helpers.ArrayHelper;
 import Scriptozavr.Mafia.Models.Player;
 import Scriptozavr.Mafia.R;
 import android.app.Activity;
+import android.content.Intent;
 import android.os.Bundle;
 import android.os.Parcelable;
 import android.view.View;
@@ -17,15 +18,15 @@ import java.util.Arrays;
 
 public class VoteForElimination extends Activity {
     //status of all players
-    private Parcelable[] players;
+    protected Parcelable[] players;
     //people who were pushed to vote
-    private ArrayList<Integer> votingList;
-    private TextView votedPlayerTextView;
-    private NumberPicker numberPicker;
-    private TextView[] votesTextView;
-    private int[] votesCount;
-    private int currentVoteIndex = 0;
-    private int alivePlayers;
+    protected ArrayList<Integer> votingList;
+    protected TextView votedPlayerTextView;
+    protected NumberPicker numberPicker;
+    protected TextView[] votesTextView;
+    protected int[] votesCount;
+    protected int currentVoteIndex = 0;
+    protected int alivePlayers;
     @Override
     public void onCreate(Bundle savedInstanceState){
         super.onCreate(savedInstanceState);
@@ -46,7 +47,6 @@ public class VoteForElimination extends Activity {
         final LinearLayout playersLabelsList = (LinearLayout) findViewById(R.id.votedPlayersList);
         for (int i = 0; i < votesTextView.length; i++) {
             votesTextView[i] = new TextView(this);
-            votesTextView[i].setId((int) Math.random());
             votesTextView[i].setText(String.format("%s%d:", getResources().getText(R.string.number), votingList.get(i) + 1));
             votesTextView[i].setTextSize(30);
             playersLabelsList.addView(votesTextView[i]);
@@ -62,7 +62,8 @@ public class VoteForElimination extends Activity {
                         votesCount[currentVoteIndex]);
                 currentVoteIndex++;
                 currentVotes += numberPicker.getValue();
-                if (currentVoteIndex < votesCount.length - 1 && currentVotes < alivePlayers) {
+                if (currentVoteIndex < votesCount.length - 1 && currentVotes < alivePlayers &&
+                        currentVotes <= alivePlayers / 2) {
                     updateNumberPicker(currentVotes);
                     updateVotingInfoLabel();
                 } else {
@@ -73,16 +74,30 @@ public class VoteForElimination extends Activity {
                     int countMaxElements = ArrayHelper.countElements(votesCount[maxVotesIndex], votesCount);
 
                     if (countMaxElements > 1) {
-                        ArrayList<Integer> duelants = new ArrayList<Integer>();
+                        ArrayList<Integer> duelists = new ArrayList<Integer>();
                         int maxVotes = votesCount[maxVotesIndex];
                         for (int i = 0; i < votesCount.length; i++) {
                             if (votesCount[i] == maxVotes) {
-                                duelants.add(votingList.get(i));
+                                duelists.add(votingList.get(i));
                             }
                         }
-                        votedPlayerTextView.setText("DUEL, players are: " + Arrays.toString(duelants.toArray()));
+                        votedPlayerTextView.setText("DUEL, players are: " + Arrays.toString(duelists.toArray()));
+                        //если <6 игроков, нельзя выгонять больше одного
+                        //
+                        Intent i = new Intent(getApplicationContext(), DuelistsSpeech.class);
+                        i.putIntegerArrayListExtra("duelists", duelists);
+                        i.putExtra("players", players);
+                        int currentCircle = getIntent().getIntExtra("currentCircle", 0);
+                        i.putExtra("currentCircle", currentCircle);
+                        startActivity(i);
                     } else {
                         votedPlayerTextView.setText("ELIMINATED: " + (votingList.get(maxVotesIndex) + 1));
+                        ((Player) players[votingList.get(maxVotesIndex)]).setStatus(getResources().getString(R.string.status_banished));
+                        Intent i = new Intent(getApplicationContext(), NightActions.class);
+                        i.putExtra("players", players);
+                        int currentCircle = getIntent().getIntExtra("currentCircle", 0);
+                        i.putExtra("currentCircle", currentCircle);
+                        startActivity(i);
                     }
                 }
             }
@@ -91,96 +106,19 @@ public class VoteForElimination extends Activity {
         updateNumberPicker(0);
     }
 
-    private void updateVotingInfoLabel() {
+    protected void updateVotingInfoLabel() {
         votedPlayerTextView.setText(String.format("%s %s", getResources().getString(R.string.voting_for_lbl), votingList.get(currentVoteIndex)));
     }
 
-    private void updateNumberPicker(int curVotes) {
+    protected void updateNumberPicker(int curVotes) {
         numberPicker.setMaxValue(alivePlayers - curVotes);
     }
 
-    private int getAlivePlayersCount(Parcelable[] arr) {
+    protected int getAlivePlayersCount(Parcelable[] arr) {
         int alivePlayers = 0;
         for (Parcelable p : arr) {
             if (((Player) p).getStatus().equals(getResources().getString(R.string.status_alive))) alivePlayers++;
         }
         return alivePlayers;
     }
-/*
-    private View.OnClickListener getOkButtonListener(final Button[] voteButtons) {
-        return new View.OnClickListener() {
-            TextView label = (TextView)findViewById(R.id.votingForLabel);
-            @Override
-            public void onClick(View v) {
-                countVotes();
-                //do this until the pre-last item in voting list
-                if (! (currentVoteIndex < votingList.size() - 1)) {
-                    lastVotingProcess();
-                }
-            }
-
-            private void lastVotingProcess() {
-                int sum = ArrayHelper.getSum(votesCount);
-                votesCount[votesCount.length - 1] = votedMap.size()- sum;
-                int maxVotesIndex = ArrayHelper.getMaxIndex(votesCount);
-
-                if (ArrayHelper.countElements(votesCount[maxVotesIndex], votesCount) > 1){
-                    label.setText("DUEL!");
-                    return;
-                }
-
-                int eliminatedPlayer = votingList.get(maxVotesIndex);
-
-                ((Player)players[eliminatedPlayer]).setStatus(getResources().getString(R.string.status_banished));
-                label.setText("ELIMINATED: " + (eliminatedPlayer + 1));
-            }
-
-            private void countVotes() {
-                votesCount[currentVoteIndex] = currentVotes;
-                currentVotes = 0;
-                currentVoteIndex++;
-                for (Map.Entry<Player, Boolean> entry : thisTurnVoted.entrySet()) {
-                    if (entry.getValue()) {
-                        votedMap.put(entry.getKey(), true);
-                        Button voteButton = voteButtons[entry.getKey().getPosition() - 1];
-                        voteButton.setClickable(false);
-                    }
-                }
-                Player votedPlayer = (Player) players[votingList.get(currentVoteIndex)];
-                label.setText(String.format("%s%d - %s",getResources().getString(R.string.voting_for_lbl),
-                        votedPlayer.getPosition(), votedPlayer.getNick()));
-            }
-        };
-    }
-
-    private View.OnClickListener getVoteButtonListener(final Player player, final Button btn) {
-        return new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                if (!votedMap.get(player)) {
-                    boolean current = thisTurnVoted.get(player);
-                    thisTurnVoted.put(player, !current);
-                    if (current) {
-                        btn.getBackground().setColorFilter(Color.GREEN, PorterDuff.Mode.SRC);
-                        currentVotes--;
-                    } else {
-                        btn.getBackground().setColorFilter(Color.RED, PorterDuff.Mode.SRC);
-                        currentVotes++;
-                    }
-                }
-
-            }
-        };
-    }
-
-    private Map<Player,Boolean> getAlivePlayers(Parcelable[] players) {
-        HashMap <Player,Boolean> res = new HashMap<Player, Boolean>();
-        for (Parcelable p: players){
-            if (((Player)p).getStatus().equals(getResources().getString(R.string.status_alive))){
-                res.put((Player)p, false);
-            }
-        }
-        return res;
-    }
-    */
 }

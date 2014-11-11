@@ -139,12 +139,12 @@ public class MorningActions extends Activity {
         }
     }
 
-    private void stopTimer(final Button[] buttons) {
-        ((Button) findViewById(R.id.stopTimer_Btn)).setOnClickListener(new View.OnClickListener() {
+    protected void stopTimer(final Button[] buttons) {
+        findViewById(R.id.stopTimer_Btn).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 timer.cancel();
-                timer = new ourCountDownTimer(60000,100,buttons);
+                timer = new ourCountDownTimer(60000, 100, buttons);
                 timerTextView.setText(getResources().getString(R.string.StartTime));
                 continuing = false;
                 timer.onFinish();
@@ -152,25 +152,24 @@ public class MorningActions extends Activity {
         });
     }
 
-    private void startTimer(final Button[] buttons) {
-        ((Button) findViewById(R.id.startTimer_Btn)).setOnClickListener(new View.OnClickListener() {
+    protected void startTimer(final Button[] buttons) {
+        findViewById(R.id.startTimer_Btn).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                if(!continuing) {
+                if (!continuing) {
                     timer.start();
-                }
-                else{
+                } else {
                     timer.cancel();
-                    String [] time = timerTextView.getText().toString().split(":");
-                    currentTime=Long.parseLong(time[1]);
-                    timer = new ourCountDownTimer(currentTime*1000,100,buttons);
+                    String[] time = timerTextView.getText().toString().split(":");
+                    currentTime = Long.parseLong(time[1]);
+                    timer = new ourCountDownTimer(currentTime * 1000, 100, buttons);
                 }
                 continuing = !continuing;
             }
         });
     }
 
-    private class ourCountDownTimer extends CountDownTimer{
+    protected class ourCountDownTimer extends CountDownTimer {
 
         private final long mMillisInFuture;
         private final long mCountdownInterval;
