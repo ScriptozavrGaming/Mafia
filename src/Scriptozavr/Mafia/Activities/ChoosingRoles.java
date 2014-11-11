@@ -53,7 +53,9 @@ public class ChoosingRoles extends Activity {
             @Override
             public void onClick(View v) {
                 Intent main = new Intent(getApplicationContext(), MorningActions.class);
+                int currentCirlce = 0;
                 main.putExtra("players", players);
+                main.putExtra("currentCircle", currentCirlce);
                 startActivity(main);
                 finish();
             }
