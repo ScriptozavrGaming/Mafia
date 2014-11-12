@@ -28,8 +28,10 @@ public class MorningActions extends Activity {
     private TextView Circle;
     private int currentCirlce = 0;
     private int currentPlayer = 0;
+    private int firstAlivePlayer=0;
+    private int lastAlivePlayer=0;
     private int previousPlayer = 0;
-    private int cnt=0;
+    //private int countOfPlayersWhichTalk=0;
     long currentTime = 0;
     private ourCountDownTimer timer;
     private boolean continuing = false;
@@ -42,6 +44,7 @@ public class MorningActions extends Activity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.morning);
 
+        currentCirlce = getIntent().getIntExtra("currentCircle",0);
         final TextView[] playerLabels = {
                 (TextView) findViewById(R.id.number1),
                 (TextView) findViewById(R.id.number2),
@@ -76,8 +79,7 @@ public class MorningActions extends Activity {
         ((TextView)findViewById(R.id.OnVote)).setText(getResources().getString(R.string.Nobody_on_vote));
         timerTextView = (TextView)findViewById(R.id.ourTimer);
 
-        //playerLabels[currentPlayer].getBackground().setColorFilter(Color.GREEN, PorterDuff.Mode.SRC);
-        playerLabelsForOnFinish[currentPlayer].setBackgroundColor(Color.GREEN);
+
         startTimer(faultsBtns);
         stopTimer(faultsBtns);
 
@@ -94,12 +96,22 @@ public class MorningActions extends Activity {
                 (Button) findViewById(R.id.vote_btn9),
                 (Button) findViewById(R.id.vote_btn10),
         };
+
         final Parcelable[] players = getIntent().getParcelableArrayExtra("players");
         for(int i =0 ;i<players.length;i++) {
             p[i]=players[i];
         }
-        ((Player)p[0]).setStatus(getResources().getString(R.string.status_killed));
-        playerLabels[0].setText(p[0].toString());
+        //
+        try {
+            firstAlivePlayer = FirstAlivePlayer();
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+        lastAlivePlayer = LastAlivePlayer();
+        currentPlayer = firstAlivePlayer;
+        previousPlayer = firstAlivePlayer;
+        playerLabelsForOnFinish[currentPlayer].setBackgroundColor(Color.GREEN);
+
         //final Player[] players = ReadFile(FinalFilename);
         for (int i = 0; i < players.length; i++) {
 
@@ -194,7 +206,8 @@ public class MorningActions extends Activity {
         @Override
         public void onFinish() {
             currentPlayer++;
-            if(currentPlayer<10) {
+            lastAlivePlayer = LastAlivePlayer();
+            if(currentPlayer<10 && currentPlayer!=lastAlivePlayer+1 ) {
                 if(((Player)p[currentPlayer]).getStatus().equals(getResources().getString(R.string.status_alive))) {
                     playerLabelsForOnFinish[currentPlayer].setBackgroundColor(Color.GREEN);
                     playerLabelsForOnFinish[previousPlayer].setBackgroundColor(Color.TRANSPARENT);
@@ -209,11 +222,23 @@ public class MorningActions extends Activity {
                     previousPlayer = currentPlayer;
                 }
             }
-            else{
+            else if(currentPlayer==10 && lastAlivePlayer!=9){
+                previousPlayer=currentPlayer-1;
+                currentPlayer = 0;
+                while(!((Player)p[currentPlayer]).getStatus().equals(getResources().getString(R.string.status_alive)) && currentPlayer<lastAlivePlayer) {
+                    currentPlayer++;
+                }
+                playerLabelsForOnFinish[currentPlayer].setBackgroundColor(Color.GREEN);
+                playerLabelsForOnFinish[previousPlayer].setBackgroundColor(Color.TRANSPARENT);
+                previousPlayer=currentPlayer;
+
+            }
+            else if(currentPlayer==lastAlivePlayer+1){
                 if(playersOnVote.size()>1) {
                     Intent VotingForElimination = new Intent(getApplicationContext(), VoteForElimination.class);
                     VotingForElimination.putIntegerArrayListExtra("votingList", playersOnVote);
                     VotingForElimination.putExtra("players", p);
+                    VotingForElimination.putExtra("currentCircle",currentCirlce);
                     startActivity(VotingForElimination);
                 }
                 else if(playersOnVote.size()==1){
@@ -224,12 +249,39 @@ public class MorningActions extends Activity {
                 }
                 Intent NightActions = new Intent(getApplicationContext(), Scriptozavr.Mafia.Activities.NightActions.class);
                 NightActions.putExtra("players",p);
-
+                NightActions.putExtra("currentCircle",currentCirlce);
                 startActivity(NightActions);
             }
         }
     }
+    private int FirstAlivePlayer() throws Exception {
+        int currPlayer = currentCirlce;
+        for(int i=currPlayer;i<p.length;i++){
+            if(((Player)p[i]).getStatus().equals(getResources().getString(R.string.status_alive))){
+                return i;
+            }
+        }
+        for(int i=0;i<currPlayer;i++){
+            if(((Player)p[i]).getStatus().equals(getResources().getString(R.string.status_alive))){
+                return i;
+            }
+        }
+        throw new Exception("No Players Alive");
+    }
 
-
+    private int LastAlivePlayer(){
+        int currPlayer = currentCirlce;
+        for(int i=currPlayer;i<p.length;i++){
+            if(((Player)p[i]).getStatus().equals(getResources().getString(R.string.status_alive))){
+                currPlayer = i;
+            }
+        }
+        for(int i=0;i<currentCirlce;i++){
+            if(((Player)p[i]).getStatus().equals(getResources().getString(R.string.status_alive))){
+                currPlayer = i;
+            }
+        }
+        return currPlayer;
+    }
 
 }
