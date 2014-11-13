@@ -15,6 +15,7 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.Chronometer;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import java.util.*;
 import java.util.concurrent.TimeUnit;
@@ -101,6 +102,8 @@ public class MorningActions extends Activity {
         for(int i =0 ;i<players.length;i++) {
             p[i]=players[i];
         }
+
+        fullCheckForWin();
         //
         try {
             firstAlivePlayer = FirstAlivePlayer();
@@ -138,6 +141,20 @@ public class MorningActions extends Activity {
                         faultsBtns[buttonInd].setClickable(false);
                         voteBtns[buttonInd].setClickable(false);
                         p.setStatus(getResources().getString(R.string.status_banished));
+                        int checkForWin = CheckForWin();
+                        if(checkForWin!=0){
+                            if(checkForWin==-1) {
+                                Toast toast = Toast.makeText(getApplicationContext(),
+                                        "Mafia win", Toast.LENGTH_SHORT);
+                                toast.show();
+                            }
+                            else{
+                                Toast toast = Toast.makeText(getApplicationContext(),
+                                        "Peasants win", Toast.LENGTH_SHORT);
+                                toast.show();
+                            }
+                            finish();
+                        }
                         //playerLabels[p.getPosition()-1].setBackgroundColor(Color.RED);
                     }
                     playerLabels[buttonInd].setText(p.toString());
@@ -148,6 +165,23 @@ public class MorningActions extends Activity {
                 faultsBtns[i].setClickable(false);
                 voteBtns[i].setClickable(false);
             }
+        }
+    }
+
+    private void fullCheckForWin() {
+        int checkForWin = CheckForWin();
+        if(checkForWin!=0){
+            if(checkForWin==-1) {
+                Toast toast = Toast.makeText(getApplicationContext(),
+                        "Mafia win", Toast.LENGTH_SHORT);
+                toast.show();
+            }
+            else{
+                Toast toast = Toast.makeText(getApplicationContext(),
+                        "Peasants win", Toast.LENGTH_SHORT);
+                toast.show();
+            }
+                finish();
         }
     }
 
@@ -244,13 +278,16 @@ public class MorningActions extends Activity {
                 else if(playersOnVote.size()==1){
                     ((Player)p[playersOnVote.get(0)-1]).setStatus(getResources().getString(R.string.status_banished));
                     playerLabelsForOnFinish[playersOnVote.get(0)-1].setText(p[playersOnVote.get(0)-1].toString());
+                    fullCheckForWin();
                     //playerLabelsForOnFinish[playersOnVote.get(0)-1].setBackgroundColor(Color.RED);
                     mButtons[playersOnVote.get(0)-1].setClickable(false);
                 }
-                Intent NightActions = new Intent(getApplicationContext(), Scriptozavr.Mafia.Activities.NightActions.class);
-                NightActions.putExtra("players",p);
-                NightActions.putExtra("currentCircle",currentCirlce);
-                startActivity(NightActions);
+                else {
+                    Intent NightActions = new Intent(getApplicationContext(), Scriptozavr.Mafia.Activities.NightActions.class);
+                    NightActions.putExtra("players", p);
+                    NightActions.putExtra("currentCircle", currentCirlce);
+                    startActivity(NightActions);
+                }
             }
         }
     }
@@ -282,6 +319,29 @@ public class MorningActions extends Activity {
             }
         }
         return currPlayer;
+    }
+
+    private int CheckForWin(){
+        int mafiaCount=0,peasantsCount=0;
+        for(int i=0;i<p.length;i++){
+            if((((Player)p[i]).getRole().equals(getResources().getString(R.string.mafia)) ||
+                    ((Player)p[i]).getRole().equals(getResources().getString(R.string.don))) &&
+                            ((Player)p[i]).getStatus().equals(getResources().getString(R.string.status_alive))){
+                mafiaCount++;
+            }
+            else if((((Player)p[i]).getRole().equals(getResources().getString(R.string.peasant)) ||
+                    ((Player)p[i]).getRole().equals(getResources().getString(R.string.comissar))) &&
+                            ((Player)p[i]).getStatus().equals(getResources().getString(R.string.status_alive))){
+                peasantsCount++;
+            }
+        }
+        if(mafiaCount==peasantsCount){
+            return -1;
+        }
+        if(mafiaCount==0){
+            return 1;
+        }
+        return 0;
     }
 
 }
