@@ -44,7 +44,7 @@ public class VoteForElimination extends Activity {
         final LinearLayout playersLabelsList = (LinearLayout) findViewById(R.id.votedPlayersList);
         for (int i = 0; i < votesTextView.length; i++) {
             votesTextView[i] = new TextView(this);
-            votesTextView[i].setText(String.format("%s%d:", getResources().getText(R.string.number), votingList.get(i) + 1));
+            votesTextView[i].setText(String.format("%s%d:", getResources().getText(R.string.number), votingList.get(i) ));
             votesTextView[i].setTextSize(30);
             playersLabelsList.addView(votesTextView[i]);
         }
