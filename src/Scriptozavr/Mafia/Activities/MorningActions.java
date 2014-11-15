@@ -31,7 +31,7 @@ public class MorningActions extends Activity {
     protected ourCountDownTimer timer;
     protected boolean continuing = false;
     protected TextView[] playerLabelsForOnFinish = new TextView[10];
-    protected Parcelable[] p = new Parcelable[10];
+    private Parcelable[] players;
 
 
     @Override
@@ -92,10 +92,7 @@ public class MorningActions extends Activity {
                 (Button) findViewById(R.id.vote_btn10),
         };
 
-        final Parcelable[] players = getIntent().getParcelableArrayExtra("players");
-        for(int i =0 ;i<players.length;i++) {
-            p[i]=players[i];
-        }
+        players = getIntent().getParcelableArrayExtra("players");
 
         fullCheckForWin();
         //
@@ -198,13 +195,13 @@ public class MorningActions extends Activity {
         currentPlayer++;
         lastAlivePlayer = LastAlivePlayer();
         if(currentPlayer<10 && currentPlayer!=lastAlivePlayer+1 ) {
-            if(((Player)p[currentPlayer]).getStatus().equals(getResources().getString(R.string.status_alive))) {
+            if(((Player)players[currentPlayer]).getStatus().equals(getResources().getString(R.string.status_alive))) {
                 playerLabelsForOnFinish[currentPlayer].setBackgroundColor(Color.GREEN);
                 playerLabelsForOnFinish[previousPlayer].setBackgroundColor(Color.TRANSPARENT);
                 previousPlayer = currentPlayer;
             }
             else{
-                while(!((Player)p[currentPlayer]).getStatus().equals(getResources().getString(R.string.status_alive))) {
+                while(!((Player)players[currentPlayer]).getStatus().equals(getResources().getString(R.string.status_alive))) {
                     currentPlayer++;
                 }
                 playerLabelsForOnFinish[currentPlayer].setBackgroundColor(Color.GREEN);
@@ -225,21 +222,21 @@ public class MorningActions extends Activity {
             if(playersOnVote.size()>1) {
                 Intent VotingForElimination = new Intent(getApplicationContext(), VoteForElimination.class);
                 VotingForElimination.putIntegerArrayListExtra("votingList", playersOnVote);
-                VotingForElimination.putExtra("players", p);
+                VotingForElimination.putExtra("players", players);
                 VotingForElimination.putExtra("currentCircle",currentCirlce);
                 startActivity(VotingForElimination);
                 finish();
             }
             else if(playersOnVote.size()==1){
-                ((Player)p[playersOnVote.get(0)-1]).setStatus(getResources().getString(R.string.status_banished));
-                playerLabelsForOnFinish[playersOnVote.get(0)-1].setText(p[playersOnVote.get(0)-1].toString());
+                ((Player)players[playersOnVote.get(0)-1]).setStatus(getResources().getString(R.string.status_banished));
+                playerLabelsForOnFinish[playersOnVote.get(0)-1].setText(players[playersOnVote.get(0)-1].toString());
                 fullCheckForWin();
                 //playerLabelsForOnFinish[playersOnVote.get(0)-1].setBackgroundColor(Color.RED);
                 mButtons[playersOnVote.get(0)-1].setClickable(false);
             }
             else {
                 Intent NightActions = new Intent(getApplicationContext(), Scriptozavr.Mafia.Activities.NightActions.class);
-                NightActions.putExtra("players", p);
+                NightActions.putExtra("players", players);
                 NightActions.putExtra("currentCircle", currentCirlce);
                 startActivity(NightActions);
                 finish();
@@ -279,20 +276,20 @@ public class MorningActions extends Activity {
 
     private void firstAlivePlayerFromPosition(int pos,int lastAlivePlayer) {
         currentPlayer = pos;
-        while(!((Player)p[currentPlayer]).getStatus().equals(getResources().getString(R.string.status_alive)) && currentPlayer<lastAlivePlayer) {
+        while(!((Player)players[currentPlayer]).getStatus().equals(getResources().getString(R.string.status_alive)) && currentPlayer<lastAlivePlayer) {
             currentPlayer++;
         }
     }
 
     private int FirstAlivePlayer() throws Exception {
         int currPlayer = currentCirlce;
-        for(int i=currPlayer;i<p.length;i++){
-            if(((Player)p[i]).getStatus().equals(getResources().getString(R.string.status_alive))){
+        for(int i=currPlayer;i<players.length;i++){
+            if(((Player)players[i]).getStatus().equals(getResources().getString(R.string.status_alive))){
                 return i;
             }
         }
         for(int i=0;i<currPlayer;i++){
-            if(((Player)p[i]).getStatus().equals(getResources().getString(R.string.status_alive))){
+            if(((Player)players[i]).getStatus().equals(getResources().getString(R.string.status_alive))){
                 return i;
             }
         }
@@ -301,13 +298,13 @@ public class MorningActions extends Activity {
 
     private int LastAlivePlayer(){
         int currPlayer = currentCirlce;
-        for(int i=currPlayer;i<p.length;i++){
-            if(((Player)p[i]).getStatus().equals(getResources().getString(R.string.status_alive))){
+        for(int i=currPlayer;i<players.length;i++){
+            if(((Player)players[i]).getStatus().equals(getResources().getString(R.string.status_alive))){
                 currPlayer = i;
             }
         }
         for(int i=0;i<currentCirlce;i++){
-            if(((Player)p[i]).getStatus().equals(getResources().getString(R.string.status_alive))){
+            if(((Player)players[i]).getStatus().equals(getResources().getString(R.string.status_alive))){
                 currPlayer = i;
             }
         }
@@ -316,15 +313,15 @@ public class MorningActions extends Activity {
 
     private int CheckForWin(){
         int mafiaCount=0,peasantsCount=0;
-        for(int i=0;i<p.length;i++){
-            if((((Player)p[i]).getRole().equals(getResources().getString(R.string.mafia)) ||
-                    ((Player)p[i]).getRole().equals(getResources().getString(R.string.don))) &&
-                            ((Player)p[i]).getStatus().equals(getResources().getString(R.string.status_alive))){
+        for(int i=0;i<players.length;i++){
+            if((((Player)players[i]).getRole().equals(getResources().getString(R.string.mafia)) ||
+                    ((Player)players[i]).getRole().equals(getResources().getString(R.string.don))) &&
+                            ((Player)players[i]).getStatus().equals(getResources().getString(R.string.status_alive))){
                 mafiaCount++;
             }
-            else if((((Player)p[i]).getRole().equals(getResources().getString(R.string.peasant)) ||
-                    ((Player)p[i]).getRole().equals(getResources().getString(R.string.comissar))) &&
-                            ((Player)p[i]).getStatus().equals(getResources().getString(R.string.status_alive))){
+            else if((((Player)players[i]).getRole().equals(getResources().getString(R.string.peasant)) ||
+                    ((Player)players[i]).getRole().equals(getResources().getString(R.string.comissar))) &&
+                            ((Player)players[i]).getStatus().equals(getResources().getString(R.string.status_alive))){
                 peasantsCount++;
             }
         }

@@ -16,6 +16,7 @@ import java.util.ArrayList;
 public class DuelistsSpeech extends MorningActions {
     private ArrayList<Integer> duelists;
     private int index = 0;
+    private Parcelable[] players;
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
@@ -79,14 +80,11 @@ public class DuelistsSpeech extends MorningActions {
         ((TextView)findViewById(R.id.OnVote)).setText(ArrayHelper.arrayToString(getResources().getString(R.string.duel),duelists));
         startTimer(faultsBtns,timer);
         stopTimer(faultsBtns,timer);
-        final Parcelable[] players = getIntent().getParcelableArrayExtra("players");
-        for(int i =0 ;i<players.length;i++) {
-            p[i]=players[i];
-        }
+        players = getIntent().getParcelableArrayExtra("players");
 
         currentPlayer = duelists.get(index);
         previousPlayer = currentPlayer;
-
+        playerLabelsForOnFinish[currentPlayer].setBackgroundColor(Color.GREEN);
 
         for (int i = 0; i < players.length; i++) {
 
@@ -103,30 +101,45 @@ public class DuelistsSpeech extends MorningActions {
             }
         }
 
-        playerLabelsForOnFinish[currentPlayer].setBackgroundColor(Color.GREEN);
+
     }
-
-
 
     @Override
     protected void currentPlayersSpeechCalculate(Button[] mButtons) {
-        super.currentPlayersSpeechCalculate(mButtons);
+        //super.currentPlayersSpeechCalculate(mButtons);
         index++;
-        if(index==duelists.size()-1){
-            Intent VotingForElimination = new Intent(getApplicationContext(), VoteForElimination.class);
-            playersOnVote = duelists;
-            VotingForElimination.putIntegerArrayListExtra("votingList", playersOnVote);
-            VotingForElimination.putExtra("players", p);
-            VotingForElimination.putExtra("currentCircle",currentCirlce);
-            startActivity(VotingForElimination);
-            finish();
+        if(index>duelists.size()-1){
+            finishDuel();
         }
-        previousPlayer=currentPlayer;
+        else {
+            previousPlayer = currentPlayer;
+            if (((Player) players[duelists.get(index)]).getStatus().equals(getResources().getString(R.string.status_alive))) {
+                currentPlayer = duelists.get(index);
+                playerLabelsForOnFinish[currentPlayer].setBackgroundColor(Color.GREEN);
+                playerLabelsForOnFinish[previousPlayer].setBackgroundColor(Color.TRANSPARENT);
+            }else{
+                while(index<duelists.size() && !((Player) players[duelists.get(index)]).getStatus().equals(getResources().getString(R.string.status_alive))){
+                    index++;
+                }
+                if(index<duelists.size()){
+                    //previousPlayer = currentPlayer;
+                    currentPlayer = duelists.get(index);
+                }
+                else{
+                    finishDuel();
+                }
+            }
+        }
+    }
 
-        currentPlayer=duelists.get(index);
-
-        playerLabelsForOnFinish[currentPlayer].setBackgroundColor(Color.GREEN);
-        playerLabelsForOnFinish[previousPlayer].setBackgroundColor(Color.TRANSPARENT);
+    private void finishDuel() {
+        Intent VotingForElimination = new Intent(getApplicationContext(), VoteForElimination.class);
+        playersOnVote = duelists;
+        VotingForElimination.putIntegerArrayListExtra("votingList", playersOnVote);
+        VotingForElimination.putExtra("players", players);
+        VotingForElimination.putExtra("currentCircle",currentCirlce);
+        startActivity(VotingForElimination);
+        finish();
     }
 
     @Override
