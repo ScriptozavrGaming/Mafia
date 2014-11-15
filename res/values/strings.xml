@@ -38,6 +38,8 @@
     <string name="Nobody_on_vote">Никто не выставлен</string>
     <string name="Circle">Круг</string>
     <string name="StartTime">01:00</string>
+    <string name="StartTimeForDuel">00:30</string>
     <string name="ok">Дальше</string>
     <string name="nightInTheCity">Сегодня ночью умрет:</string>
+    <string name="duel">Перестрелка между:</string>
 </resources>
