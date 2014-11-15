@@ -42,17 +42,6 @@ public class NightActions extends Activity{
         };
         final Parcelable[] players = getIntent().getParcelableArrayExtra("players");
 
-        for(int i=0; i<players.length; i++) {
-            if(!((Player)players[i]).getStatus().equals(getResources().getString(R.string.status_alive))){
-                killButtons[i].setClickable(false);
-                killButtons[i].setBackgroundColor(Color.GRAY);
-            }
-            else{
-                killButtons[i].setBackgroundColor(Color.GREEN);
-            }
-            killButtonToPlayerMap.put(killButtons[i],(Player)players[i]);
-            pressedButtonToIntegerMap.put(killButtons[i],i);
-        }
         currentCircle = getIntent().getIntExtra("currentCircle",0);
         for(int i=0; i<killButtons.length;i++){
             killButtons[i].setOnClickListener(new View.OnClickListener() {
@@ -95,6 +84,18 @@ public class NightActions extends Activity{
                 startActivity(MorningActions);
             }
         });
+
+        for(int i=0; i<players.length; i++) {
+            if(!((Player)players[i]).getStatus().equals(getResources().getString(R.string.status_alive))){
+                killButtons[i].setBackgroundColor(Color.GRAY);
+                killButtons[i].setClickable(false);
+            }
+            else{
+                killButtons[i].setBackgroundColor(Color.GREEN);
+            }
+            killButtonToPlayerMap.put(killButtons[i],(Player)players[i]);
+            pressedButtonToIntegerMap.put(killButtons[i],i);
+        }
 
     }
 }

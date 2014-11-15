@@ -103,7 +103,7 @@ public class VoteForElimination extends Activity {
 
     protected void voteSuccessful(int maxVotesIndex) {
         votedPlayerTextView.setText("ELIMINATED: " + (votingList.get(maxVotesIndex) + 1));
-        ((Player) players[votingList.get(maxVotesIndex + 1)]).setStatus(getResources().getString(R.string.status_banished));
+        ((Player) players[votingList.get(maxVotesIndex)]).setStatus(getResources().getString(R.string.status_banished));
         Intent i = new Intent(getApplicationContext(), NightActions.class);
         i.putExtra("players", players);
         int currentCircle = getIntent().getIntExtra("currentCircle", 0);

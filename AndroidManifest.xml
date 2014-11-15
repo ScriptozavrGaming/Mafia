@@ -17,13 +17,15 @@
                 android:name=".Activities.ChoosingRoles"
                 android:label="@string/app_name"/>
         <activity android:name=".Activities.SetNicknames"
-                  android:label="Mafia"/>
+                  android:label="@string/app_name"/>
         <activity android:name=".Activities.MorningActions"
-                  android:label="Mafia"/>
+                  android:label="@string/app_name"/>
         <activity android:name=".Activities.VoteForElimination"
-                  android:label="Mafia"/>
+                  android:label="@string/app_name"/>
         <activity android:name=".Activities.NightActions"
-                  android:label="Mafia"/>
+                  android:label="@string/app_name"/>
+        <activity android:name=".Activities.DuelistsSpeech"
+                  android:label="@string/app_name"/>
     </application>
 
 </manifest>
