@@ -1,5 +1,7 @@
 package Scriptozavr.Mafia.Helpers;
 
+import java.util.ArrayList;
+
 public class ArrayHelper {
 
     public static int getSum(int[] arr) {
@@ -29,5 +31,13 @@ public class ArrayHelper {
         }
         return index;
     }
-
+    public static String arrayToString(String message, ArrayList<Integer> arr) {
+        StringBuilder resString = new StringBuilder();
+        resString.append(message);
+        for (int i: arr){
+            resString.append(i + 1).append(", ");
+        }
+        resString.delete(resString.length() - 2, resString.length());
+        return resString.toString();
+    }
 }

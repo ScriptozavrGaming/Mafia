@@ -40,9 +40,6 @@ public class VoteForElimination extends Activity {
         votesTextView = new TextView[votingList.size()];
         votesCount = new int[votingList.size()];
         alivePlayers = getAlivePlayersCount(players);
-        for (int i : votingList) {
-            i--;
-        }
 
         final LinearLayout playersLabelsList = (LinearLayout) findViewById(R.id.votedPlayersList);
         for (int i = 0; i < votesTextView.length; i++) {
@@ -81,29 +78,37 @@ public class VoteForElimination extends Activity {
                                 duelists.add(votingList.get(i));
                             }
                         }
-                        votedPlayerTextView.setText("DUEL, players are: " + Arrays.toString(duelists.toArray()));
-                        //если <6 игроков, нельзя выгонять больше одного
-                        //
-                        Intent i = new Intent(getApplicationContext(), DuelistsSpeech.class);
-                        i.putIntegerArrayListExtra("duelists", duelists);
-                        i.putExtra("players", players);
-                        int currentCircle = getIntent().getIntExtra("currentCircle", 0);
-                        i.putExtra("currentCircle", currentCircle);
-                        startActivity(i);
+                        voteDuel(duelists);
                     } else {
-                        votedPlayerTextView.setText("ELIMINATED: " + (votingList.get(maxVotesIndex) + 1));
-                        ((Player) players[votingList.get(maxVotesIndex)]).setStatus(getResources().getString(R.string.status_banished));
-                        Intent i = new Intent(getApplicationContext(), NightActions.class);
-                        i.putExtra("players", players);
-                        int currentCircle = getIntent().getIntExtra("currentCircle", 0);
-                        i.putExtra("currentCircle", currentCircle);
-                        startActivity(i);
+                        voteSuccessful(maxVotesIndex);
                     }
                 }
             }
         });
         updateVotingInfoLabel();
         updateNumberPicker(0);
+    }
+
+    protected void voteDuel(ArrayList<Integer> duelists) {
+        votedPlayerTextView.setText("DUEL, players are: " + Arrays.toString(duelists.toArray()));
+        //если <6 игроков, нельзя выгонять больше одного
+        //
+        Intent i = new Intent(getApplicationContext(), DuelistsSpeech.class);
+        i.putIntegerArrayListExtra("duelists", duelists);
+        i.putExtra("players", players);
+        int currentCircle = getIntent().getIntExtra("currentCircle", 0);
+        i.putExtra("currentCircle", currentCircle);
+        startActivity(i);
+    }
+
+    protected void voteSuccessful(int maxVotesIndex) {
+        votedPlayerTextView.setText("ELIMINATED: " + (votingList.get(maxVotesIndex) + 1));
+        ((Player) players[votingList.get(maxVotesIndex + 1)]).setStatus(getResources().getString(R.string.status_banished));
+        Intent i = new Intent(getApplicationContext(), NightActions.class);
+        i.putExtra("players", players);
+        int currentCircle = getIntent().getIntExtra("currentCircle", 0);
+        i.putExtra("currentCircle", currentCircle);
+        startActivity(i);
     }
 
     protected void updateVotingInfoLabel() {

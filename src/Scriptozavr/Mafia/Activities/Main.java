@@ -57,7 +57,6 @@ public class Main extends Activity {
                         p[i].setNick("Player " + (i + 1));
                         p[i].setPosition(i + 1);
                     }
-                    p[4].setStatus(getResources().getString(R.string.status_killed));
                     p[6].setRole(getResources().getString(R.string.comissar));
                     p[7].setRole(getResources().getString(R.string.don));
                     p[8].setRole(getResources().getString(R.string.mafia));
@@ -68,13 +67,13 @@ public class Main extends Activity {
                     votingList.add(0);
                     votingList.add(1);
                     votingList.add(2);
-                    votingList.add(3);
-                    votingList.add(4);
-                    votingList.add(5);
-                    votingList.add(6);
-                    votingList.add(7);
-                    votingList.add(8);
-                    votingList.add(9);
+//                    votingList.add(3);
+//                    votingList.add(4);
+//                    votingList.add(5);
+//                    votingList.add(6);
+//                    votingList.add(7);
+//                    votingList.add(8);
+//                    votingList.add(9);
 
                     votingForElimination.putIntegerArrayListExtra("votingList", votingList);
                     startActivity(votingForElimination);
