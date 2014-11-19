@@ -20,12 +20,14 @@ public class MorningActions extends Activity {
     protected Map<Button,Player> faultButtonToPlayerMap = new HashMap<Button, Player>();
     protected Map<Button,Player> voteButtonToPlayerMap = new HashMap<Button, Player>();
     protected ArrayList<Integer> playersOnVote = new ArrayList<Integer>();
+    protected ArrayList<Integer> playersForLastMinute = new ArrayList<Integer>();
     protected TextView timerTextView;
     protected TextView Circle;
     protected int currentCirlce = 0;
     protected int currentPlayer = 0;
     private int firstAlivePlayer=0;
     private int lastAlivePlayer=0;
+    private int currPlayerToNull = 0;
     protected int previousPlayer = 0;
     private long currentTime = 0;
     protected ourCountDownTimer timer;
@@ -98,6 +100,11 @@ public class MorningActions extends Activity {
         //
         try {
             firstAlivePlayer = FirstAlivePlayer();
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+        try {
+            currPlayerToNull = FirstAliveFromTheEnd();
         } catch (Exception e) {
             e.printStackTrace();
         }
@@ -201,6 +208,9 @@ public class MorningActions extends Activity {
                 previousPlayer = currentPlayer;
             }
             else{
+                if(currentPlayer==currPlayerToNull+1){
+                    currentPlayer=0;
+                }
                 while(!((Player)players[currentPlayer]).getStatus().equals(getResources().getString(R.string.status_alive))) {
                     currentPlayer++;
                 }
@@ -228,11 +238,23 @@ public class MorningActions extends Activity {
                 finish();
             }
             else if(playersOnVote.size()==1){
-                ((Player)players[playersOnVote.get(0)-1]).setStatus(getResources().getString(R.string.status_banished));
-                playerLabelsForOnFinish[playersOnVote.get(0)-1].setText(players[playersOnVote.get(0)-1].toString());
+                ((Player)players[playersOnVote.get(0)]).setStatus(getResources().getString(R.string.status_banished));
+                playerLabelsForOnFinish[playersOnVote.get(0)].setText(players[playersOnVote.get(0)].toString());
                 fullCheckForWin();
                 //playerLabelsForOnFinish[playersOnVote.get(0)-1].setBackgroundColor(Color.RED);
-                mButtons[playersOnVote.get(0)-1].setClickable(false);
+                mButtons[playersOnVote.get(0)].setClickable(false);
+                playersForLastMinute.add(playersOnVote.get(0));
+                boolean ifKilled = false;
+                Intent LastMinute = new Intent(getApplicationContext(), Scriptozavr.Mafia.Activities.LastMinute.class);
+                LastMinute.putExtra("ifKilled",ifKilled);
+                LastMinute.putExtra("players",players);
+                LastMinute.putExtra("currentCircle",currentCirlce);
+                LastMinute.putIntegerArrayListExtra("lastMin",playersForLastMinute);
+                startActivity(LastMinute);
+                //NightActions.putExtra("players", players);
+                //NightActions.putExtra("currentCircle", currentCirlce);
+                //startActivity(NightActions);
+                finish();
             }
             else {
                 Intent NightActions = new Intent(getApplicationContext(), Scriptozavr.Mafia.Activities.NightActions.class);
@@ -309,6 +331,15 @@ public class MorningActions extends Activity {
             }
         }
         return currPlayer;
+    }
+    // Check, when we need currentPlayer = 0;
+    private int FirstAliveFromTheEnd() throws Exception {
+        for(int i = players.length-1; i>=0; i--){
+            if(((Player)players[i]).getStatus().equals(getResources().getString(R.string.status_alive))){
+                return i;
+            }
+        }
+        throw new Exception("Error in count of players");
     }
 
     private int CheckForWin(){

@@ -11,6 +11,7 @@ import android.os.Parcelable;
 import android.view.View;
 import android.widget.Button;
 
+import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.Map;
 
@@ -19,6 +20,7 @@ public class NightActions extends Activity{
     private int currentCircle;
     private Map<Button,Player> killButtonToPlayerMap = new HashMap<Button, Player>();
     private Map<Button,Integer> pressedButtonToIntegerMap = new HashMap<Button, Integer>();
+    private ArrayList<Integer> playersForLastMinute = new ArrayList<Integer>();
     private Button choosedKillButton;
     private int choosedButton = -1;
     private boolean keyPressed = false;
@@ -74,14 +76,24 @@ public class NightActions extends Activity{
         ((Button)findViewById(R.id.buttonOk)).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                currentCircle++;
                 if(choosedButton!=-1){
                     ((Player)players[choosedButton]).setStatus(getResources().getString(R.string.status_killed));
+                    boolean ifKilled = true;
+                    playersForLastMinute.add(choosedButton);
+                    Intent LastMinute = new Intent(getApplicationContext(), Scriptozavr.Mafia.Activities.LastMinute.class);
+                    LastMinute.putExtra("ifKilled",ifKilled);
+                    LastMinute.putExtra("players",players);
+                    LastMinute.putExtra("currentCircle",currentCircle);
+                    LastMinute.putIntegerArrayListExtra("lastMin",playersForLastMinute);
+                    startActivity(LastMinute);
                 }
-                currentCircle++;
-                Intent MorningActions = new Intent(getApplicationContext(), MorningActions.class);
-                MorningActions.putExtra("currentCircle",currentCircle);
-                MorningActions.putExtra("players",players);
-                startActivity(MorningActions);
+                else {
+                    Intent MorningActions = new Intent(getApplicationContext(), MorningActions.class);
+                    MorningActions.putExtra("currentCircle", currentCircle);
+                    MorningActions.putExtra("players", players);
+                    startActivity(MorningActions);
+                }
             }
         });
 
