@@ -14,7 +14,7 @@ import android.widget.TextView;
 
 import java.util.ArrayList;
 
-public class LastMinute extends MorningActions{
+public class LastMinute extends MorningActions {
     private ArrayList<Integer> playersForLastMinute;
     private int index = 0;
     private Parcelable[] players;
@@ -25,9 +25,9 @@ public class LastMinute extends MorningActions{
         setContentView(R.layout.morning);
 
         playersForLastMinute = getIntent().getIntegerArrayListExtra("lastMin");
-        currentCirlce = getIntent().getIntExtra("currentCircle",0);
+        currentCirlce = getIntent().getIntExtra("currentCircle", 0);
 
-        timerTextView = (TextView)findViewById(R.id.ourTimer);
+        timerTextView = (TextView) findViewById(R.id.ourTimer);
 
         final TextView[] playerLabels = {
                 (TextView) findViewById(R.id.number1),
@@ -42,7 +42,7 @@ public class LastMinute extends MorningActions{
                 (TextView) findViewById(R.id.number10)
         };
 
-        playerLabelsForOnFinish=playerLabels;
+        playerLabelsForOnFinish = playerLabels;
 
         final Button[] voteBtns = {
                 (Button) findViewById(R.id.vote_btn1),
@@ -70,16 +70,16 @@ public class LastMinute extends MorningActions{
                 (Button) findViewById(R.id.fault_btn10),
         };
 
-        for (Button b: voteBtns){
+        for (Button b : voteBtns) {
             b.setVisibility(View.INVISIBLE);
         }
-        timer = new ourCountDownTimer(60000,100,faultsBtns);
+        timer = new ourCountDownTimer(60000, 100, faultsBtns);
         Circle = (TextView) findViewById(R.id.Circle);
-        Circle.setText(getResources().getString(R.string.Circle) + ":" + currentCirlce );
-        timerTextView = (TextView)findViewById(R.id.ourTimer);
-        ((TextView)findViewById(R.id.OnVote)).setText(ArrayHelper.arrayToString(getResources().getString(R.string.LastMin), playersForLastMinute));
-        startTimer(faultsBtns,timer);
-        stopTimer(faultsBtns,timer);
+        Circle.setText(getResources().getString(R.string.Circle) + ":" + currentCirlce);
+        timerTextView = (TextView) findViewById(R.id.ourTimer);
+        ((TextView) findViewById(R.id.OnVote)).setText(ArrayHelper.arrayToString(getResources().getString(R.string.LastMin), playersForLastMinute));
+        startTimer(faultsBtns, timer);
+        stopTimer(faultsBtns, timer);
         players = getIntent().getParcelableArrayExtra("players");
 
         currentPlayer = playersForLastMinute.get(index);
@@ -94,13 +94,14 @@ public class LastMinute extends MorningActions{
 
             final int buttonInd = i;
             onFaultButtonClick(playerLabels[buttonInd], faultsBtns, voteBtns[buttonInd], players[buttonInd], faultsBtns[i], buttonInd);
-            if(!((Player)players[i]).getStatus().equals(getResources().getString(R.string.status_alive))){
+            if (!((Player) players[i]).getStatus().equals(getResources().getString(R.string.status_alive))) {
                 //playerLabels[i].setBackgroundColor(Color.RED);
                 faultsBtns[i].setClickable(false);
                 voteBtns[i].setClickable(false);
             }
         }
     }
+
     @Override
     protected void currentPlayersSpeechCalculate(Button[] mButtons) {
         //super.currentPlayersSpeechCalculate(mButtons);
@@ -129,13 +130,12 @@ public class LastMinute extends MorningActions{
 
     private void finishLastMin() {
         boolean ifKilled = getIntent().getBooleanExtra("ifKilled", false);
-        if(ifKilled){
+        if (ifKilled) {
             Intent MorningActions = new Intent(getApplicationContext(), MorningActions.class);
             MorningActions.putExtra("players", players);
             MorningActions.putExtra("currentCircle", currentCirlce);
             startActivity(MorningActions);
-        }
-        else {
+        } else {
             Intent NightActions = new Intent(getApplicationContext(), NightActions.class);
             NightActions.putExtra("players", players);
             NightActions.putExtra("currentCircle", currentCirlce);

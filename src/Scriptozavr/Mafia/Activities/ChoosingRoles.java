@@ -44,8 +44,7 @@ public class ChoosingRoles extends Activity {
         initPlayersSpinners(playerNickNames, spinners);
         initFirstAndLastSpinnerAdapters(spinners);
 
-        for (int i = 0; i < spinners.length - 1; i++)
-        {
+        for (int i = 0; i < spinners.length - 1; i++) {
             spinners[i].setOnItemSelectedListener(getListener(spinners, i + 1));
         }
 
@@ -116,10 +115,10 @@ public class ChoosingRoles extends Activity {
         String[] nicknames = ReadFile(nickNameFile);
 
         for (int i = 0; i < players.length; i++) {
-            players[i] = new Player(nicknames[i], i+1, null,
+            players[i] = new Player(nicknames[i], i + 1, null,
                     getResources().getString(R.string.status_alive), 0);
 
-            spinners[i] = (Spinner)findViewById(playerNickNames[i].getLabelFor());
+            spinners[i] = (Spinner) findViewById(playerNickNames[i].getLabelFor());
             spinners[i].setVisibility(View.INVISIBLE);
             playerNickNames[i].setText(nicknames[i]);
         }

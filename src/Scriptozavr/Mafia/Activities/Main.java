@@ -49,7 +49,7 @@ public class Main extends Activity {
                 public void onClick(View v) {
                     Intent votingForElimination = new Intent(getApplicationContext(), VoteForElimination.class);
                     Player[] p = new Player[10];
-                    for(int i = 0; i < p.length; i++){
+                    for (int i = 0; i < p.length; i++) {
                         p[i] = new Player();
                         p[i].setFaults(0);
                         p[i].setRole(getResources().getString(R.string.peasant));
@@ -61,7 +61,7 @@ public class Main extends Activity {
                     p[7].setRole(getResources().getString(R.string.don));
                     p[8].setRole(getResources().getString(R.string.mafia));
                     p[9].setRole(getResources().getString(R.string.mafia));
-                    votingForElimination.putExtra("players",p);
+                    votingForElimination.putExtra("players", p);
 
                     ArrayList<Integer> votingList = new ArrayList<Integer>();
                     votingList.add(0);
@@ -84,7 +84,7 @@ public class Main extends Activity {
                 public void onClick(View v) {
                     Intent morning = new Intent(getApplicationContext(), MorningActions.class);
                     Player[] p = new Player[10];
-                    for(int i = 0; i < p.length; i++){
+                    for (int i = 0; i < p.length; i++) {
                         p[i] = new Player();
                         p[i].setFaults(0);
                         p[i].setRole(getResources().getString(R.string.peasant));
@@ -96,7 +96,7 @@ public class Main extends Activity {
                     p[7].setRole(getResources().getString(R.string.don));
                     p[8].setRole(getResources().getString(R.string.mafia));
                     p[9].setRole(getResources().getString(R.string.mafia));
-                    morning.putExtra("players",p);
+                    morning.putExtra("players", p);
 
                     startActivity(morning);
 

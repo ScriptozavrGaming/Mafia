@@ -47,4 +47,6 @@
     <string name="raw">Download Default Songs</string>
     <string name="stop">Stop(Doesnt working, maybe not needed)</string>
     <string name="play">Play/Pause</string>
+    <string name="kill_duelants">Выгнать</string>
+    <string name="release_duelants">Освободить</string>
 </resources>

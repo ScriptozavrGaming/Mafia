@@ -50,17 +50,22 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="dfdf98e7-fc47-4826-a295-8e204ffcc520" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/raw/track1.mp3" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/Scriptozavr/Mafia/Helpers/Utilities.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Scriptozavr/Mafia/Activities/ChoosingRoles.java" afterPath="$PROJECT_DIR$/src/Scriptozavr/Mafia/Activities/ChoosingRoles.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Scriptozavr/Mafia/Activities/DuelVoting.java" afterPath="$PROJECT_DIR$/src/Scriptozavr/Mafia/Activities/DuelVoting.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Scriptozavr/Mafia/Activities/DuelistsSpeech.java" afterPath="$PROJECT_DIR$/src/Scriptozavr/Mafia/Activities/DuelistsSpeech.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Scriptozavr/Mafia/Activities/LastMinute.java" afterPath="$PROJECT_DIR$/src/Scriptozavr/Mafia/Activities/LastMinute.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Scriptozavr/Mafia/Activities/Main.java" afterPath="$PROJECT_DIR$/src/Scriptozavr/Mafia/Activities/Main.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Scriptozavr/Mafia/Activities/MorningActions.java" afterPath="$PROJECT_DIR$/src/Scriptozavr/Mafia/Activities/MorningActions.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Scriptozavr/Mafia/Activities/NightActions.java" afterPath="$PROJECT_DIR$/src/Scriptozavr/Mafia/Activities/NightActions.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/layout/fullnight.xml" afterPath="$PROJECT_DIR$/res/layout/fullnight.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Scriptozavr/Mafia/Activities/VoteForElimination.java" afterPath="$PROJECT_DIR$/src/Scriptozavr/Mafia/Activities/VoteForElimination.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/values/strings.xml" afterPath="$PROJECT_DIR$/res/values/strings.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/layout/voting.xml" afterPath="$PROJECT_DIR$/res/layout/voting.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="Mafia.iws" />
     <ignored path=".idea/workspace.xml" />
     <ignored path="$PROJECT_DIR$/out/" />
+    <ignored path=".idea/dataSources.local.xml" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -85,126 +90,156 @@
     <favorites_list name="Mafia" />
   </component>
   <component name="FileEditorManager">
-    <leaf>
-      <file leaf-file-name="MorningActions.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/Scriptozavr/Mafia/Activities/MorningActions.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-11.076923" vertical-offset="2967" max-vertical-offset="5085">
-              <caret line="262" column="24" selection-start-line="262" selection-start-column="16" selection-end-line="262" selection-end-column="24" />
-              <folding>
-                <element signature="method#onFaultButtonClick#0;class#MorningActions#0" expanded="false" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="LastMinute.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/Scriptozavr/Mafia/Activities/LastMinute.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-7.923077" vertical-offset="1909" max-vertical-offset="2280">
-              <caret line="141" column="20" selection-start-line="141" selection-start-column="12" selection-end-line="141" selection-end-column="20" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="strings.xml" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/res/values/strings.xml">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.34870318" vertical-offset="179" max-vertical-offset="840">
-              <caret line="20" column="46" selection-start-line="20" selection-start-column="46" selection-end-line="20" selection-end-column="46" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="NightActions.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/Scriptozavr/Mafia/Activities/NightActions.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-10.807693" vertical-offset="2509" max-vertical-offset="3795">
-              <caret line="214" column="38" selection-start-line="214" selection-start-column="38" selection-end-line="214" selection-end-column="38" />
-              <folding>
-                <element signature="e#1153#1162#0" expanded="true" />
-                <element signature="e#9314#10168#0" expanded="true" />
-                <element signature="e#10167#10168#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Runnable.java" pinned="false" current-in-tab="false">
-        <entry file="file:///Applications/adt-bundle-mac-x86_64-20140702/sdk/sources/android-19/java/lang/Runnable.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="360">
-              <caret line="31" column="22" selection-start-line="31" selection-start-column="22" selection-end-line="31" selection-end-column="22" />
-              <folding>
-                <element signature="e#0#1207#0" expanded="false" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="main.xml" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/res/layout/main.xml">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-0.4" vertical-offset="248" max-vertical-offset="615">
-              <caret line="18" column="78" selection-start-line="18" selection-start-column="78" selection-end-line="18" selection-end-column="78" />
-              <folding />
-            </state>
-          </provider>
-          <provider editor-type-id="android-designer">
-            <state />
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Main.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/Scriptozavr/Mafia/Activities/Main.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="1028" max-vertical-offset="1455">
-              <caret line="101" column="0" selection-start-line="101" selection-start-column="0" selection-end-line="101" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="SetNicknames.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/Scriptozavr/Mafia/Activities/SetNicknames.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-2.3076923" vertical-offset="0" max-vertical-offset="1650">
-              <caret line="4" column="29" selection-start-line="4" selection-start-column="23" selection-end-line="4" selection-end-column="29" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="ChoosingRoles.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/Scriptozavr/Mafia/Activities/ChoosingRoles.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-4.730769" vertical-offset="717" max-vertical-offset="2310">
-              <caret line="58" column="24" selection-start-line="58" selection-start-column="16" selection-end-line="58" selection-end-column="24" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="fullnight.xml" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/res/layout/fullnight.xml">
-          <provider editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-5.52" vertical-offset="207" max-vertical-offset="2820">
-              <caret line="23" column="0" selection-start-line="23" selection-start-column="0" selection-end-line="23" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-          <provider selected="true" editor-type-id="android-designer">
-            <state />
-          </provider>
-        </entry>
-      </file>
-    </leaf>
+    <splitter split-orientation="horizontal" split-proportion="0.43510816">
+      <split-first>
+        <leaf>
+          <file leaf-file-name="Main.java" pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/src/Scriptozavr/Mafia/Activities/Main.java">
+              <provider selected="true" editor-type-id="text-editor">
+                <state vertical-scroll-proportion="0.0" vertical-offset="3" max-vertical-offset="1836">
+                  <caret line="19" column="13" selection-start-line="19" selection-start-column="13" selection-end-line="19" selection-end-column="13" />
+                  <folding>
+                    <element signature="imports" expanded="true" />
+                    <element signature="e#3470#4596#0" expanded="true" />
+                    <element signature="e#4595#4596#0" expanded="true" />
+                  </folding>
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="VoteForElimination.java" pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/src/Scriptozavr/Mafia/Activities/VoteForElimination.java">
+              <provider selected="true" editor-type-id="text-editor">
+                <state vertical-scroll-proportion="0.0" vertical-offset="134" max-vertical-offset="1275">
+                  <caret line="104" column="68" selection-start-line="104" selection-start-column="68" selection-end-line="104" selection-end-column="68" />
+                  <folding>
+                    <element signature="imports" expanded="true" />
+                    <element signature="method#onCreate#0;class#VoteForElimination#0" expanded="false" />
+                    <element signature="e#4681#4731#0" expanded="true" />
+                    <element signature="e#5262#5263#0" expanded="true" />
+                    <element signature="e#5327#5328#0" expanded="true" />
+                  </folding>
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="SetNicknames.java" pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/src/Scriptozavr/Mafia/Activities/SetNicknames.java">
+              <provider selected="true" editor-type-id="text-editor">
+                <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1870">
+                  <caret line="4" column="29" selection-start-line="4" selection-start-column="23" selection-end-line="4" selection-end-column="29" />
+                  <folding />
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="NightActions.java" pinned="false" current-in-tab="true">
+            <entry file="file://$PROJECT_DIR$/src/Scriptozavr/Mafia/Activities/NightActions.java">
+              <provider selected="true" editor-type-id="text-editor">
+                <state vertical-scroll-proportion="1.5573951" vertical-offset="0" max-vertical-offset="4760">
+                  <caret line="83" column="49" selection-start-line="83" selection-start-column="49" selection-end-line="83" selection-end-column="49" />
+                  <folding>
+                    <element signature="imports" expanded="true" />
+                    <element signature="e#936#952#0" expanded="true" />
+                    <element signature="e#1028#1045#0" expanded="true" />
+                    <element signature="e#1116#1125#0" expanded="true" />
+                    <element signature="e#2714#3957#0" expanded="true" />
+                    <element signature="e#3636#3683#0" expanded="true" />
+                    <element signature="e#3956#3957#0" expanded="true" />
+                    <element signature="e#4025#5388#0" expanded="true" />
+                    <element signature="e#4256#4304#0" expanded="true" />
+                    <element signature="e#5387#5388#0" expanded="true" />
+                    <element signature="e#5501#5548#0" expanded="true" />
+                    <element signature="e#8597#8598#0" expanded="true" />
+                    <element signature="e#8643#8644#0" expanded="true" />
+                    <element signature="e#9126#9127#0" expanded="true" />
+                    <element signature="e#9184#9185#0" expanded="true" />
+                    <element signature="e#9276#10074#0" expanded="true" />
+                    <element signature="e#10073#10074#0" expanded="true" />
+                  </folding>
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="ChoosingRoles.java" pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/src/Scriptozavr/Mafia/Activities/ChoosingRoles.java">
+              <provider selected="true" editor-type-id="text-editor">
+                <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="2601">
+                  <caret line="57" column="24" selection-start-line="57" selection-start-column="16" selection-end-line="57" selection-end-column="24" />
+                  <folding>
+                    <element signature="imports" expanded="true" />
+                  </folding>
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="DuelVoting.java" pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/src/Scriptozavr/Mafia/Activities/DuelVoting.java">
+              <provider selected="true" editor-type-id="text-editor">
+                <state vertical-scroll-proportion="0.0" vertical-offset="595" max-vertical-offset="969">
+                  <caret line="56" column="44" selection-start-line="56" selection-start-column="44" selection-end-line="56" selection-end-column="44" />
+                  <folding>
+                    <element signature="e#1998#1999#0" expanded="false" />
+                    <element signature="e#2068#2069#0" expanded="true" />
+                    <element signature="e#2119#2120#0" expanded="true" />
+                  </folding>
+                </state>
+              </provider>
+            </entry>
+          </file>
+        </leaf>
+      </split-first>
+      <split-second>
+        <leaf>
+          <file leaf-file-name="DuelVoting.java" pinned="false" current-in-tab="true">
+            <entry file="file://$PROJECT_DIR$/src/Scriptozavr/Mafia/Activities/DuelVoting.java">
+              <provider selected="true" editor-type-id="text-editor">
+                <state vertical-scroll-proportion="0.27924946" vertical-offset="2" max-vertical-offset="935">
+                  <caret line="25" column="58" selection-start-line="25" selection-start-column="58" selection-end-line="25" selection-end-column="58" />
+                  <folding>
+                    <element signature="e#1187#1523#0" expanded="true" />
+                    <element signature="e#1386#1436#0" expanded="true" />
+                    <element signature="e#1522#1523#0" expanded="true" />
+                    <element signature="e#1568#1991#0" expanded="true" />
+                    <element signature="e#1990#1991#0" expanded="true" />
+                    <element signature="e#2068#2069#0" expanded="true" />
+                    <element signature="e#2119#2120#0" expanded="true" />
+                  </folding>
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="voting.xml" pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/res/layout/voting.xml">
+              <provider editor-type-id="android-designer">
+                <state />
+              </provider>
+              <provider selected="true" editor-type-id="text-editor">
+                <state vertical-scroll-proportion="-20.4" vertical-offset="0" max-vertical-offset="1071">
+                  <caret line="36" column="45" selection-start-line="36" selection-start-column="45" selection-end-line="36" selection-end-column="45" />
+                  <folding>
+                    <element signature="e#468#488#0" expanded="true" />
+                    <element signature="e#1118#1130#0" expanded="true" />
+                    <element signature="e#1712#1735#0" expanded="true" />
+                    <element signature="e#2082#2108#0" expanded="true" />
+                  </folding>
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="LastMinute.java" pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/src/Scriptozavr/Mafia/Activities/LastMinute.java">
+              <provider selected="true" editor-type-id="text-editor">
+                <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="2397">
+                  <caret line="45" column="0" selection-start-line="45" selection-start-column="0" selection-end-line="45" selection-end-column="0" />
+                  <folding />
+                </state>
+              </provider>
+            </entry>
+          </file>
+        </leaf>
+      </split-second>
+    </splitter>
   </component>
   <component name="FindManager">
     <FindUsagesManager>
@@ -233,30 +268,34 @@
         <option value="$PROJECT_DIR$/res/layout/morning.xml" />
         <option value="$PROJECT_DIR$/res/layout/voting_.xml" />
         <option value="$PROJECT_DIR$/src/Scriptozavr/Mafia/Activities/SetNicknames.java" />
-        <option value="$PROJECT_DIR$/res/layout/voting.xml" />
         <option value="$PROJECT_DIR$/res/layout/night.xml" />
         <option value="$PROJECT_DIR$/src/Scriptozavr/Mafia/Activities/ChoosingRoles.java" />
-        <option value="$PROJECT_DIR$/src/Scriptozavr/Mafia/Activities/VoteForElimination.java" />
         <option value="$PROJECT_DIR$/src/Scriptozavr/Mafia/Activities/DuelistsSpeech.java" />
         <option value="$PROJECT_DIR$/AndroidManifest.xml" />
         <option value="$PROJECT_DIR$/src/Scriptozavr/Mafia/Activities/MorningActions.java" />
         <option value="$PROJECT_DIR$/src/Scriptozavr/Mafia/Activities/LastMinute.java" />
         <option value="$PROJECT_DIR$/src/Scriptozavr/Mafia/Helpers/Utilities.java" />
         <option value="$PROJECT_DIR$/res/layout/fullnight.xml" />
-        <option value="$PROJECT_DIR$/src/Scriptozavr/Mafia/Activities/Main.java" />
-        <option value="$PROJECT_DIR$/src/Scriptozavr/Mafia/Activities/NightActions.java" />
         <option value="$PROJECT_DIR$/res/values/strings.xml" />
+        <option value="$PROJECT_DIR$/src/Scriptozavr/Mafia/Activities/Main.java" />
+        <option value="$PROJECT_DIR$/res/layout/voting.xml" />
+        <option value="$PROJECT_DIR$/src/Scriptozavr/Mafia/Activities/VoteForElimination.java" />
+        <option value="$PROJECT_DIR$/src/Scriptozavr/Mafia/Activities/NightActions.java" />
+        <option value="$PROJECT_DIR$/src/Scriptozavr/Mafia/Activities/DuelVoting.java" />
       </list>
     </option>
+  </component>
+  <component name="JsGulpfileManager">
+    <detection-done>true</detection-done>
   </component>
   <component name="MavenProjectNavigator">
     <treeState />
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="41" />
-    <option name="y" value="23" />
-    <option name="width" value="1400" />
-    <option name="height" value="808" />
+    <option name="x" value="-8" />
+    <option name="y" value="-8" />
+    <option name="width" value="1936" />
+    <option name="height" value="1056" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
     <OptionsSetting value="true" id="Add" />
@@ -328,7 +367,7 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="Mafia" />
+              <option name="myItemId" value="Scriptozavr" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -338,17 +377,13 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="Mafia" />
+              <option name="myItemId" value="Scriptozavr" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="src" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Models" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
           </PATH>
           <PATH>
             <PATH_ELEMENT>
@@ -356,25 +391,7 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="Mafia" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Helpers" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Mafia" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Mafia" />
+              <option name="myItemId" value="Scriptozavr" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
@@ -392,15 +409,11 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="Mafia" />
+              <option name="myItemId" value="Scriptozavr" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="res" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="values" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -410,25 +423,7 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="Mafia" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="res" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="raw" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Mafia" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Mafia" />
+              <option name="myItemId" value="Scriptozavr" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
@@ -437,20 +432,6 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="layout" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Mafia" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Mafia" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="res" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -515,11 +496,10 @@
     <property name="options.splitter.details.proportions" value="0.2" />
     <property name="options.searchVisible" value="true" />
     <property name="recentsLimit" value="5" />
-    <property name="SearchEverywhereHistoryKey" value="geny&#9;ACTION&#9;Genymotion.gdm&#10;optimize&#9;ACTION&#9;OptimizeImports&#10;numberpi&#9;PSI&#9;JAVA://android.widget.NumberPicker&#10;rena&#9;ACTION&#9;RenameElement&#10;onfinish&#9;PSI&#9;JAVA://Scriptozavr.Mafia.Activities.MorningActions.ourCountDownTimer#onFinish&#10;genym&#9;ACTION&#9;Genymotion.gdm&#10;eny&#9;ACTION&#9;Genymotion.gdm&#10;optimi&#9;ACTION&#9;OptimizeImports&#10;override&#9;ACTION&#9;OverrideMethods&#10;change si&#9;ACTION&#9;ChangeSignature&#10;extract&#9;ACTION&#9;IntroduceActionsGroup&#10;reformat&#9;ACTION&#9;ReformatCode&#10;refor&#9;ACTION&#9;ReformatCode&#10;choo&#9;FILE&#9;file://C:/Users/Dasd/Documents/Mafia/src/Scriptozavr/Mafia/Activities/ChoosingRoles.java&#10;genymo&#9;ACTION&#9;Genymotion.gdm&#10;find us&#9;ACTION&#9;FindUsages&#10;getter&#9;ACTION&#9;null&#10;constru&#9;ACTION&#9;null&#10;refo&#9;ACTION&#9;ReformatCode&#10;mo&#9;FILE&#9;file://C:/Users/Dasd/Documents/Mafia/res/layout/morning.xml&#10;setter&#9;ACTION&#9;GenerateGetterAndSetter&#10;player&#9;FILE&#9;file://C:/Users/Dasd/Documents/Mafia/src/Scriptozavr/Mafia/Models/Player.java&#10;cho&#9;FILE&#9;file://C:/Users/Dasd/Documents/Mafia/src/Scriptozavr/Mafia/Activities/ChoosingRoles.java&#10;settings&#9;ACTION&#9;ShowSettings&#10;show line&#9;ACTION&#9;EditorToggleShowLineNumbers&#10;plugins&#9;ACTION&#9;WelcomeScreen.Plugins&#10;move&#9;ACTION&#9;Move&#10;tools&#9;ACTION&#9;ExternalToolsGroup&#10;android&#9;ACTION&#9;Android.CreateResourceDirectory" />
+    <property name="SearchEverywhereHistoryKey" value="reforma&#9;ACTION&#9;ReformatCode&#10;geny&#9;ACTION&#9;Genymotion.gdm&#10;optimize&#9;ACTION&#9;OptimizeImports&#10;numberpi&#9;PSI&#9;JAVA://android.widget.NumberPicker&#10;rena&#9;ACTION&#9;RenameElement&#10;onfinish&#9;PSI&#9;JAVA://Scriptozavr.Mafia.Activities.MorningActions.ourCountDownTimer#onFinish&#10;genym&#9;ACTION&#9;Genymotion.gdm&#10;eny&#9;ACTION&#9;Genymotion.gdm&#10;optimi&#9;ACTION&#9;OptimizeImports&#10;override&#9;ACTION&#9;OverrideMethods&#10;change si&#9;ACTION&#9;ChangeSignature&#10;extract&#9;ACTION&#9;IntroduceActionsGroup&#10;reformat&#9;ACTION&#9;ReformatCode&#10;refor&#9;ACTION&#9;ReformatCode&#10;choo&#9;FILE&#9;file://C:/Users/Dasd/Documents/Mafia/src/Scriptozavr/Mafia/Activities/ChoosingRoles.java&#10;genymo&#9;ACTION&#9;Genymotion.gdm&#10;find us&#9;ACTION&#9;FindUsages&#10;getter&#9;ACTION&#9;null&#10;constru&#9;ACTION&#9;null&#10;refo&#9;ACTION&#9;ReformatCode&#10;mo&#9;FILE&#9;file://C:/Users/Dasd/Documents/Mafia/res/layout/morning.xml&#10;setter&#9;ACTION&#9;GenerateGetterAndSetter&#10;player&#9;FILE&#9;file://C:/Users/Dasd/Documents/Mafia/src/Scriptozavr/Mafia/Models/Player.java&#10;cho&#9;FILE&#9;file://C:/Users/Dasd/Documents/Mafia/src/Scriptozavr/Mafia/Activities/ChoosingRoles.java&#10;settings&#9;ACTION&#9;ShowSettings&#10;show line&#9;ACTION&#9;EditorToggleShowLineNumbers&#10;plugins&#9;ACTION&#9;WelcomeScreen.Plugins&#10;move&#9;ACTION&#9;Move&#10;tools&#9;ACTION&#9;ExternalToolsGroup&#10;android&#9;ACTION&#9;Android.CreateResourceDirectory" />
     <property name="restartRequiresConfirmation" value="true" />
     <property name="FullScreen" value="false" />
     <property name="ANDROID_EXTENDED_DEVICE_CHOOSER_SERIALS" value="192.168.56.101:5555" />
-    <property name="ANDROID_EXTENDED_DEVICE_CHOOSER_AVD" value="myAVD" />
     <property name="last_opened_file_path" value="$USER_HOME$/Downloads/AudioPlayer-master" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="extract.method.default.visibility" value="protected" />
@@ -528,6 +508,7 @@
     <property name="LayoutCode.rearrangeEntriesXML" value="false" />
     <property name="OverrideImplement.combined" value="true" />
     <property name="OverrideImplement.overriding.sorted" value="false" />
+    <property name="UI_DESIGNER_EDITOR_MODE.PaletteToolWindowManager.SHOW" value="true" />
   </component>
   <component name="RecentsManager">
     <key name="CreateClassDialog.RecentsKey">
@@ -542,116 +523,12 @@
     </key>
   </component>
   <component name="RunManager" selected="Android Application.Mafia">
-    <configuration default="true" type="#org.jetbrains.idea.devkit.run.PluginConfigurationType" factoryName="Plugin">
-      <module name="" />
-      <option name="VM_PARAMETERS" value="-Xmx512m -Xms256m -XX:MaxPermSize=250m -ea" />
-      <option name="PROGRAM_PARAMETERS" />
-      <method />
-    </configuration>
-    <configuration default="true" type="AndroidTestRunConfigurationType" factoryName="Android Tests">
-      <module name="" />
-      <option name="TESTING_TYPE" value="0" />
-      <option name="INSTRUMENTATION_RUNNER_CLASS" value="" />
-      <option name="METHOD_NAME" value="" />
-      <option name="CLASS_NAME" value="" />
-      <option name="PACKAGE_NAME" value="" />
-      <option name="TARGET_SELECTION_MODE" value="EMULATOR" />
-      <option name="USE_LAST_SELECTED_DEVICE" value="false" />
-      <option name="PREFERRED_AVD" value="" />
-      <option name="USE_COMMAND_LINE" value="true" />
-      <option name="COMMAND_LINE" value="" />
-      <option name="WIPE_USER_DATA" value="false" />
-      <option name="DISABLE_BOOT_ANIMATION" value="false" />
-      <option name="NETWORK_SPEED" value="full" />
-      <option name="NETWORK_LATENCY" value="none" />
-      <option name="CLEAR_LOGCAT" value="false" />
-      <option name="SHOW_LOGCAT_AUTOMATICALLY" value="true" />
-      <option name="FILTER_LOGCAT_AUTOMATICALLY" value="true" />
-      <method />
-    </configuration>
     <configuration default="true" type="Remote" factoryName="Remote">
       <option name="USE_SOCKET_TRANSPORT" value="true" />
       <option name="SERVER_MODE" value="false" />
       <option name="SHMEM_ADDRESS" value="javadebug" />
       <option name="HOST" value="localhost" />
       <option name="PORT" value="5005" />
-      <method />
-    </configuration>
-    <configuration default="true" type="JarApplication" factoryName="JAR Application">
-      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
-      <envs />
-      <method />
-    </configuration>
-    <configuration default="true" type="GradleRunConfiguration" factoryName="Gradle">
-      <ExternalSystemSettings>
-        <option name="executionName" />
-        <option name="externalProjectPath" />
-        <option name="externalSystemIdString" value="GRADLE" />
-        <option name="scriptParameters" />
-        <option name="taskDescriptions">
-          <list />
-        </option>
-        <option name="taskNames">
-          <list />
-        </option>
-        <option name="vmOptions" />
-      </ExternalSystemSettings>
-      <method />
-    </configuration>
-    <configuration default="true" type="TestNG" factoryName="TestNG">
-      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
-      <module name="" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
-      <option name="SUITE_NAME" />
-      <option name="PACKAGE_NAME" />
-      <option name="MAIN_CLASS_NAME" />
-      <option name="METHOD_NAME" />
-      <option name="GROUP_NAME" />
-      <option name="TEST_OBJECT" value="CLASS" />
-      <option name="VM_PARAMETERS" value="-ea" />
-      <option name="PARAMETERS" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
-      <option name="OUTPUT_DIRECTORY" />
-      <option name="ANNOTATION_TYPE" />
-      <option name="ENV_VARIABLES" />
-      <option name="PASS_PARENT_ENVS" value="true" />
-      <option name="TEST_SEARCH_SCOPE">
-        <value defaultName="moduleWithDependencies" />
-      </option>
-      <option name="USE_DEFAULT_REPORTERS" value="false" />
-      <option name="PROPERTIES_FILE" />
-      <envs />
-      <properties />
-      <listeners />
-      <method />
-    </configuration>
-    <configuration default="true" type="Applet" factoryName="Applet">
-      <module name="" />
-      <option name="MAIN_CLASS_NAME" />
-      <option name="HTML_FILE_NAME" />
-      <option name="HTML_USED" value="false" />
-      <option name="WIDTH" value="400" />
-      <option name="HEIGHT" value="300" />
-      <option name="POLICY_FILE" value="$APPLICATION_HOME_DIR$/bin/appletviewer.policy" />
-      <option name="VM_PARAMETERS" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
-      <method />
-    </configuration>
-    <configuration default="true" type="Application" factoryName="Application">
-      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
-      <option name="MAIN_CLASS_NAME" />
-      <option name="VM_PARAMETERS" />
-      <option name="PROGRAM_PARAMETERS" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
-      <option name="ENABLE_SWING_INSPECTOR" value="false" />
-      <option name="ENV_VARIABLES" />
-      <option name="PASS_PARENT_ENVS" value="true" />
-      <module name="" />
-      <envs />
       <method />
     </configuration>
     <configuration default="true" type="JUnit" factoryName="JUnit">
@@ -693,6 +570,194 @@
       <option name="CLEAR_LOGCAT" value="false" />
       <option name="SHOW_LOGCAT_AUTOMATICALLY" value="true" />
       <option name="FILTER_LOGCAT_AUTOMATICALLY" value="true" />
+      <method />
+    </configuration>
+    <configuration default="true" type="#org.jetbrains.idea.devkit.run.PluginConfigurationType" factoryName="Plugin">
+      <module name="" />
+      <option name="VM_PARAMETERS" value="-Xmx512m -Xms256m -XX:MaxPermSize=250m -ea" />
+      <option name="PROGRAM_PARAMETERS" />
+      <method />
+    </configuration>
+    <configuration default="true" type="GrailsRunConfigurationType" factoryName="Grails">
+      <module name="" />
+      <setting name="vmparams" value="" />
+      <setting name="cmdLine" value="run-app" />
+      <setting name="depsClasspath" value="false" />
+      <setting name="passParentEnv" value="true" />
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
+      <setting name="launchBrowser" value="false" />
+      <method />
+    </configuration>
+    <configuration default="true" type="JarApplication" factoryName="JAR Application">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
+      <envs />
+      <method />
+    </configuration>
+    <configuration default="true" type="TestNG" factoryName="TestNG">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
+      <module name="" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="SUITE_NAME" />
+      <option name="PACKAGE_NAME" />
+      <option name="MAIN_CLASS_NAME" />
+      <option name="METHOD_NAME" />
+      <option name="GROUP_NAME" />
+      <option name="TEST_OBJECT" value="CLASS" />
+      <option name="VM_PARAMETERS" value="-ea" />
+      <option name="PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="OUTPUT_DIRECTORY" />
+      <option name="ANNOTATION_TYPE" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="moduleWithDependencies" />
+      </option>
+      <option name="USE_DEFAULT_REPORTERS" value="false" />
+      <option name="PROPERTIES_FILE" />
+      <envs />
+      <properties />
+      <listeners />
+      <method />
+    </configuration>
+    <configuration default="true" type="Application" factoryName="Application">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
+      <option name="MAIN_CLASS_NAME" />
+      <option name="VM_PARAMETERS" />
+      <option name="PROGRAM_PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="ENABLE_SWING_INSPECTOR" value="false" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <module name="" />
+      <envs />
+      <method />
+    </configuration>
+    <configuration default="true" type="js.build_tools.gulp" factoryName="Gulp.js">
+      <method />
+    </configuration>
+    <configuration default="true" type="FlexUnitRunConfigurationType" factoryName="FlexUnit" appDescriptorForEmulator="Android" class_name="" emulatorAdlOptions="" method_name="" package_name="" scope="Class">
+      <option name="BCName" value="" />
+      <option name="launcherParameters">
+        <LauncherParameters>
+          <option name="browser" value="a7bb68e0-33c0-4d6f-a81a-aac1fdb870c8" />
+          <option name="launcherType" value="OSDefault" />
+          <option name="newPlayerInstance" value="false" />
+          <option name="playerPath" value="FlashPlayerDebugger.exe" />
+        </LauncherParameters>
+      </option>
+      <option name="moduleName" value="" />
+      <option name="trusted" value="true" />
+      <method />
+    </configuration>
+    <configuration default="true" type="AndroidTestRunConfigurationType" factoryName="Android Tests">
+      <module name="" />
+      <option name="TESTING_TYPE" value="0" />
+      <option name="INSTRUMENTATION_RUNNER_CLASS" value="" />
+      <option name="METHOD_NAME" value="" />
+      <option name="CLASS_NAME" value="" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="TARGET_SELECTION_MODE" value="EMULATOR" />
+      <option name="USE_LAST_SELECTED_DEVICE" value="false" />
+      <option name="PREFERRED_AVD" value="" />
+      <option name="USE_COMMAND_LINE" value="true" />
+      <option name="COMMAND_LINE" value="" />
+      <option name="WIPE_USER_DATA" value="false" />
+      <option name="DISABLE_BOOT_ANIMATION" value="false" />
+      <option name="NETWORK_SPEED" value="full" />
+      <option name="NETWORK_LATENCY" value="none" />
+      <option name="CLEAR_LOGCAT" value="false" />
+      <option name="SHOW_LOGCAT_AUTOMATICALLY" value="true" />
+      <option name="FILTER_LOGCAT_AUTOMATICALLY" value="true" />
+      <method />
+    </configuration>
+    <configuration default="true" type="FlashRunConfigurationType" factoryName="Flash App">
+      <option name="BCName" value="" />
+      <option name="IOSSimulatorSdkPath" value="" />
+      <option name="adlOptions" value="" />
+      <option name="airProgramParameters" value="" />
+      <option name="appDescriptorForEmulator" value="Android" />
+      <option name="debugTransport" value="USB" />
+      <option name="debuggerSdkRaw" value="BC SDK" />
+      <option name="emulator" value="NexusOne" />
+      <option name="emulatorAdlOptions" value="" />
+      <option name="fastPackaging" value="true" />
+      <option name="fullScreenHeight" value="0" />
+      <option name="fullScreenWidth" value="0" />
+      <option name="launchUrl" value="false" />
+      <option name="launcherParameters">
+        <LauncherParameters>
+          <option name="browser" value="a7bb68e0-33c0-4d6f-a81a-aac1fdb870c8" />
+          <option name="launcherType" value="OSDefault" />
+          <option name="newPlayerInstance" value="false" />
+          <option name="playerPath" value="FlashPlayerDebugger.exe" />
+        </LauncherParameters>
+      </option>
+      <option name="mobileRunTarget" value="Emulator" />
+      <option name="moduleName" value="" />
+      <option name="overriddenMainClass" value="" />
+      <option name="overriddenOutputFileName" value="" />
+      <option name="overrideMainClass" value="false" />
+      <option name="runTrusted" value="true" />
+      <option name="screenDpi" value="0" />
+      <option name="screenHeight" value="0" />
+      <option name="screenWidth" value="0" />
+      <option name="url" value="http://" />
+      <option name="usbDebugPort" value="7936" />
+      <method />
+    </configuration>
+    <configuration default="true" type="GradleRunConfiguration" factoryName="Gradle">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list />
+        </option>
+        <option name="vmOptions" />
+      </ExternalSystemSettings>
+      <method />
+    </configuration>
+    <configuration default="true" type="JavascriptDebugType" factoryName="JavaScript Debug">
+      <method />
+    </configuration>
+    <configuration default="true" type="Applet" factoryName="Applet">
+      <module name="" />
+      <option name="MAIN_CLASS_NAME" />
+      <option name="HTML_FILE_NAME" />
+      <option name="HTML_USED" value="false" />
+      <option name="WIDTH" value="400" />
+      <option name="HEIGHT" value="300" />
+      <option name="POLICY_FILE" value="$APPLICATION_HOME_DIR$/bin/appletviewer.policy" />
+      <option name="VM_PARAMETERS" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <method />
+    </configuration>
+    <configuration default="true" type="CucumberJavaRunConfigurationType" factoryName="Cucumber java">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
+      <option name="myFilePath" />
+      <option name="GLUE" />
+      <option name="myNameFilter" />
+      <option name="myGeneratedName" />
+      <option name="MAIN_CLASS_NAME" />
+      <option name="VM_PARAMETERS" />
+      <option name="PROGRAM_PARAMETERS" />
+      <option name="WORKING_DIRECTORY" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="ENABLE_SWING_INSPECTOR" value="false" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <module name="" />
+      <envs />
       <method />
     </configuration>
     <configuration default="false" name="Mafia" type="AndroidRunConfigurationType" factoryName="Android Application">
@@ -748,6 +813,7 @@
       <workItem from="1415206699345" duration="15000" />
       <workItem from="1415206847445" duration="1045000" />
       <workItem from="1415207961947" duration="171000" />
+      <workItem from="1416562156552" duration="1883000" />
     </task>
     <task id="LOCAL-00001" summary="Moved project 1 directory above from where it was before: now IDEA works with git, and everything is great">
       <created>1415210219867</created>
@@ -765,43 +831,43 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="11068000" />
+    <option name="totallyTimeSpent" value="12951000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="41" y="23" width="1400" height="808" extended-state="0" />
-    <editor active="false" />
+    <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
+    <editor active="true" />
     <layout>
-      <window_info id="Palette&#9;" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.46820027" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
-      <window_info id="Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.31785715" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="14" side_tool="false" content_ui="tabs" />
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.24983074" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.39377537" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32736155" sideWeight="0.5" order="8" side_tool="true" content_ui="tabs" />
-      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.21255673" sideWeight="0.5" order="5" side_tool="true" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32899022" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
-      <window_info id="Build Variants" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.24962178" sideWeight="0.5" order="3" side_tool="true" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32611638" sideWeight="0.5" order="13" side_tool="false" content_ui="tabs" />
-      <window_info id="Android" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.4248985" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
-      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.24962178" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32904536" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.21142857" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32070366" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Memory Monitor" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="15" side_tool="true" content_ui="tabs" />
-      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3297224" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="IDEtalk Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="12" side_tool="false" content_ui="tabs" />
       <window_info id="IDEtalk" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.23222749" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="combo" />
+      <window_info id="Build Variants" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.24962178" sideWeight="0.5" order="3" side_tool="true" content_ui="tabs" />
+      <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32736155" sideWeight="0.5" order="8" side_tool="true" content_ui="tabs" />
+      <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
+      <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32904536" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3297224" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.24962178" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.24983074" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.39377537" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.46820027" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32611638" sideWeight="0.5" order="13" side_tool="false" content_ui="tabs" />
+      <window_info id="Palette&#9;" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.31666666" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32899022" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32070366" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="14" side_tool="false" content_ui="tabs" />
+      <window_info id="Android" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.42427498" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.15" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Memory Monitor" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="15" side_tool="true" content_ui="tabs" />
+      <window_info id="IDEtalk Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="12" side_tool="false" content_ui="tabs" />
+      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.21255673" sideWeight="0.5" order="5" side_tool="true" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32736155" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="combo" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.39739415" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32736155" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
     </layout>
   </component>
   <component name="Vcs.Log.UiProperties">
@@ -828,30 +894,18 @@
       <breakpoints>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/Scriptozavr/Mafia/Activities/MorningActions.java</url>
-          <line>313</line>
+          <line>319</line>
           <properties />
           <option name="timeStamp" value="78" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/Scriptozavr/Mafia/Activities/MorningActions.java</url>
-          <line>309</line>
+          <line>315</line>
           <properties />
           <option name="timeStamp" value="79" />
         </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/Scriptozavr/Mafia/Activities/DuelistsSpeech.java</url>
-          <line>120</line>
-          <properties />
-          <option name="timeStamp" value="97" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/Scriptozavr/Mafia/Activities/DuelistsSpeech.java</url>
-          <line>109</line>
-          <properties />
-          <option name="timeStamp" value="98" />
-        </line-breakpoint>
       </breakpoints>
-      <option name="time" value="99" />
+      <option name="time" value="100" />
     </breakpoint-manager>
     <watches-manager>
       <configuration name="Mafia">
@@ -864,6 +918,58 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/res/layout/main.xml">
+      <provider editor-type-id="android-designer">
+        <state />
+      </provider>
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="306" max-vertical-offset="697">
+          <caret line="18" column="78" selection-start-line="18" selection-start-column="78" selection-end-line="18" selection-end-column="78" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Scriptozavr/Mafia/Activities/Main.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="1445" max-vertical-offset="1632">
+          <caret line="101" column="0" selection-start-line="101" selection-start-column="0" selection-end-line="101" selection-end-column="0" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#3470#4596#0" expanded="true" />
+            <element signature="e#4595#4596#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Scriptozavr/Mafia/Activities/SetNicknames.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="68" max-vertical-offset="1870">
+          <caret line="4" column="29" selection-start-line="4" selection-start-column="23" selection-end-line="4" selection-end-column="29" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Scriptozavr/Mafia/Activities/ChoosingRoles.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="952" max-vertical-offset="2618">
+          <caret line="58" column="24" selection-start-line="58" selection-start-column="16" selection-end-line="58" selection-end-column="24" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/res/layout/fullnight.xml">
+      <provider selected="true" editor-type-id="android-designer">
+        <state />
+      </provider>
+      <provider editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="391" max-vertical-offset="1445">
+          <caret line="23" column="0" selection-start-line="23" selection-start-column="0" selection-end-line="23" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/Scriptozavr/Mafia/Activities/Main.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="270" max-vertical-offset="585">
@@ -1073,16 +1179,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/res/layout/voting.xml">
-      <provider editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="51" max-vertical-offset="833">
-          <caret line="31" column="63" selection-start-line="31" selection-start-column="63" selection-end-line="31" selection-end-column="63" />
-        </state>
-      </provider>
-      <provider selected="true" editor-type-id="android-designer">
-        <state />
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/Scriptozavr/Mafia/Models/Player.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="105" max-vertical-offset="1200">
@@ -1127,545 +1223,6 @@
         <state />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Scriptozavr/Mafia/Activities/DuelVoting.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="300">
-          <caret line="11" column="0" selection-start-line="11" selection-start-column="0" selection-end-line="11" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file:///Applications/adt-bundle-mac-x86_64-20140702/sdk/sources/android-19/android/view/View.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="267745" max-vertical-offset="284910">
-          <caret line="18422" column="0" selection-start-line="18422" selection-start-column="0" selection-end-line="18422" selection-end-column="0" />
-          <folding>
-            <element signature="e#0#760180#0" expanded="false" />
-            <element signature="imports" expanded="false" />
-            <element signature="e#59284#59290#0" expanded="false" />
-            <element signature="e#131496#131497#0" expanded="false" />
-            <element signature="e#131535#131536#0" expanded="false" />
-            <element signature="e#154752#154753#0" expanded="false" />
-            <element signature="e#154785#154786#0" expanded="false" />
-            <element signature="e#166172#166173#0" expanded="false" />
-            <element signature="e#166221#166222#0" expanded="false" />
-            <element signature="e#166630#166631#0" expanded="false" />
-            <element signature="e#166690#166691#0" expanded="false" />
-            <element signature="e#173812#173813#0" expanded="false" />
-            <element signature="e#173876#173877#0" expanded="false" />
-            <element signature="e#174296#174297#0" expanded="false" />
-            <element signature="e#174336#174337#0" expanded="false" />
-            <element signature="e#175111#175112#0" expanded="false" />
-            <element signature="e#175163#175164#0" expanded="false" />
-            <element signature="e#175376#175377#0" expanded="false" />
-            <element signature="e#175430#175431#0" expanded="false" />
-            <element signature="e#175952#175953#0" expanded="false" />
-            <element signature="e#176006#176007#0" expanded="false" />
-            <element signature="e#176451#176452#0" expanded="false" />
-            <element signature="e#176504#176505#0" expanded="false" />
-            <element signature="e#178570#178571#0" expanded="false" />
-            <element signature="e#178635#178636#0" expanded="false" />
-            <element signature="e#183113#183114#0" expanded="false" />
-            <element signature="e#183172#183173#0" expanded="false" />
-            <element signature="e#183700#183701#0" expanded="false" />
-            <element signature="e#183781#183782#0" expanded="false" />
-            <element signature="e#207745#207746#0" expanded="false" />
-            <element signature="e#207789#207790#0" expanded="false" />
-            <element signature="e#210600#210601#0" expanded="false" />
-            <element signature="e#210645#210646#0" expanded="false" />
-            <element signature="e#211079#211080#0" expanded="false" />
-            <element signature="e#211128#211129#0" expanded="false" />
-            <element signature="e#213037#213038#0" expanded="false" />
-            <element signature="e#213124#213125#0" expanded="false" />
-            <element signature="e#213696#213697#0" expanded="false" />
-            <element signature="e#213738#213739#0" expanded="false" />
-            <element signature="e#215351#215352#0" expanded="false" />
-            <element signature="e#215385#215386#0" expanded="false" />
-            <element signature="e#216412#216413#0" expanded="false" />
-            <element signature="e#216447#216448#0" expanded="false" />
-            <element signature="e#216961#216962#0" expanded="false" />
-            <element signature="e#217020#217021#0" expanded="false" />
-            <element signature="e#217271#217272#0" expanded="false" />
-            <element signature="e#217344#217345#0" expanded="false" />
-            <element signature="e#217673#217674#0" expanded="false" />
-            <element signature="e#217747#217748#0" expanded="false" />
-            <element signature="e#219262#219263#0" expanded="false" />
-            <element signature="e#219324#219325#0" expanded="false" />
-            <element signature="e#219869#219870#0" expanded="false" />
-            <element signature="e#219930#219931#0" expanded="false" />
-            <element signature="e#220285#220286#0" expanded="false" />
-            <element signature="e#220342#220343#0" expanded="false" />
-            <element signature="e#220701#220702#0" expanded="false" />
-            <element signature="e#220776#220777#0" expanded="false" />
-            <element signature="e#221074#221075#0" expanded="false" />
-            <element signature="e#221113#221114#0" expanded="false" />
-            <element signature="e#221453#221454#0" expanded="false" />
-            <element signature="e#221503#221504#0" expanded="false" />
-            <element signature="e#221804#221805#0" expanded="false" />
-            <element signature="e#221844#221845#0" expanded="false" />
-            <element signature="e#222189#222190#0" expanded="false" />
-            <element signature="e#222241#222242#0" expanded="false" />
-            <element signature="e#222533#222534#0" expanded="false" />
-            <element signature="e#222570#222571#0" expanded="false" />
-            <element signature="e#222900#222901#0" expanded="false" />
-            <element signature="e#222946#222947#0" expanded="false" />
-            <element signature="e#223244#223245#0" expanded="false" />
-            <element signature="e#223283#223284#0" expanded="false" />
-            <element signature="e#223623#223624#0" expanded="false" />
-            <element signature="e#223673#223674#0" expanded="false" />
-            <element signature="e#223980#223981#0" expanded="false" />
-            <element signature="e#224022#224023#0" expanded="false" />
-            <element signature="e#224377#224378#0" expanded="false" />
-            <element signature="e#224433#224434#0" expanded="false" />
-            <element signature="e#232259#232260#0" expanded="false" />
-            <element signature="e#232339#232340#0" expanded="false" />
-            <element signature="e#232398#232399#0" expanded="false" />
-            <element signature="e#232443#232444#0" expanded="false" />
-            <element signature="e#233407#233408#0" expanded="false" />
-            <element signature="e#233458#233459#0" expanded="false" />
-            <element signature="e#234146#234147#0" expanded="false" />
-            <element signature="e#234207#234208#0" expanded="false" />
-            <element signature="e#237563#237564#0" expanded="false" />
-            <element signature="e#237647#237648#0" expanded="false" />
-            <element signature="e#242657#242658#0" expanded="false" />
-            <element signature="e#242726#242727#0" expanded="false" />
-            <element signature="e#245483#245484#0" expanded="false" />
-            <element signature="e#245525#245526#0" expanded="false" />
-            <element signature="e#245709#245710#0" expanded="false" />
-            <element signature="e#245791#245792#0" expanded="false" />
-            <element signature="e#246270#246271#0" expanded="false" />
-            <element signature="e#246338#246339#0" expanded="false" />
-            <element signature="e#246579#246580#0" expanded="false" />
-            <element signature="e#246643#246644#0" expanded="false" />
-            <element signature="e#247476#247477#0" expanded="false" />
-            <element signature="e#247562#247563#0" expanded="false" />
-            <element signature="e#247875#247876#0" expanded="false" />
-            <element signature="e#247935#247936#0" expanded="false" />
-            <element signature="e#248400#248401#0" expanded="false" />
-            <element signature="e#248462#248463#0" expanded="false" />
-            <element signature="e#248765#248766#0" expanded="false" />
-            <element signature="e#248835#248836#0" expanded="false" />
-            <element signature="e#250780#250781#0" expanded="false" />
-            <element signature="e#250851#250852#0" expanded="false" />
-            <element signature="e#251224#251225#0" expanded="false" />
-            <element signature="e#251297#251298#0" expanded="false" />
-            <element signature="e#252050#252051#0" expanded="false" />
-            <element signature="e#252123#252124#0" expanded="false" />
-            <element signature="e#252608#252609#0" expanded="false" />
-            <element signature="e#252679#252680#0" expanded="false" />
-            <element signature="e#254845#254846#0" expanded="false" />
-            <element signature="e#254910#254911#0" expanded="false" />
-            <element signature="e#256692#256693#0" expanded="false" />
-            <element signature="e#256720#256721#0" expanded="false" />
-            <element signature="e#258360#258361#0" expanded="false" />
-            <element signature="e#258442#258443#0" expanded="false" />
-            <element signature="e#259307#259313#0" expanded="false" />
-            <element signature="e#262884#262890#0" expanded="false" />
-            <element signature="e#263669#263670#0" expanded="false" />
-            <element signature="e#263744#263745#0" expanded="false" />
-            <element signature="e#268440#268441#0" expanded="false" />
-            <element signature="e#268492#268493#0" expanded="false" />
-            <element signature="e#269445#269446#0" expanded="false" />
-            <element signature="e#269497#269498#0" expanded="false" />
-            <element signature="e#281990#281991#0" expanded="false" />
-            <element signature="e#282066#282067#0" expanded="false" />
-            <element signature="e#285113#285114#0" expanded="false" />
-            <element signature="e#285190#285191#0" expanded="false" />
-            <element signature="e#292392#292393#0" expanded="false" />
-            <element signature="e#292438#292439#0" expanded="false" />
-            <element signature="e#292644#292645#0" expanded="false" />
-            <element signature="e#292672#292673#0" expanded="false" />
-            <element signature="e#292752#292753#0" expanded="false" />
-            <element signature="e#292803#292804#0" expanded="false" />
-            <element signature="e#292881#292882#0" expanded="false" />
-            <element signature="e#292936#292937#0" expanded="false" />
-            <element signature="e#296534#296535#0" expanded="false" />
-            <element signature="e#296575#296576#0" expanded="false" />
-            <element signature="e#297816#297817#0" expanded="false" />
-            <element signature="e#297877#297878#0" expanded="false" />
-            <element signature="e#299466#299467#0" expanded="false" />
-            <element signature="e#299529#299530#0" expanded="false" />
-            <element signature="e#305019#305020#0" expanded="false" />
-            <element signature="e#305047#305048#0" expanded="false" />
-            <element signature="e#305482#305483#0" expanded="false" />
-            <element signature="e#305510#305511#0" expanded="false" />
-            <element signature="e#305939#305940#0" expanded="false" />
-            <element signature="e#305967#305968#0" expanded="false" />
-            <element signature="e#307125#307126#0" expanded="false" />
-            <element signature="e#307171#307172#0" expanded="false" />
-            <element signature="e#308581#308582#0" expanded="false" />
-            <element signature="e#308654#308655#0" expanded="false" />
-            <element signature="e#310308#310309#0" expanded="false" />
-            <element signature="e#310343#310344#0" expanded="false" />
-            <element signature="e#311178#311179#0" expanded="false" />
-            <element signature="e#311231#311232#0" expanded="false" />
-            <element signature="e#312149#312150#0" expanded="false" />
-            <element signature="e#312230#312231#0" expanded="false" />
-            <element signature="e#314518#314519#0" expanded="false" />
-            <element signature="e#314567#314568#0" expanded="false" />
-            <element signature="e#317127#317128#0" expanded="false" />
-            <element signature="e#317158#317159#0" expanded="false" />
-            <element signature="e#317862#317863#0" expanded="false" />
-            <element signature="e#317890#317891#0" expanded="false" />
-            <element signature="e#319742#319743#0" expanded="false" />
-            <element signature="e#319770#319771#0" expanded="false" />
-            <element signature="e#321818#321819#0" expanded="false" />
-            <element signature="e#321846#321847#0" expanded="false" />
-            <element signature="e#322481#322482#0" expanded="false" />
-            <element signature="e#322509#322510#0" expanded="false" />
-            <element signature="e#323479#323480#0" expanded="false" />
-            <element signature="e#323507#323508#0" expanded="false" />
-            <element signature="e#324160#324161#0" expanded="false" />
-            <element signature="e#324187#324188#0" expanded="false" />
-            <element signature="e#324759#324760#0" expanded="false" />
-            <element signature="e#324787#324788#0" expanded="false" />
-            <element signature="e#326509#326510#0" expanded="false" />
-            <element signature="e#326536#326537#0" expanded="false" />
-            <element signature="e#327468#327469#0" expanded="false" />
-            <element signature="e#327496#327497#0" expanded="false" />
-            <element signature="e#329296#329297#0" expanded="false" />
-            <element signature="e#329324#329325#0" expanded="false" />
-            <element signature="e#334406#334407#0" expanded="false" />
-            <element signature="e#334465#334466#0" expanded="false" />
-            <element signature="e#344575#344576#0" expanded="false" />
-            <element signature="e#344616#344617#0" expanded="false" />
-            <element signature="e#344724#344725#0" expanded="false" />
-            <element signature="e#344761#344762#0" expanded="false" />
-            <element signature="e#355155#355156#0" expanded="false" />
-            <element signature="e#355185#355186#0" expanded="false" />
-            <element signature="e#355467#355468#0" expanded="false" />
-            <element signature="e#355508#355509#0" expanded="false" />
-            <element signature="e#355788#355789#0" expanded="false" />
-            <element signature="e#355829#355830#0" expanded="false" />
-            <element signature="e#356209#356210#0" expanded="false" />
-            <element signature="e#356240#356241#0" expanded="false" />
-            <element signature="e#356606#356607#0" expanded="false" />
-            <element signature="e#356637#356638#0" expanded="false" />
-            <element signature="e#356840#356841#0" expanded="false" />
-            <element signature="e#356877#356878#0" expanded="false" />
-            <element signature="e#357079#357080#0" expanded="false" />
-            <element signature="e#357116#357117#0" expanded="false" />
-            <element signature="e#358061#358062#0" expanded="false" />
-            <element signature="e#358119#358120#0" expanded="false" />
-            <element signature="e#358658#358659#0" expanded="false" />
-            <element signature="e#358695#358696#0" expanded="false" />
-            <element signature="e#358983#358984#0" expanded="false" />
-            <element signature="e#359042#359043#0" expanded="false" />
-            <element signature="e#359584#359585#0" expanded="false" />
-            <element signature="e#359622#359623#0" expanded="false" />
-            <element signature="e#361128#361129#0" expanded="false" />
-            <element signature="e#361204#361205#0" expanded="false" />
-            <element signature="e#368704#368705#0" expanded="false" />
-            <element signature="e#368790#368791#0" expanded="false" />
-            <element signature="e#370352#370353#0" expanded="false" />
-            <element signature="e#370439#370440#0" expanded="false" />
-            <element signature="e#372230#372231#0" expanded="false" />
-            <element signature="e#372317#372318#0" expanded="false" />
-            <element signature="e#374184#374185#0" expanded="false" />
-            <element signature="e#374268#374269#0" expanded="false" />
-            <element signature="e#375754#375755#0" expanded="false" />
-            <element signature="e#375838#375839#0" expanded="false" />
-            <element signature="e#377368#377369#0" expanded="false" />
-            <element signature="e#377452#377453#0" expanded="false" />
-            <element signature="e#379415#379416#0" expanded="false" />
-            <element signature="e#379499#379500#0" expanded="false" />
-            <element signature="e#381331#381332#0" expanded="false" />
-            <element signature="e#381414#381415#0" expanded="false" />
-            <element signature="e#382654#382655#0" expanded="false" />
-            <element signature="e#382681#382682#0" expanded="false" />
-            <element signature="e#387850#387851#0" expanded="false" />
-            <element signature="e#387943#387944#0" expanded="false" />
-            <element signature="e#388140#388141#0" expanded="false" />
-            <element signature="e#388167#388168#0" expanded="false" />
-            <element signature="e#390610#390611#0" expanded="false" />
-            <element signature="e#390640#390641#0" expanded="false" />
-            <element signature="e#390810#390811#0" expanded="false" />
-            <element signature="e#390872#390873#0" expanded="false" />
-            <element signature="e#393258#393259#0" expanded="false" />
-            <element signature="e#393286#393287#0" expanded="false" />
-            <element signature="e#395753#395754#0" expanded="false" />
-            <element signature="e#395782#395783#0" expanded="false" />
-            <element signature="e#398312#398313#0" expanded="false" />
-            <element signature="e#398412#398413#0" expanded="false" />
-            <element signature="e#398793#398794#0" expanded="false" />
-            <element signature="e#398835#398836#0" expanded="false" />
-            <element signature="e#399198#399199#0" expanded="false" />
-            <element signature="e#399297#399298#0" expanded="false" />
-            <element signature="e#399676#399677#0" expanded="false" />
-            <element signature="e#399717#399718#0" expanded="false" />
-            <element signature="e#400120#400121#0" expanded="false" />
-            <element signature="e#400210#400211#0" expanded="false" />
-            <element signature="e#401880#401881#0" expanded="false" />
-            <element signature="e#401970#401971#0" expanded="false" />
-            <element signature="e#405332#405333#0" expanded="false" />
-            <element signature="e#405365#405366#0" expanded="false" />
-            <element signature="e#406669#406670#0" expanded="false" />
-            <element signature="e#406721#406722#0" expanded="false" />
-            <element signature="e#411692#411693#0" expanded="false" />
-            <element signature="e#411728#411729#0" expanded="false" />
-            <element signature="e#413895#413896#0" expanded="false" />
-            <element signature="e#413947#413948#0" expanded="false" />
-            <element signature="e#417452#417453#0" expanded="false" />
-            <element signature="e#417509#417510#0" expanded="false" />
-            <element signature="e#425534#425535#0" expanded="false" />
-            <element signature="e#425566#425567#0" expanded="false" />
-            <element signature="e#439435#439436#0" expanded="false" />
-            <element signature="e#439475#439476#0" expanded="false" />
-            <element signature="e#447460#447461#0" expanded="false" />
-            <element signature="e#447542#447543#0" expanded="false" />
-            <element signature="e#448799#448800#0" expanded="false" />
-            <element signature="e#448869#448870#0" expanded="false" />
-            <element signature="e#450006#450007#0" expanded="false" />
-            <element signature="e#450078#450079#0" expanded="false" />
-            <element signature="e#452140#452141#0" expanded="false" />
-            <element signature="e#452220#452221#0" expanded="false" />
-            <element signature="e#453892#453893#0" expanded="false" />
-            <element signature="e#453966#453967#0" expanded="false" />
-            <element signature="e#456099#456100#0" expanded="false" />
-            <element signature="e#456161#456162#0" expanded="false" />
-            <element signature="e#458272#458273#0" expanded="false" />
-            <element signature="e#458329#458330#0" expanded="false" />
-            <element signature="e#459016#459017#0" expanded="false" />
-            <element signature="e#459049#459050#0" expanded="false" />
-            <element signature="e#459818#459819#0" expanded="false" />
-            <element signature="e#459849#459850#0" expanded="false" />
-            <element signature="e#460616#460617#0" expanded="false" />
-            <element signature="e#460649#460650#0" expanded="false" />
-            <element signature="e#461297#461298#0" expanded="false" />
-            <element signature="e#461331#461332#0" expanded="false" />
-            <element signature="e#462084#462085#0" expanded="false" />
-            <element signature="e#462115#462116#0" expanded="false" />
-            <element signature="e#462867#462868#0" expanded="false" />
-            <element signature="e#462901#462902#0" expanded="false" />
-            <element signature="e#469909#469910#0" expanded="false" />
-            <element signature="e#469937#469938#0" expanded="false" />
-            <element signature="e#474677#474678#0" expanded="false" />
-            <element signature="e#474726#474727#0" expanded="false" />
-            <element signature="e#475359#475360#0" expanded="false" />
-            <element signature="e#475427#475428#0" expanded="false" />
-            <element signature="e#480140#480141#0" expanded="false" />
-            <element signature="e#480216#480217#0" expanded="false" />
-            <element signature="e#480565#480566#0" expanded="false" />
-            <element signature="e#480657#480658#0" expanded="false" />
-            <element signature="e#483573#483574#0" expanded="false" />
-            <element signature="e#483631#483632#0" expanded="false" />
-            <element signature="e#485861#485862#0" expanded="false" />
-            <element signature="e#485902#485903#0" expanded="false" />
-            <element signature="e#486171#486172#0" expanded="false" />
-            <element signature="e#486247#486248#0" expanded="false" />
-            <element signature="e#487949#487950#0" expanded="false" />
-            <element signature="e#488021#488022#0" expanded="false" />
-            <element signature="e#488278#488279#0" expanded="false" />
-            <element signature="e#488350#488351#0" expanded="false" />
-            <element signature="e#493212#493213#0" expanded="false" />
-            <element signature="e#493262#493263#0" expanded="false" />
-            <element signature="e#495030#495031#0" expanded="false" />
-            <element signature="e#495082#495083#0" expanded="false" />
-            <element signature="e#498088#498089#0" expanded="false" />
-            <element signature="e#498143#498144#0" expanded="false" />
-            <element signature="e#500777#500778#0" expanded="false" />
-            <element signature="e#500850#500851#0" expanded="false" />
-            <element signature="e#507742#507743#0" expanded="false" />
-            <element signature="e#507769#507770#0" expanded="false" />
-            <element signature="e#508447#508448#0" expanded="false" />
-            <element signature="e#508480#508481#0" expanded="false" />
-            <element signature="e#516371#516372#0" expanded="false" />
-            <element signature="e#516455#516456#0" expanded="false" />
-            <element signature="e#518216#518217#0" expanded="false" />
-            <element signature="e#518302#518303#0" expanded="false" />
-            <element signature="e#524717#524718#0" expanded="false" />
-            <element signature="e#524762#524763#0" expanded="false" />
-            <element signature="e#528247#528248#0" expanded="false" />
-            <element signature="e#528298#528299#0" expanded="false" />
-            <element signature="e#528498#528499#0" expanded="false" />
-            <element signature="e#528538#528539#0" expanded="false" />
-            <element signature="e#539437#539438#0" expanded="false" />
-            <element signature="e#539465#539466#0" expanded="false" />
-            <element signature="e#540182#540183#0" expanded="false" />
-            <element signature="e#540210#540211#0" expanded="false" />
-            <element signature="e#540532#540533#0" expanded="false" />
-            <element signature="e#540556#540557#0" expanded="false" />
-            <element signature="e#540881#540882#0" expanded="false" />
-            <element signature="e#540905#540906#0" expanded="false" />
-            <element signature="e#541224#541225#0" expanded="false" />
-            <element signature="e#541248#541249#0" expanded="false" />
-            <element signature="e#541576#541577#0" expanded="false" />
-            <element signature="e#541600#541601#0" expanded="false" />
-            <element signature="e#542903#542904#0" expanded="false" />
-            <element signature="e#542981#542982#0" expanded="false" />
-            <element signature="e#544410#544411#0" expanded="false" />
-            <element signature="e#544485#544486#0" expanded="false" />
-            <element signature="e#574945#574946#0" expanded="false" />
-            <element signature="e#574969#574970#0" expanded="false" />
-            <element signature="e#577806#577807#0" expanded="false" />
-            <element signature="e#577887#577888#0" expanded="false" />
-            <element signature="e#585221#585222#0" expanded="false" />
-            <element signature="e#585254#585255#0" expanded="false" />
-            <element signature="e#589652#589653#0" expanded="false" />
-            <element signature="e#589711#589712#0" expanded="false" />
-            <element signature="e#590705#590706#0" expanded="false" />
-            <element signature="e#590746#590747#0" expanded="false" />
-            <element signature="e#602926#602927#0" expanded="false" />
-            <element signature="e#602960#602961#0" expanded="false" />
-            <element signature="e#607887#607888#0" expanded="false" />
-            <element signature="e#607921#607922#0" expanded="false" />
-            <element signature="e#608207#608208#0" expanded="false" />
-            <element signature="e#608244#608245#0" expanded="false" />
-            <element signature="e#610571#610572#0" expanded="false" />
-            <element signature="e#610662#610663#0" expanded="false" />
-            <element signature="e#612948#612949#0" expanded="false" />
-            <element signature="e#613008#613009#0" expanded="false" />
-            <element signature="e#614581#614582#0" expanded="false" />
-            <element signature="e#614642#614643#0" expanded="false" />
-            <element signature="e#626728#626729#0" expanded="false" />
-            <element signature="e#626795#626796#0" expanded="false" />
-            <element signature="e#627141#627142#0" expanded="false" />
-            <element signature="e#627167#627168#0" expanded="false" />
-            <element signature="e#627399#627400#0" expanded="false" />
-            <element signature="e#627426#627427#0" expanded="false" />
-            <element signature="e#627870#627871#0" expanded="false" />
-            <element signature="e#627896#627897#0" expanded="false" />
-            <element signature="e#630345#630346#0" expanded="false" />
-            <element signature="e#630369#630370#0" expanded="false" />
-            <element signature="e#633474#633475#0" expanded="false" />
-            <element signature="e#633499#633500#0" expanded="false" />
-            <element signature="e#643254#643255#0" expanded="false" />
-            <element signature="e#643296#643297#0" expanded="false" />
-            <element signature="e#647419#647420#0" expanded="false" />
-            <element signature="e#647452#647453#0" expanded="false" />
-            <element signature="e#648227#648228#0" expanded="false" />
-            <element signature="e#648259#648260#0" expanded="false" />
-            <element signature="e#648992#648993#0" expanded="false" />
-            <element signature="e#649032#649033#0" expanded="false" />
-            <element signature="e#651230#651231#0" expanded="false" />
-            <element signature="e#651286#651287#0" expanded="false" />
-            <element signature="e#651624#651625#0" expanded="false" />
-            <element signature="e#651681#651682#0" expanded="false" />
-            <element signature="e#652358#652359#0" expanded="false" />
-            <element signature="e#652386#652387#0" expanded="false" />
-            <element signature="e#655537#655538#0" expanded="false" />
-            <element signature="e#655602#655603#0" expanded="false" />
-            <element signature="e#660062#660063#0" expanded="false" />
-            <element signature="e#660104#660105#0" expanded="false" />
-            <element signature="e#660401#660402#0" expanded="false" />
-            <element signature="e#660481#660482#0" expanded="false" />
-            <element signature="e#661214#661215#0" expanded="false" />
-            <element signature="e#661272#661273#0" expanded="false" />
-            <element signature="e#665088#665089#0" expanded="false" />
-            <element signature="e#665149#665150#0" expanded="false" />
-            <element signature="e#665668#665669#0" expanded="false" />
-            <element signature="e#665729#665730#0" expanded="false" />
-            <element signature="e#666262#666263#0" expanded="false" />
-            <element signature="e#666304#666305#0" expanded="false" />
-            <element signature="e#675007#675008#0" expanded="false" />
-            <element signature="e#675035#675036#0" expanded="false" />
-            <element signature="e#676204#676205#0" expanded="false" />
-            <element signature="e#676273#676274#0" expanded="false" />
-            <element signature="e#684070#684071#0" expanded="false" />
-            <element signature="e#684108#684109#0" expanded="false" />
-            <element signature="e#695279#695280#0" expanded="false" />
-            <element signature="e#695351#695352#0" expanded="false" />
-            <element signature="e#705241#705242#0" expanded="false" />
-            <element signature="e#705313#705314#0" expanded="false" />
-            <element signature="e#706577#706578#0" expanded="false" />
-            <element signature="e#706623#706624#0" expanded="false" />
-            <element signature="e#706682#706683#0" expanded="false" />
-            <element signature="e#706730#706731#0" expanded="false" />
-            <element signature="e#707112#707113#0" expanded="false" />
-            <element signature="e#707165#707166#0" expanded="false" />
-            <element signature="e#707232#707233#0" expanded="false" />
-            <element signature="e#707287#707288#0" expanded="false" />
-            <element signature="e#707669#707670#0" expanded="false" />
-            <element signature="e#707722#707723#0" expanded="false" />
-            <element signature="e#707781#707782#0" expanded="false" />
-            <element signature="e#707836#707837#0" expanded="false" />
-            <element signature="e#708162#708163#0" expanded="false" />
-            <element signature="e#708204#708205#0" expanded="false" />
-            <element signature="e#708263#708264#0" expanded="false" />
-            <element signature="e#708307#708308#0" expanded="false" />
-            <element signature="e#708633#708634#0" expanded="false" />
-            <element signature="e#708675#708676#0" expanded="false" />
-            <element signature="e#708734#708735#0" expanded="false" />
-            <element signature="e#708778#708779#0" expanded="false" />
-            <element signature="e#709139#709140#0" expanded="false" />
-            <element signature="e#709188#709189#0" expanded="false" />
-            <element signature="e#709247#709248#0" expanded="false" />
-            <element signature="e#709298#709299#0" expanded="false" />
-            <element signature="e#709665#709666#0" expanded="false" />
-            <element signature="e#709715#709716#0" expanded="false" />
-            <element signature="e#709774#709775#0" expanded="false" />
-            <element signature="e#709826#709827#0" expanded="false" />
-            <element signature="e#710193#710194#0" expanded="false" />
-            <element signature="e#710243#710244#0" expanded="false" />
-            <element signature="e#710302#710303#0" expanded="false" />
-            <element signature="e#710354#710355#0" expanded="false" />
-            <element signature="e#710706#710707#0" expanded="false" />
-            <element signature="e#710753#710754#0" expanded="false" />
-            <element signature="e#710812#710813#0" expanded="false" />
-            <element signature="e#710861#710862#0" expanded="false" />
-            <element signature="e#711213#711214#0" expanded="false" />
-            <element signature="e#711260#711261#0" expanded="false" />
-            <element signature="e#711319#711320#0" expanded="false" />
-            <element signature="e#711368#711369#0" expanded="false" />
-            <element signature="e#714962#714963#0" expanded="false" />
-            <element signature="e#715018#715019#0" expanded="false" />
-            <element signature="e#715342#715343#0" expanded="false" />
-            <element signature="e#715399#715400#0" expanded="false" />
-            <element signature="e#716874#716875#0" expanded="false" />
-            <element signature="e#716945#716946#0" expanded="false" />
-            <element signature="e#717407#717408#0" expanded="false" />
-            <element signature="e#717465#717466#0" expanded="false" />
-            <element signature="e#726364#726365#0" expanded="false" />
-            <element signature="e#726405#726406#0" expanded="false" />
-            <element signature="e#726832#726833#0" expanded="false" />
-            <element signature="e#726869#726870#0" expanded="false" />
-            <element signature="e#727118#727119#0" expanded="false" />
-            <element signature="e#727159#727160#0" expanded="false" />
-            <element signature="e#727356#727357#0" expanded="false" />
-            <element signature="e#727417#727418#0" expanded="false" />
-            <element signature="e#727475#727476#0" expanded="false" />
-            <element signature="e#727538#727539#0" expanded="false" />
-            <element signature="e#728504#728520#0" expanded="false" />
-            <element signature="e#731999#732005#0" expanded="false" />
-            <element signature="e#736537#736543#0" expanded="false" />
-            <element signature="e#746660#746661#0" expanded="false" />
-            <element signature="e#746730#746731#0" expanded="false" />
-            <element signature="e#754017#754018#0" expanded="false" />
-            <element signature="e#754052#754053#0" expanded="false" />
-            <element signature="e#755429#755430#0" expanded="false" />
-            <element signature="e#755477#755478#0" expanded="false" />
-            <element signature="e#755647#755648#0" expanded="false" />
-            <element signature="e#755710#755711#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file:///Applications/adt-bundle-mac-x86_64-20140702/sdk/sources/android-19/android/os/Handler.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="1150" max-vertical-offset="10845">
-          <caret line="103" column="0" selection-start-line="103" selection-start-column="0" selection-end-line="103" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file:///Applications/adt-bundle-mac-x86_64-20140702/sdk/sources/android-19/android/os/Looper.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="1870" max-vertical-offset="4125">
-          <caret line="152" column="0" selection-start-line="152" selection-start-column="0" selection-end-line="152" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file:///Applications/adt-bundle-mac-x86_64-20140702/sdk/sources/android-19/com/android/internal/os/ZygoteInit.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="11325">
-          <caret line="787" column="0" selection-start-line="787" selection-start-column="0" selection-end-line="787" selection-end-column="0" />
-          <folding>
-            <element signature="e#0#27389#0" expanded="false" />
-            <element signature="imports" expanded="false" />
-            <element signature="e#21561#21577#0" expanded="false" />
-            <element signature="e#21638#21656#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/AndroidManifest.xml">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="158" max-vertical-offset="585">
@@ -1682,25 +1239,32 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Scriptozavr/Mafia/Activities/VoteForElimination.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="1069" max-vertical-offset="1995">
-          <caret line="80" column="0" selection-start-line="80" selection-start-column="0" selection-end-line="80" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/Scriptozavr/Mafia/Helpers/Utilities.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="638" max-vertical-offset="1110">
           <caret line="57" column="42" selection-start-line="57" selection-start-column="42" selection-end-line="57" selection-end-column="42" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/res/values/strings.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.36645964" vertical-offset="282" max-vertical-offset="952">
+          <caret line="27" column="36" selection-start-line="27" selection-start-column="36" selection-end-line="27" selection-end-column="36" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Scriptozavr/Mafia/Activities/MorningActions.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-0.72121215" vertical-offset="3638" max-vertical-offset="6171">
+          <caret line="214" column="24" selection-start-line="214" selection-start-column="24" selection-end-line="214" selection-end-column="24" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/res/layout/main.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-0.4" vertical-offset="248" max-vertical-offset="615">
+        <state vertical-scroll-proportion="0.18709677" vertical-offset="219" max-vertical-offset="697">
           <caret line="18" column="78" selection-start-line="18" selection-start-column="78" selection-end-line="18" selection-end-column="78" />
           <folding />
         </state>
@@ -1709,78 +1273,30 @@
         <state />
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/Scriptozavr/Mafia/Activities/Main.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1700">
+          <caret line="19" column="13" selection-start-line="19" selection-start-column="13" selection-end-line="19" selection-end-column="13" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#3470#4596#0" expanded="true" />
+            <element signature="e#4595#4596#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/Scriptozavr/Mafia/Activities/SetNicknames.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-2.3076923" vertical-offset="0" max-vertical-offset="1650">
+        <state vertical-scroll-proportion="0.0" vertical-offset="68" max-vertical-offset="1870">
           <caret line="4" column="29" selection-start-line="4" selection-start-column="23" selection-end-line="4" selection-end-column="29" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Scriptozavr/Mafia/Activities/ChoosingRoles.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-4.730769" vertical-offset="717" max-vertical-offset="2310">
-          <caret line="58" column="24" selection-start-line="58" selection-start-column="16" selection-end-line="58" selection-end-column="24" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file:///Applications/adt-bundle-mac-x86_64-20140702/sdk/sources/android-19/java/lang/Runnable.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="360">
-          <caret line="31" column="22" selection-start-line="31" selection-start-column="22" selection-end-line="31" selection-end-column="22" />
-          <folding>
-            <element signature="e#0#1207#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Scriptozavr/Mafia/Activities/MorningActions.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-11.076923" vertical-offset="2967" max-vertical-offset="5085">
-          <caret line="262" column="24" selection-start-line="262" selection-start-column="16" selection-end-line="262" selection-end-column="24" />
-          <folding>
-            <element signature="method#onFaultButtonClick#0;class#MorningActions#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Scriptozavr/Mafia/Activities/LastMinute.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-7.923077" vertical-offset="1909" max-vertical-offset="2280">
-          <caret line="141" column="20" selection-start-line="141" selection-start-column="12" selection-end-line="141" selection-end-column="20" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Scriptozavr/Mafia/Activities/Main.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="1028" max-vertical-offset="1455">
-          <caret line="101" column="0" selection-start-line="101" selection-start-column="0" selection-end-line="101" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Scriptozavr/Mafia/Activities/NightActions.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-10.807693" vertical-offset="2509" max-vertical-offset="3795">
-          <caret line="214" column="38" selection-start-line="214" selection-start-column="38" selection-end-line="214" selection-end-column="38" />
-          <folding>
-            <element signature="e#1153#1162#0" expanded="true" />
-            <element signature="e#9314#10168#0" expanded="true" />
-            <element signature="e#10167#10168#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/res/layout/fullnight.xml">
       <provider editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-5.52" vertical-offset="207" max-vertical-offset="2820">
-          <caret line="23" column="0" selection-start-line="23" selection-start-column="0" selection-end-line="23" selection-end-column="0" />
+        <state vertical-scroll-proportion="0.0" vertical-offset="2125" max-vertical-offset="3196">
+          <caret line="125" column="0" selection-start-line="125" selection-start-column="0" selection-end-line="125" selection-end-column="0" />
           <folding />
         </state>
       </provider>
@@ -1788,11 +1304,93 @@
         <state />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/res/values/strings.xml">
+    <entry file="file://$PROJECT_DIR$/src/Scriptozavr/Mafia/Activities/ChoosingRoles.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.34870318" vertical-offset="179" max-vertical-offset="840">
-          <caret line="20" column="46" selection-start-line="20" selection-start-column="46" selection-end-line="20" selection-end-column="46" />
+        <state vertical-scroll-proportion="0.0" vertical-offset="935" max-vertical-offset="2601">
+          <caret line="57" column="24" selection-start-line="57" selection-start-column="16" selection-end-line="57" selection-end-column="24" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Scriptozavr/Mafia/Activities/LastMinute.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="2397">
+          <caret line="45" column="0" selection-start-line="45" selection-start-column="0" selection-end-line="45" selection-end-column="0" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/res/layout/voting.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-20.4" vertical-offset="0" max-vertical-offset="1071">
+          <caret line="36" column="45" selection-start-line="36" selection-start-column="45" selection-end-line="36" selection-end-column="45" />
+          <folding>
+            <element signature="e#468#488#0" expanded="true" />
+            <element signature="e#1118#1130#0" expanded="true" />
+            <element signature="e#1712#1735#0" expanded="true" />
+            <element signature="e#2082#2108#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+      <provider editor-type-id="android-designer">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Scriptozavr/Mafia/Activities/VoteForElimination.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="134" max-vertical-offset="1275">
+          <caret line="104" column="68" selection-start-line="104" selection-start-column="68" selection-end-line="104" selection-end-column="68" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="method#onCreate#0;class#VoteForElimination#0" expanded="false" />
+            <element signature="e#4681#4731#0" expanded="true" />
+            <element signature="e#5262#5263#0" expanded="true" />
+            <element signature="e#5327#5328#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Scriptozavr/Mafia/Activities/NightActions.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="1.5573951" vertical-offset="0" max-vertical-offset="4760">
+          <caret line="83" column="49" selection-start-line="83" selection-start-column="49" selection-end-line="83" selection-end-column="49" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#936#952#0" expanded="true" />
+            <element signature="e#1028#1045#0" expanded="true" />
+            <element signature="e#1116#1125#0" expanded="true" />
+            <element signature="e#2714#3957#0" expanded="true" />
+            <element signature="e#3636#3683#0" expanded="true" />
+            <element signature="e#3956#3957#0" expanded="true" />
+            <element signature="e#4025#5388#0" expanded="true" />
+            <element signature="e#4256#4304#0" expanded="true" />
+            <element signature="e#5387#5388#0" expanded="true" />
+            <element signature="e#5501#5548#0" expanded="true" />
+            <element signature="e#8597#8598#0" expanded="true" />
+            <element signature="e#8643#8644#0" expanded="true" />
+            <element signature="e#9126#9127#0" expanded="true" />
+            <element signature="e#9184#9185#0" expanded="true" />
+            <element signature="e#9276#10074#0" expanded="true" />
+            <element signature="e#10073#10074#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Scriptozavr/Mafia/Activities/DuelVoting.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.27924946" vertical-offset="2" max-vertical-offset="935">
+          <caret line="25" column="58" selection-start-line="25" selection-start-column="58" selection-end-line="25" selection-end-column="58" />
+          <folding>
+            <element signature="e#1187#1523#0" expanded="true" />
+            <element signature="e#1386#1436#0" expanded="true" />
+            <element signature="e#1522#1523#0" expanded="true" />
+            <element signature="e#1568#1991#0" expanded="true" />
+            <element signature="e#1990#1991#0" expanded="true" />
+            <element signature="e#2068#2069#0" expanded="true" />
+            <element signature="e#2119#2120#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>

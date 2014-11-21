@@ -27,8 +27,9 @@ public class VoteForElimination extends Activity {
     protected int[] votesCount;
     protected int currentVoteIndex = 0;
     protected int alivePlayers;
+
     @Override
-    public void onCreate(Bundle savedInstanceState){
+    public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.voting);
 
@@ -44,7 +45,7 @@ public class VoteForElimination extends Activity {
         final LinearLayout playersLabelsList = (LinearLayout) findViewById(R.id.votedPlayersList);
         for (int i = 0; i < votesTextView.length; i++) {
             votesTextView[i] = new TextView(this);
-            votesTextView[i].setText(String.format("%s%d:", getResources().getText(R.string.number), votingList.get(i) + 1 ));
+            votesTextView[i].setText(String.format("%s%d:", getResources().getText(R.string.number), votingList.get(i) + 1));
             votesTextView[i].setTextSize(30);
             playersLabelsList.addView(votesTextView[i]);
         }
@@ -60,7 +61,7 @@ public class VoteForElimination extends Activity {
                 currentVoteIndex++;
                 currentVotes += numberPicker.getValue();
                 if (currentVoteIndex < votesCount.length - 1 && currentVotes < alivePlayers &&
-                        currentVotes <= alivePlayers / 2) {
+                        numberPicker.getValue() <= alivePlayers / 2) {
                     updateNumberPicker(currentVotes);
                     updateVotingInfoLabel();
                 } else {
@@ -91,8 +92,6 @@ public class VoteForElimination extends Activity {
 
     protected void voteDuel(ArrayList<Integer> duelists) {
         votedPlayerTextView.setText("DUEL, players are: " + Arrays.toString(duelists.toArray()));
-        //если <6 игроков, нельзя выгонять больше одного
-        //
         Intent i = new Intent(getApplicationContext(), DuelistsSpeech.class);
         i.putIntegerArrayListExtra("duelists", duelists);
         i.putExtra("players", players);

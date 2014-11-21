@@ -4,7 +4,6 @@ import Scriptozavr.Mafia.Helpers.Utilities;
 import Scriptozavr.Mafia.Models.Player;
 import Scriptozavr.Mafia.R;
 import android.app.Activity;
-import android.content.DialogInterface;
 import android.content.Intent;
 import android.graphics.Color;
 import android.media.AudioManager;
@@ -26,13 +25,13 @@ import java.util.Map;
 
 
 public class NightActions extends Activity implements MediaPlayer.OnPreparedListener,
-        MediaPlayer.OnCompletionListener, SeekBar.OnSeekBarChangeListener{
+        MediaPlayer.OnCompletionListener, SeekBar.OnSeekBarChangeListener {
     private int currentCircle;
-    private Map<Button,Player> killButtonToPlayerMap = new HashMap<Button, Player>();
-    private Map<Button,Integer> pressedButtonToIntegerMap = new HashMap<Button, Integer>();
+    private Map<Button, Player> killButtonToPlayerMap = new HashMap<Button, Player>();
+    private Map<Button, Integer> pressedButtonToIntegerMap = new HashMap<Button, Integer>();
     private ArrayList<Integer> playersForLastMinute = new ArrayList<Integer>();
-    private Button choosedKillButton;
-    private int choosedButton = -1;
+    private Button chosenKillButton;
+    private int chosenButton = -1;
     private boolean keyPressed = false;
     final String LOG_TAG = "myLogs";
     final String DATA_SD = Environment.getExternalStoragePublicDirectory(Environment.DIRECTORY_MUSIC) + "/music.mp3";
@@ -54,65 +53,63 @@ public class NightActions extends Activity implements MediaPlayer.OnPreparedList
 
         initAudioPlayer();
 
-        final Button [] killButtons = {
-                (Button)findViewById(R.id.killButton1),
-                (Button)findViewById(R.id.killButton2),
-                (Button)findViewById(R.id.killButton3),
-                (Button)findViewById(R.id.killButton4),
-                (Button)findViewById(R.id.killButton5),
-                (Button)findViewById(R.id.killButton6),
-                (Button)findViewById(R.id.killButton7),
-                (Button)findViewById(R.id.killButton8),
-                (Button)findViewById(R.id.killButton9),
-                (Button)findViewById(R.id.killButton10),
+        final Button[] killButtons = {
+                (Button) findViewById(R.id.killButton1),
+                (Button) findViewById(R.id.killButton2),
+                (Button) findViewById(R.id.killButton3),
+                (Button) findViewById(R.id.killButton4),
+                (Button) findViewById(R.id.killButton5),
+                (Button) findViewById(R.id.killButton6),
+                (Button) findViewById(R.id.killButton7),
+                (Button) findViewById(R.id.killButton8),
+                (Button) findViewById(R.id.killButton9),
+                (Button) findViewById(R.id.killButton10),
         };
         final Parcelable[] players = getIntent().getParcelableArrayExtra("players");
 
-        currentCircle = getIntent().getIntExtra("currentCircle",0);
-        for(int i=0; i<killButtons.length;i++){
+        currentCircle = getIntent().getIntExtra("currentCircle", 0);
+        for (int i = 0; i < killButtons.length; i++) {
             killButtons[i].setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
-                    if(!keyPressed) {
-                        choosedKillButton = (Button) findViewById(v.getId());
-                        choosedKillButton.setBackgroundColor(Color.RED);
-                        choosedButton = pressedButtonToIntegerMap.get(choosedKillButton);
-                        for(int i=0;i<killButtons.length;i++){
-                            if(i!=choosedButton) {
+                    if (!keyPressed) {
+                        chosenKillButton = (Button) findViewById(v.getId());
+                        chosenKillButton.setBackgroundColor(Color.RED);
+                        chosenButton = pressedButtonToIntegerMap.get(chosenKillButton);
+                        for (int i = 0; i < killButtons.length; i++) {
+                            if (i != chosenButton) {
                                 killButtons[i].setClickable(false);
                             }
                         }
-                        keyPressed=!keyPressed;
-                    }
-                    else{
-                        choosedKillButton.setBackgroundColor(Color.GREEN);
-                        for(int i=0;i<killButtons.length;i++){
-                            if(((Player)players[i]).getStatus().equals(getResources().getString(R.string.status_alive))) {
+                        keyPressed = !keyPressed;
+                    } else {
+                        chosenKillButton.setBackgroundColor(Color.GREEN);
+                        for (int i = 0; i < killButtons.length; i++) {
+                            if (((Player) players[i]).getStatus().equals(getResources().getString(R.string.status_alive))) {
                                 killButtons[i].setClickable(true);
                             }
                         }
-                        choosedButton = -1;
-                        keyPressed=!keyPressed;
+                        chosenButton = -1;
+                        keyPressed = !keyPressed;
                     }
                 }
             });
         }
-        ((Button)findViewById(R.id.buttonOk)).setOnClickListener(new View.OnClickListener() {
+        findViewById(R.id.buttonOk).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 currentCircle++;
-                if(choosedButton!=-1){
-                    ((Player)players[choosedButton]).setStatus(getResources().getString(R.string.status_killed));
+                if (chosenButton != -1) {
+                    ((Player) players[chosenButton]).setStatus(getResources().getString(R.string.status_killed));
                     boolean ifKilled = true;
-                    playersForLastMinute.add(choosedButton);
+                    playersForLastMinute.add(chosenButton);
                     Intent LastMinute = new Intent(getApplicationContext(), Scriptozavr.Mafia.Activities.LastMinute.class);
-                    LastMinute.putExtra("ifKilled",ifKilled);
-                    LastMinute.putExtra("players",players);
-                    LastMinute.putExtra("currentCircle",currentCircle);
-                    LastMinute.putIntegerArrayListExtra("lastMin",playersForLastMinute);
+                    LastMinute.putExtra("ifKilled", ifKilled);
+                    LastMinute.putExtra("players", players);
+                    LastMinute.putExtra("currentCircle", currentCircle);
+                    LastMinute.putIntegerArrayListExtra("lastMin", playersForLastMinute);
                     startActivity(LastMinute);
-                }
-                else {
+                } else {
                     Intent MorningActions = new Intent(getApplicationContext(), MorningActions.class);
                     MorningActions.putExtra("currentCircle", currentCircle);
                     MorningActions.putExtra("players", players);
@@ -125,28 +122,27 @@ public class NightActions extends Activity implements MediaPlayer.OnPreparedList
             }
         });
 
-        for(int i=0; i<players.length; i++) {
-            if(!((Player)players[i]).getStatus().equals(getResources().getString(R.string.status_alive))){
+        for (int i = 0; i < players.length; i++) {
+            if (!((Player) players[i]).getStatus().equals(getResources().getString(R.string.status_alive))) {
                 killButtons[i].setBackgroundColor(Color.GRAY);
                 killButtons[i].setClickable(false);
-            }
-            else{
+            } else {
                 killButtons[i].setBackgroundColor(Color.GREEN);
             }
-            killButtonToPlayerMap.put(killButtons[i],(Player)players[i]);
-            pressedButtonToIntegerMap.put(killButtons[i],i);
+            killButtonToPlayerMap.put(killButtons[i], (Player) players[i]);
+            pressedButtonToIntegerMap.put(killButtons[i], i);
         }
     }
 
     //work with Audio
-    private void initAudioPlayer(){
-        final SeekBar seekbar = (SeekBar)findViewById(R.id.seekBar);
+    private void initAudioPlayer() {
+        final SeekBar seekbar = (SeekBar) findViewById(R.id.seekBar);
         seekbar.setOnSeekBarChangeListener(this);
 
         am = (AudioManager) getSystemService(AUDIO_SERVICE);
         seekbar.setMax(am.getStreamMaxVolume(AudioManager.STREAM_MUSIC));
-        seekbar.setProgress(seekbar.getMax() /2);
-        am.setStreamVolume(AudioManager.STREAM_MUSIC,seekbar.getProgress(),0);
+        seekbar.setProgress(seekbar.getMax() / 2);
+        am.setStreamVolume(AudioManager.STREAM_MUSIC, seekbar.getProgress(), 0);
 
         //----------------Status of Song-----------
         songStatusBar = (SeekBar) findViewById(R.id.songProgressBar);
@@ -156,13 +152,12 @@ public class NightActions extends Activity implements MediaPlayer.OnPreparedList
         utils = new Utilities();
         //-----------------------------------------
     }
+
     public void onClickStart(View view) {
         releaseMP();
 
         try {
             switch (view.getId()) {
-
-
                 case R.id.btnStartSD:
                     mediaPlayer = new MediaPlayer();
                     mediaPlayer.setDataSource(DATA_SD);
@@ -177,7 +172,6 @@ public class NightActions extends Activity implements MediaPlayer.OnPreparedList
                     break;
 
             }
-
         } catch (IOException e) {
             e.printStackTrace();
         }
@@ -245,33 +239,34 @@ public class NightActions extends Activity implements MediaPlayer.OnPreparedList
 
     @Override
     public void onStopTrackingTouch(SeekBar seekBar) {
-        am.setStreamVolume(AudioManager.STREAM_MUSIC,seekBar.getProgress(),0);
+        am.setStreamVolume(AudioManager.STREAM_MUSIC, seekBar.getProgress(), 0);
     }
 
     public void updateProgressBar() {
         mHandler.postDelayed(mUpdateTimeTask, 100);
     }
+
     /**
      * Background Runnable thread
-     * */
+     */
     private Runnable mUpdateTimeTask = new Runnable() {
         public void run() {
 
-                long totalDuration = mediaPlayer.getDuration();
-                long currentDuration = mediaPlayer.getCurrentPosition();
+            long totalDuration = mediaPlayer.getDuration();
+            long currentDuration = mediaPlayer.getCurrentPosition();
 
-                // Displaying Total Duration time
-                songTotalDurationLabel.setText("" + utils.milliSecondsToTimer(totalDuration));
-                // Displaying time completed playing
-                songCurrentDurationLabel.setText("" + utils.milliSecondsToTimer(currentDuration));
+            // Displaying Total Duration time
+            songTotalDurationLabel.setText("" + utils.milliSecondsToTimer(totalDuration));
+            // Displaying time completed playing
+            songCurrentDurationLabel.setText("" + utils.milliSecondsToTimer(currentDuration));
 
-                // Updating progress bar
-                int progress = (int) (utils.getProgressPercentage(currentDuration, totalDuration));
-                //Log.d("Progress", ""+progress);
-                songStatusBar.setProgress(progress);
+            // Updating progress bar
+            int progress = utils.getProgressPercentage(currentDuration, totalDuration);
+            //Log.d("Progress", ""+progress);
+            songStatusBar.setProgress(progress);
 
-                // Running this thread after 100 milliseconds
-                mHandler.postDelayed(this, 100);
+            // Running this thread after 100 milliseconds
+            mHandler.postDelayed(this, 100);
         }
 
     };

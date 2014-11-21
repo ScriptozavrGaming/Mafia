@@ -24,9 +24,9 @@ public class DuelistsSpeech extends MorningActions {
         setContentView(R.layout.morning);
 
         duelists = getIntent().getIntegerArrayListExtra("duelists");
-        currentCirlce = getIntent().getIntExtra("currentCircle",0);
+        currentCirlce = getIntent().getIntExtra("currentCircle", 0);
 
-        timerTextView = (TextView)findViewById(R.id.ourTimer);
+        timerTextView = (TextView) findViewById(R.id.ourTimer);
         timerTextView.setText(getResources().getString(R.string.StartTimeForDuel));
 
         final TextView[] playerLabels = {
@@ -42,7 +42,7 @@ public class DuelistsSpeech extends MorningActions {
                 (TextView) findViewById(R.id.number10)
         };
 
-        playerLabelsForOnFinish=playerLabels;
+        playerLabelsForOnFinish = playerLabels;
 
         final Button[] voteBtns = {
                 (Button) findViewById(R.id.vote_btn1),
@@ -70,16 +70,16 @@ public class DuelistsSpeech extends MorningActions {
                 (Button) findViewById(R.id.fault_btn10),
         };
 
-        for (Button b: voteBtns){
+        for (Button b : voteBtns) {
             b.setVisibility(View.INVISIBLE);
         }
-        timer = new ourCountDownTimer(30000,100,faultsBtns);
+        timer = new ourCountDownTimer(30000, 100, faultsBtns);
         Circle = (TextView) findViewById(R.id.Circle);
-        Circle.setText(getResources().getString(R.string.Circle) + ":" + currentCirlce );
-        timerTextView = (TextView)findViewById(R.id.ourTimer);
-        ((TextView)findViewById(R.id.OnVote)).setText(ArrayHelper.arrayToString(getResources().getString(R.string.duel),duelists));
-        startTimer(faultsBtns,timer);
-        stopTimer(faultsBtns,timer);
+        Circle.setText(getResources().getString(R.string.Circle) + ":" + currentCirlce);
+        timerTextView = (TextView) findViewById(R.id.ourTimer);
+        ((TextView) findViewById(R.id.OnVote)).setText(ArrayHelper.arrayToString(getResources().getString(R.string.duel), duelists));
+        startTimer(faultsBtns, timer);
+        stopTimer(faultsBtns, timer);
         players = getIntent().getParcelableArrayExtra("players");
 
         currentPlayer = duelists.get(index);
@@ -94,7 +94,7 @@ public class DuelistsSpeech extends MorningActions {
 
             final int buttonInd = i;
             onFaultButtonClick(playerLabels[buttonInd], faultsBtns, voteBtns[buttonInd], players[buttonInd], faultsBtns[i], buttonInd);
-            if(!((Player)players[i]).getStatus().equals(getResources().getString(R.string.status_alive))){
+            if (!((Player) players[i]).getStatus().equals(getResources().getString(R.string.status_alive))) {
                 //playerLabels[i].setBackgroundColor(Color.RED);
                 faultsBtns[i].setClickable(false);
                 voteBtns[i].setClickable(false);
@@ -108,24 +108,22 @@ public class DuelistsSpeech extends MorningActions {
     protected void currentPlayersSpeechCalculate(Button[] mButtons) {
         //super.currentPlayersSpeechCalculate(mButtons);
         index++;
-        if(index>duelists.size()-1){
+        if (index > duelists.size() - 1) {
             finishDuel();
-        }
-        else {
+        } else {
             previousPlayer = currentPlayer;
             if (((Player) players[duelists.get(index)]).getStatus().equals(getResources().getString(R.string.status_alive))) {
                 currentPlayer = duelists.get(index);
                 playerLabelsForOnFinish[currentPlayer].setBackgroundColor(Color.GREEN);
                 playerLabelsForOnFinish[previousPlayer].setBackgroundColor(Color.TRANSPARENT);
-            }else{
-                while(index<duelists.size() && !((Player) players[duelists.get(index)]).getStatus().equals(getResources().getString(R.string.status_alive))){
+            } else {
+                while (index < duelists.size() && !((Player) players[duelists.get(index)]).getStatus().equals(getResources().getString(R.string.status_alive))) {
                     index++;
                 }
-                if(index<duelists.size()){
+                if (index < duelists.size()) {
                     //previousPlayer = currentPlayer;
                     currentPlayer = duelists.get(index);
-                }
-                else{
+                } else {
                     finishDuel();
                 }
             }
@@ -137,7 +135,7 @@ public class DuelistsSpeech extends MorningActions {
         playersOnVote = duelists;
         VotingForElimination.putIntegerArrayListExtra("votingList", playersOnVote);
         VotingForElimination.putExtra("players", players);
-        VotingForElimination.putExtra("currentCircle",currentCirlce);
+        VotingForElimination.putExtra("currentCircle", currentCirlce);
         startActivity(VotingForElimination);
         finish();
     }
