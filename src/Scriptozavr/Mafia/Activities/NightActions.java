@@ -1,22 +1,32 @@
 package Scriptozavr.Mafia.Activities;
 
+import Scriptozavr.Mafia.Helpers.Utilities;
 import Scriptozavr.Mafia.Models.Player;
 import Scriptozavr.Mafia.R;
 import android.app.Activity;
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.graphics.Color;
+import android.media.AudioManager;
+import android.media.MediaPlayer;
 import android.os.Bundle;
+import android.os.Environment;
+import android.os.Handler;
 import android.os.Parcelable;
+import android.util.Log;
 import android.view.View;
 import android.widget.Button;
+import android.widget.SeekBar;
+import android.widget.TextView;
 
+import java.io.IOException;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.Map;
 
 
-public class NightActions extends Activity{
+public class NightActions extends Activity implements MediaPlayer.OnPreparedListener,
+        MediaPlayer.OnCompletionListener, SeekBar.OnSeekBarChangeListener{
     private int currentCircle;
     private Map<Button,Player> killButtonToPlayerMap = new HashMap<Button, Player>();
     private Map<Button,Integer> pressedButtonToIntegerMap = new HashMap<Button, Integer>();
@@ -24,11 +34,25 @@ public class NightActions extends Activity{
     private Button choosedKillButton;
     private int choosedButton = -1;
     private boolean keyPressed = false;
+    final String LOG_TAG = "myLogs";
+    final String DATA_SD = Environment.getExternalStoragePublicDirectory(Environment.DIRECTORY_MUSIC) + "/music.mp3";
+
+
+    MediaPlayer mediaPlayer;
+    AudioManager am;
+
+    private SeekBar songStatusBar;
+    private TextView songCurrentDurationLabel;
+    private TextView songTotalDurationLabel;
+    private Utilities utils;
+    private Handler mHandler = new Handler();
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.fullnight);
+
+        initAudioPlayer();
 
         final Button [] killButtons = {
                 (Button)findViewById(R.id.killButton1),
@@ -94,6 +118,10 @@ public class NightActions extends Activity{
                     MorningActions.putExtra("players", players);
                     startActivity(MorningActions);
                 }
+                mediaPlayer.stop();
+                mHandler.removeCallbacks(mUpdateTimeTask);
+                //mUpdateTimeTask;
+                finish();
             }
         });
 
@@ -108,6 +136,144 @@ public class NightActions extends Activity{
             killButtonToPlayerMap.put(killButtons[i],(Player)players[i]);
             pressedButtonToIntegerMap.put(killButtons[i],i);
         }
+    }
+
+    //work with Audio
+    private void initAudioPlayer(){
+        final SeekBar seekbar = (SeekBar)findViewById(R.id.seekBar);
+        seekbar.setOnSeekBarChangeListener(this);
+
+        am = (AudioManager) getSystemService(AUDIO_SERVICE);
+        seekbar.setMax(am.getStreamMaxVolume(AudioManager.STREAM_MUSIC));
+        seekbar.setProgress(seekbar.getMax() /2);
+        am.setStreamVolume(AudioManager.STREAM_MUSIC,seekbar.getProgress(),0);
+
+        //----------------Status of Song-----------
+        songStatusBar = (SeekBar) findViewById(R.id.songProgressBar);
+        //songStatusBar.setOnSeekBarChangeListener(this);
+        songCurrentDurationLabel = (TextView) findViewById(R.id.songCurrentDurationLabel);
+        songTotalDurationLabel = (TextView) findViewById(R.id.songTotalDurationLabel);
+        utils = new Utilities();
+        //-----------------------------------------
+    }
+    public void onClickStart(View view) {
+        releaseMP();
+
+        try {
+            switch (view.getId()) {
+
+
+                case R.id.btnStartSD:
+                    mediaPlayer = new MediaPlayer();
+                    mediaPlayer.setDataSource(DATA_SD);
+                    mediaPlayer.setAudioStreamType(AudioManager.STREAM_MUSIC);
+                    mediaPlayer.prepare();
+                    mediaPlayer.start();
+                    break;
+                case R.id.btnStartRaw:
+                    mediaPlayer = MediaPlayer.create(this, R.raw.track1);
+                    songStatusBar.setProgress(0);
+                    songStatusBar.setMax(100);
+                    break;
+
+            }
+
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+        if (mediaPlayer == null)
+            return;
+
+        mediaPlayer.setOnCompletionListener(this);
+    }
+
+    private void releaseMP() {
+        if (mediaPlayer != null) {
+            try {
+                mediaPlayer.release();
+                mediaPlayer = null;
+            } catch (Exception e) {
+                e.printStackTrace();
+            }
+        }
+    }
+
+    public void onClick(View view) {
+        if (mediaPlayer == null)
+            return;
+        switch (view.getId()) {
+
+            case R.id.btnPlay:
+                if (mediaPlayer.isPlaying())
+                    mediaPlayer.pause();
+                else {
+
+                    mediaPlayer.start();
+                }
+                updateProgressBar();
+                break;
+            //if needed stop button!!!
+        }
+    }
+
+    @Override
+    public void onPrepared(MediaPlayer mp) {
+        Log.d(LOG_TAG, "onPrepared");
+        mp.start();
+    }
+
+    @Override
+    public void onCompletion(MediaPlayer mp) {
+        Log.d(LOG_TAG, "onCompletion");
+    }
+
+    @Override
+    protected void onDestroy() {
+        super.onDestroy();
+        releaseMP();
+    }
+
+    @Override
+    public void onProgressChanged(SeekBar seekBar, int progress, boolean fromUser) {
 
     }
+
+    @Override
+    public void onStartTrackingTouch(SeekBar seekBar) {
+
+    }
+
+    @Override
+    public void onStopTrackingTouch(SeekBar seekBar) {
+        am.setStreamVolume(AudioManager.STREAM_MUSIC,seekBar.getProgress(),0);
+    }
+
+    public void updateProgressBar() {
+        mHandler.postDelayed(mUpdateTimeTask, 100);
+    }
+    /**
+     * Background Runnable thread
+     * */
+    private Runnable mUpdateTimeTask = new Runnable() {
+        public void run() {
+
+                long totalDuration = mediaPlayer.getDuration();
+                long currentDuration = mediaPlayer.getCurrentPosition();
+
+                // Displaying Total Duration time
+                songTotalDurationLabel.setText("" + utils.milliSecondsToTimer(totalDuration));
+                // Displaying time completed playing
+                songCurrentDurationLabel.setText("" + utils.milliSecondsToTimer(currentDuration));
+
+                // Updating progress bar
+                int progress = (int) (utils.getProgressPercentage(currentDuration, totalDuration));
+                //Log.d("Progress", ""+progress);
+                songStatusBar.setProgress(progress);
+
+                // Running this thread after 100 milliseconds
+                mHandler.postDelayed(this, 100);
+        }
+
+    };
+    //work with audio
 }

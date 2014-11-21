@@ -43,4 +43,8 @@
     <string name="nightInTheCity">Сегодня ночью умрет:</string>
     <string name="duel">Перестрелка между:</string>
     <string name="LastMin">Прощальная речь игроков:</string>
+    <string name="sd">Download songs from SD</string>
+    <string name="raw">Download Default Songs</string>
+    <string name="stop">Stop(Doesnt working, maybe not needed)</string>
+    <string name="play">Play/Pause</string>
 </resources>

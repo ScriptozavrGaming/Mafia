@@ -99,6 +99,7 @@ public class Main extends Activity {
                     morning.putExtra("players",p);
 
                     startActivity(morning);
+
                 }
             });
         }
