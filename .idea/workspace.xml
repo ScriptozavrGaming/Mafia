@@ -50,16 +50,12 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="dfdf98e7-fc47-4826-a295-8e204ffcc520" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Scriptozavr/Mafia/Activities/ChoosingRoles.java" afterPath="$PROJECT_DIR$/src/Scriptozavr/Mafia/Activities/ChoosingRoles.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/AndroidManifest.xml" afterPath="$PROJECT_DIR$/AndroidManifest.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Scriptozavr/Mafia/Activities/DuelVoting.java" afterPath="$PROJECT_DIR$/src/Scriptozavr/Mafia/Activities/DuelVoting.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Scriptozavr/Mafia/Activities/DuelistsSpeech.java" afterPath="$PROJECT_DIR$/src/Scriptozavr/Mafia/Activities/DuelistsSpeech.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Scriptozavr/Mafia/Activities/LastMinute.java" afterPath="$PROJECT_DIR$/src/Scriptozavr/Mafia/Activities/LastMinute.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Scriptozavr/Mafia/Activities/Main.java" afterPath="$PROJECT_DIR$/src/Scriptozavr/Mafia/Activities/Main.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Scriptozavr/Mafia/Activities/MorningActions.java" afterPath="$PROJECT_DIR$/src/Scriptozavr/Mafia/Activities/MorningActions.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Scriptozavr/Mafia/Activities/NightActions.java" afterPath="$PROJECT_DIR$/src/Scriptozavr/Mafia/Activities/NightActions.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Scriptozavr/Mafia/Activities/VoteForElimination.java" afterPath="$PROJECT_DIR$/src/Scriptozavr/Mafia/Activities/VoteForElimination.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/values/strings.xml" afterPath="$PROJECT_DIR$/res/values/strings.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/layout/voting.xml" afterPath="$PROJECT_DIR$/res/layout/voting.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/layout/fullnight.xml" afterPath="$PROJECT_DIR$/res/layout/fullnight.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="Mafia.iws" />
@@ -90,34 +86,16 @@
     <favorites_list name="Mafia" />
   </component>
   <component name="FileEditorManager">
-    <splitter split-orientation="horizontal" split-proportion="0.43510816">
+    <splitter split-orientation="horizontal" split-proportion="0.49240923">
       <split-first>
         <leaf>
           <file leaf-file-name="Main.java" pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/src/Scriptozavr/Mafia/Activities/Main.java">
               <provider selected="true" editor-type-id="text-editor">
-                <state vertical-scroll-proportion="0.0" vertical-offset="3" max-vertical-offset="1836">
+                <state vertical-scroll-proportion="0.0" vertical-offset="323" max-vertical-offset="1785">
                   <caret line="19" column="13" selection-start-line="19" selection-start-column="13" selection-end-line="19" selection-end-column="13" />
                   <folding>
                     <element signature="imports" expanded="true" />
-                    <element signature="e#3470#4596#0" expanded="true" />
-                    <element signature="e#4595#4596#0" expanded="true" />
-                  </folding>
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file leaf-file-name="VoteForElimination.java" pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/src/Scriptozavr/Mafia/Activities/VoteForElimination.java">
-              <provider selected="true" editor-type-id="text-editor">
-                <state vertical-scroll-proportion="0.0" vertical-offset="134" max-vertical-offset="1275">
-                  <caret line="104" column="68" selection-start-line="104" selection-start-column="68" selection-end-line="104" selection-end-column="68" />
-                  <folding>
-                    <element signature="imports" expanded="true" />
-                    <element signature="method#onCreate#0;class#VoteForElimination#0" expanded="false" />
-                    <element signature="e#4681#4731#0" expanded="true" />
-                    <element signature="e#5262#5263#0" expanded="true" />
-                    <element signature="e#5327#5328#0" expanded="true" />
                   </folding>
                 </state>
               </provider>
@@ -126,37 +104,53 @@
           <file leaf-file-name="SetNicknames.java" pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/src/Scriptozavr/Mafia/Activities/SetNicknames.java">
               <provider selected="true" editor-type-id="text-editor">
-                <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1870">
+                <state vertical-scroll-proportion="0.0" vertical-offset="68" max-vertical-offset="1870">
                   <caret line="4" column="29" selection-start-line="4" selection-start-column="23" selection-end-line="4" selection-end-column="29" />
                   <folding />
                 </state>
               </provider>
             </entry>
           </file>
-          <file leaf-file-name="NightActions.java" pinned="false" current-in-tab="true">
+          <file leaf-file-name="LastMinute.java" pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/src/Scriptozavr/Mafia/Activities/LastMinute.java">
+              <provider selected="true" editor-type-id="text-editor">
+                <state vertical-scroll-proportion="0.0" vertical-offset="1411" max-vertical-offset="2397">
+                  <caret line="132" column="16" selection-start-line="132" selection-start-column="16" selection-end-line="132" selection-end-column="16" />
+                  <folding />
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="NightActions.java" pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/src/Scriptozavr/Mafia/Activities/NightActions.java">
               <provider selected="true" editor-type-id="text-editor">
-                <state vertical-scroll-proportion="1.5573951" vertical-offset="0" max-vertical-offset="4760">
-                  <caret line="83" column="49" selection-start-line="83" selection-start-column="49" selection-end-line="83" selection-end-column="49" />
+                <state vertical-scroll-proportion="0.0" vertical-offset="1432" max-vertical-offset="4658">
+                  <caret line="116" column="35" selection-start-line="116" selection-start-column="35" selection-end-line="116" selection-end-column="35" />
                   <folding>
                     <element signature="imports" expanded="true" />
-                    <element signature="e#936#952#0" expanded="true" />
-                    <element signature="e#1028#1045#0" expanded="true" />
-                    <element signature="e#1116#1125#0" expanded="true" />
-                    <element signature="e#2714#3957#0" expanded="true" />
-                    <element signature="e#3636#3683#0" expanded="true" />
-                    <element signature="e#3956#3957#0" expanded="true" />
-                    <element signature="e#4025#5388#0" expanded="true" />
-                    <element signature="e#4256#4304#0" expanded="true" />
-                    <element signature="e#5387#5388#0" expanded="true" />
-                    <element signature="e#5501#5548#0" expanded="true" />
-                    <element signature="e#8597#8598#0" expanded="true" />
-                    <element signature="e#8643#8644#0" expanded="true" />
-                    <element signature="e#9126#9127#0" expanded="true" />
-                    <element signature="e#9184#9185#0" expanded="true" />
-                    <element signature="e#9276#10074#0" expanded="true" />
-                    <element signature="e#10073#10074#0" expanded="true" />
+                    <element signature="e#4025#5407#0" expanded="true" />
+                    <element signature="e#5406#5407#0" expanded="true" />
                   </folding>
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="DuelistsSpeech.java" pinned="false" current-in-tab="true">
+            <entry file="file://$PROJECT_DIR$/src/Scriptozavr/Mafia/Activities/DuelistsSpeech.java">
+              <provider selected="true" editor-type-id="text-editor">
+                <state vertical-scroll-proportion="1.1414027" vertical-offset="1031" max-vertical-offset="2533">
+                  <caret line="131" column="0" selection-start-line="131" selection-start-column="0" selection-end-line="131" selection-end-column="0" />
+                  <folding />
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="AndroidManifest.xml" pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/AndroidManifest.xml">
+              <provider selected="true" editor-type-id="text-editor">
+                <state vertical-scroll-proportion="0.0" vertical-offset="141" max-vertical-offset="697">
+                  <caret line="27" column="52" selection-start-line="27" selection-start-column="52" selection-end-line="27" selection-end-column="52" />
+                  <folding />
                 </state>
               </provider>
             </entry>
@@ -164,7 +158,7 @@
           <file leaf-file-name="ChoosingRoles.java" pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/src/Scriptozavr/Mafia/Activities/ChoosingRoles.java">
               <provider selected="true" editor-type-id="text-editor">
-                <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="2601">
+                <state vertical-scroll-proportion="0.0" vertical-offset="969" max-vertical-offset="2601">
                   <caret line="57" column="24" selection-start-line="57" selection-start-column="16" selection-end-line="57" selection-end-column="24" />
                   <folding>
                     <element signature="imports" expanded="true" />
@@ -176,12 +170,16 @@
           <file leaf-file-name="DuelVoting.java" pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/src/Scriptozavr/Mafia/Activities/DuelVoting.java">
               <provider selected="true" editor-type-id="text-editor">
-                <state vertical-scroll-proportion="0.0" vertical-offset="595" max-vertical-offset="969">
-                  <caret line="56" column="44" selection-start-line="56" selection-start-column="44" selection-end-line="56" selection-end-column="44" />
+                <state vertical-scroll-proportion="0.0" vertical-offset="369" max-vertical-offset="1190">
+                  <caret line="38" column="0" selection-start-line="38" selection-start-column="0" selection-end-line="38" selection-end-column="0" />
                   <folding>
-                    <element signature="e#1998#1999#0" expanded="false" />
-                    <element signature="e#2068#2069#0" expanded="true" />
-                    <element signature="e#2119#2120#0" expanded="true" />
+                    <element signature="imports" expanded="true" />
+                    <element signature="e#410#411#0" expanded="true" />
+                    <element signature="e#455#456#0" expanded="true" />
+                    <element signature="e#1187#1923#0" expanded="true" />
+                    <element signature="e#1922#1923#0" expanded="true" />
+                    <element signature="e#1968#2417#0" expanded="true" />
+                    <element signature="e#2416#2417#0" expanded="true" />
                   </folding>
                 </state>
               </provider>
@@ -191,47 +189,49 @@
       </split-first>
       <split-second>
         <leaf>
-          <file leaf-file-name="DuelVoting.java" pinned="false" current-in-tab="true">
+          <file leaf-file-name="DuelVoting.java" pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/src/Scriptozavr/Mafia/Activities/DuelVoting.java">
               <provider selected="true" editor-type-id="text-editor">
-                <state vertical-scroll-proportion="0.27924946" vertical-offset="2" max-vertical-offset="935">
-                  <caret line="25" column="58" selection-start-line="25" selection-start-column="58" selection-end-line="25" selection-end-column="58" />
+                <state vertical-scroll-proportion="0.0" vertical-offset="102" max-vertical-offset="1054">
+                  <caret line="12" column="50" selection-start-line="12" selection-start-column="50" selection-end-line="12" selection-end-column="50" />
                   <folding>
-                    <element signature="e#1187#1523#0" expanded="true" />
-                    <element signature="e#1386#1436#0" expanded="true" />
-                    <element signature="e#1522#1523#0" expanded="true" />
-                    <element signature="e#1568#1991#0" expanded="true" />
-                    <element signature="e#1990#1991#0" expanded="true" />
-                    <element signature="e#2068#2069#0" expanded="true" />
-                    <element signature="e#2119#2120#0" expanded="true" />
+                    <element signature="imports" expanded="true" />
                   </folding>
                 </state>
               </provider>
             </entry>
           </file>
-          <file leaf-file-name="voting.xml" pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/res/layout/voting.xml">
-              <provider editor-type-id="android-designer">
-                <state />
-              </provider>
+          <file leaf-file-name="MorningActions.java" pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/src/Scriptozavr/Mafia/Activities/MorningActions.java">
               <provider selected="true" editor-type-id="text-editor">
-                <state vertical-scroll-proportion="-20.4" vertical-offset="0" max-vertical-offset="1071">
-                  <caret line="36" column="45" selection-start-line="36" selection-start-column="45" selection-end-line="36" selection-end-column="45" />
+                <state vertical-scroll-proportion="0.0" vertical-offset="3444" max-vertical-offset="6086">
+                  <caret line="239" column="46" selection-start-line="239" selection-start-column="46" selection-end-line="239" selection-end-column="46" />
                   <folding>
-                    <element signature="e#468#488#0" expanded="true" />
-                    <element signature="e#1118#1130#0" expanded="true" />
-                    <element signature="e#1712#1735#0" expanded="true" />
-                    <element signature="e#2082#2108#0" expanded="true" />
+                    <element signature="e#8062#8063#0" expanded="true" />
+                    <element signature="e#8125#8126#0" expanded="true" />
                   </folding>
                 </state>
               </provider>
             </entry>
           </file>
-          <file leaf-file-name="LastMinute.java" pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/src/Scriptozavr/Mafia/Activities/LastMinute.java">
+          <file leaf-file-name="VoteForElimination.java" pinned="false" current-in-tab="true">
+            <entry file="file://$PROJECT_DIR$/src/Scriptozavr/Mafia/Activities/VoteForElimination.java">
               <provider selected="true" editor-type-id="text-editor">
-                <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="2397">
-                  <caret line="45" column="0" selection-start-line="45" selection-start-column="0" selection-end-line="45" selection-end-column="0" />
+                <state vertical-scroll-proportion="0.27941176" vertical-offset="25" max-vertical-offset="2363">
+                  <caret line="16" column="0" selection-start-line="16" selection-start-column="0" selection-end-line="16" selection-end-column="0" />
+                  <folding>
+                    <element signature="imports" expanded="true" />
+                    <element signature="e#3603#3612#0" expanded="true" />
+                  </folding>
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="ArrayHelper.java" pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/src/Scriptozavr/Mafia/Helpers/ArrayHelper.java">
+              <provider selected="true" editor-type-id="text-editor">
+                <state vertical-scroll-proportion="0.0" vertical-offset="663" max-vertical-offset="833">
+                  <caret line="39" column="37" selection-start-line="39" selection-start-column="37" selection-end-line="39" selection-end-column="37" />
                   <folding />
                 </state>
               </provider>
@@ -270,8 +270,6 @@
         <option value="$PROJECT_DIR$/src/Scriptozavr/Mafia/Activities/SetNicknames.java" />
         <option value="$PROJECT_DIR$/res/layout/night.xml" />
         <option value="$PROJECT_DIR$/src/Scriptozavr/Mafia/Activities/ChoosingRoles.java" />
-        <option value="$PROJECT_DIR$/src/Scriptozavr/Mafia/Activities/DuelistsSpeech.java" />
-        <option value="$PROJECT_DIR$/AndroidManifest.xml" />
         <option value="$PROJECT_DIR$/src/Scriptozavr/Mafia/Activities/MorningActions.java" />
         <option value="$PROJECT_DIR$/src/Scriptozavr/Mafia/Activities/LastMinute.java" />
         <option value="$PROJECT_DIR$/src/Scriptozavr/Mafia/Helpers/Utilities.java" />
@@ -279,9 +277,11 @@
         <option value="$PROJECT_DIR$/res/values/strings.xml" />
         <option value="$PROJECT_DIR$/src/Scriptozavr/Mafia/Activities/Main.java" />
         <option value="$PROJECT_DIR$/res/layout/voting.xml" />
-        <option value="$PROJECT_DIR$/src/Scriptozavr/Mafia/Activities/VoteForElimination.java" />
         <option value="$PROJECT_DIR$/src/Scriptozavr/Mafia/Activities/NightActions.java" />
+        <option value="$PROJECT_DIR$/src/Scriptozavr/Mafia/Activities/DuelistsSpeech.java" />
+        <option value="$PROJECT_DIR$/AndroidManifest.xml" />
         <option value="$PROJECT_DIR$/src/Scriptozavr/Mafia/Activities/DuelVoting.java" />
+        <option value="$PROJECT_DIR$/src/Scriptozavr/Mafia/Activities/VoteForElimination.java" />
       </list>
     </option>
   </component>
@@ -325,6 +325,51 @@
       <sortByType />
     </navigator>
     <panes>
+      <pane id="Scope">
+        <subPane subId="Problems" />
+        <subPane subId="Production">
+          <PATH>
+            <PATH_ELEMENT USER_OBJECT="Root">
+              <option name="myItemId" value="" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT USER_OBJECT="Mafia">
+              <option name="myItemId" value="" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+          </PATH>
+        </subPane>
+        <subPane subId="Project Files">
+          <PATH>
+            <PATH_ELEMENT USER_OBJECT="Root">
+              <option name="myItemId" value="" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT USER_OBJECT="Mafia">
+              <option name="myItemId" value="" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT USER_OBJECT="Root">
+              <option name="myItemId" value="" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT USER_OBJECT="Mafia">
+              <option name="myItemId" value="" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT USER_OBJECT="src">
+              <option name="myItemId" value="" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT USER_OBJECT="Scriptozavr/Mafia">
+              <option name="myItemId" value="" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+          </PATH>
+        </subPane>
+      </pane>
       <pane id="PackagesPane">
         <subPane>
           <PATH>
@@ -384,6 +429,28 @@
               <option name="myItemId" value="src" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Models" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Mafia" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Scriptozavr" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Helpers" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
           </PATH>
           <PATH>
             <PATH_ELEMENT>
@@ -437,51 +504,6 @@
           </PATH>
         </subPane>
       </pane>
-      <pane id="Scope">
-        <subPane subId="Problems" />
-        <subPane subId="Production">
-          <PATH>
-            <PATH_ELEMENT USER_OBJECT="Root">
-              <option name="myItemId" value="" />
-              <option name="myItemType" value="" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT USER_OBJECT="Mafia">
-              <option name="myItemId" value="" />
-              <option name="myItemType" value="" />
-            </PATH_ELEMENT>
-          </PATH>
-        </subPane>
-        <subPane subId="Project Files">
-          <PATH>
-            <PATH_ELEMENT USER_OBJECT="Root">
-              <option name="myItemId" value="" />
-              <option name="myItemType" value="" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT USER_OBJECT="Mafia">
-              <option name="myItemId" value="" />
-              <option name="myItemType" value="" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT USER_OBJECT="Root">
-              <option name="myItemId" value="" />
-              <option name="myItemType" value="" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT USER_OBJECT="Mafia">
-              <option name="myItemId" value="" />
-              <option name="myItemType" value="" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT USER_OBJECT="src">
-              <option name="myItemId" value="" />
-              <option name="myItemType" value="" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT USER_OBJECT="Scriptozavr/Mafia">
-              <option name="myItemId" value="" />
-              <option name="myItemType" value="" />
-            </PATH_ELEMENT>
-          </PATH>
-        </subPane>
-      </pane>
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -496,7 +518,7 @@
     <property name="options.splitter.details.proportions" value="0.2" />
     <property name="options.searchVisible" value="true" />
     <property name="recentsLimit" value="5" />
-    <property name="SearchEverywhereHistoryKey" value="reforma&#9;ACTION&#9;ReformatCode&#10;geny&#9;ACTION&#9;Genymotion.gdm&#10;optimize&#9;ACTION&#9;OptimizeImports&#10;numberpi&#9;PSI&#9;JAVA://android.widget.NumberPicker&#10;rena&#9;ACTION&#9;RenameElement&#10;onfinish&#9;PSI&#9;JAVA://Scriptozavr.Mafia.Activities.MorningActions.ourCountDownTimer#onFinish&#10;genym&#9;ACTION&#9;Genymotion.gdm&#10;eny&#9;ACTION&#9;Genymotion.gdm&#10;optimi&#9;ACTION&#9;OptimizeImports&#10;override&#9;ACTION&#9;OverrideMethods&#10;change si&#9;ACTION&#9;ChangeSignature&#10;extract&#9;ACTION&#9;IntroduceActionsGroup&#10;reformat&#9;ACTION&#9;ReformatCode&#10;refor&#9;ACTION&#9;ReformatCode&#10;choo&#9;FILE&#9;file://C:/Users/Dasd/Documents/Mafia/src/Scriptozavr/Mafia/Activities/ChoosingRoles.java&#10;genymo&#9;ACTION&#9;Genymotion.gdm&#10;find us&#9;ACTION&#9;FindUsages&#10;getter&#9;ACTION&#9;null&#10;constru&#9;ACTION&#9;null&#10;refo&#9;ACTION&#9;ReformatCode&#10;mo&#9;FILE&#9;file://C:/Users/Dasd/Documents/Mafia/res/layout/morning.xml&#10;setter&#9;ACTION&#9;GenerateGetterAndSetter&#10;player&#9;FILE&#9;file://C:/Users/Dasd/Documents/Mafia/src/Scriptozavr/Mafia/Models/Player.java&#10;cho&#9;FILE&#9;file://C:/Users/Dasd/Documents/Mafia/src/Scriptozavr/Mafia/Activities/ChoosingRoles.java&#10;settings&#9;ACTION&#9;ShowSettings&#10;show line&#9;ACTION&#9;EditorToggleShowLineNumbers&#10;plugins&#9;ACTION&#9;WelcomeScreen.Plugins&#10;move&#9;ACTION&#9;Move&#10;tools&#9;ACTION&#9;ExternalToolsGroup&#10;android&#9;ACTION&#9;Android.CreateResourceDirectory" />
+    <property name="SearchEverywhereHistoryKey" value="geny&#9;ACTION&#9;Genymotion.gdm&#10;genym&#9;ACTION&#9;Genymotion.gdm&#10;vo&#9;FILE&#9;file://E:/Repo/Scriptozavr/src/Scriptozavr/Mafia/Activities/VoteForElimination.java&#10;reforma&#9;ACTION&#9;ReformatCode&#10;optimize&#9;ACTION&#9;OptimizeImports&#10;numberpi&#9;PSI&#9;JAVA://android.widget.NumberPicker&#10;rena&#9;ACTION&#9;RenameElement&#10;onfinish&#9;PSI&#9;JAVA://Scriptozavr.Mafia.Activities.MorningActions.ourCountDownTimer#onFinish&#10;eny&#9;ACTION&#9;Genymotion.gdm&#10;optimi&#9;ACTION&#9;OptimizeImports&#10;override&#9;ACTION&#9;OverrideMethods&#10;change si&#9;ACTION&#9;ChangeSignature&#10;extract&#9;ACTION&#9;IntroduceActionsGroup&#10;reformat&#9;ACTION&#9;ReformatCode&#10;refor&#9;ACTION&#9;ReformatCode&#10;choo&#9;FILE&#9;file://C:/Users/Dasd/Documents/Mafia/src/Scriptozavr/Mafia/Activities/ChoosingRoles.java&#10;genymo&#9;ACTION&#9;Genymotion.gdm&#10;find us&#9;ACTION&#9;FindUsages&#10;getter&#9;ACTION&#9;null&#10;constru&#9;ACTION&#9;null&#10;refo&#9;ACTION&#9;ReformatCode&#10;mo&#9;FILE&#9;file://C:/Users/Dasd/Documents/Mafia/res/layout/morning.xml&#10;setter&#9;ACTION&#9;GenerateGetterAndSetter&#10;player&#9;FILE&#9;file://C:/Users/Dasd/Documents/Mafia/src/Scriptozavr/Mafia/Models/Player.java&#10;cho&#9;FILE&#9;file://C:/Users/Dasd/Documents/Mafia/src/Scriptozavr/Mafia/Activities/ChoosingRoles.java&#10;settings&#9;ACTION&#9;ShowSettings&#10;show line&#9;ACTION&#9;EditorToggleShowLineNumbers&#10;plugins&#9;ACTION&#9;WelcomeScreen.Plugins&#10;move&#9;ACTION&#9;Move&#10;tools&#9;ACTION&#9;ExternalToolsGroup&#10;android&#9;ACTION&#9;Android.CreateResourceDirectory" />
     <property name="restartRequiresConfirmation" value="true" />
     <property name="FullScreen" value="false" />
     <property name="ANDROID_EXTENDED_DEVICE_CHOOSER_SERIALS" value="192.168.56.101:5555" />
@@ -637,6 +659,11 @@
       <method />
     </configuration>
     <configuration default="true" type="js.build_tools.gulp" factoryName="Gulp.js">
+      <node-options />
+      <gulpfile />
+      <tasks />
+      <pass-parent-envs>true</pass-parent-envs>
+      <envs />
       <method />
     </configuration>
     <configuration default="true" type="FlexUnitRunConfigurationType" factoryName="FlexUnit" appDescriptorForEmulator="Android" class_name="" emulatorAdlOptions="" method_name="" package_name="" scope="Class">
@@ -814,6 +841,10 @@
       <workItem from="1415206847445" duration="1045000" />
       <workItem from="1415207961947" duration="171000" />
       <workItem from="1416562156552" duration="1883000" />
+      <workItem from="1416600359668" duration="2102000" />
+      <workItem from="1416657305063" duration="512000" />
+      <workItem from="1416657832655" duration="4086000" />
+      <workItem from="1416662541840" duration="58000" />
     </task>
     <task id="LOCAL-00001" summary="Moved project 1 directory above from where it was before: now IDEA works with git, and everything is great">
       <created>1415210219867</created>
@@ -831,20 +862,56 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="12951000" />
+    <option name="totallyTimeSpent" value="19709000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
     <editor active="true" />
     <layout>
+      <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.46820027" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="IDEtalk" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.23222749" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Build Variants" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.24962178" sideWeight="0.5" order="3" side_tool="true" content_ui="tabs" />
+      <window_info id="Palette&#9;" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32736155" sideWeight="0.5" order="8" side_tool="true" content_ui="tabs" />
+      <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
+      <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32904536" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32899022" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="14" side_tool="false" content_ui="tabs" />
+      <window_info id="Android" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.42378378" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
+      <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.1924307" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Memory Monitor" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="15" side_tool="true" content_ui="tabs" />
+      <window_info id="IDEtalk Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="12" side_tool="false" content_ui="tabs" />
+      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3297224" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.24962178" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.24983074" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.21255673" sideWeight="0.5" order="5" side_tool="true" content_ui="tabs" />
+      <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="combo" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33081082" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32540542" sideWeight="0.5" order="13" side_tool="false" content_ui="tabs" />
+      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.39739415" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.31663114" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32736155" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+    </layout>
+    <layout-to-restore>
+      <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="IDEtalk" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.23222749" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Build Variants" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.24962178" sideWeight="0.5" order="3" side_tool="true" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32736155" sideWeight="0.5" order="8" side_tool="true" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32904536" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="combo" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3297224" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.24962178" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.24983074" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -854,21 +921,18 @@
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32611638" sideWeight="0.5" order="13" side_tool="false" content_ui="tabs" />
       <window_info id="Palette&#9;" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.39739415" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.31666666" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32899022" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32070366" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="14" side_tool="false" content_ui="tabs" />
       <window_info id="Android" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.42427498" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.15" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.1932886" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Memory Monitor" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="15" side_tool="true" content_ui="tabs" />
       <window_info id="IDEtalk Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="12" side_tool="false" content_ui="tabs" />
-      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.21255673" sideWeight="0.5" order="5" side_tool="true" content_ui="tabs" />
-      <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="combo" />
-      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.39739415" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32736155" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-    </layout>
+      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.21255673" sideWeight="0.5" order="5" side_tool="true" content_ui="tabs" />
+    </layout-to-restore>
   </component>
   <component name="Vcs.Log.UiProperties">
     <option name="RECENTLY_FILTERED_USER_GROUPS">
@@ -893,19 +957,31 @@
     <breakpoint-manager>
       <breakpoints>
         <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/Scriptozavr/Mafia/Activities/MorningActions.java</url>
-          <line>319</line>
+          <url>file://$PROJECT_DIR$/src/Scriptozavr/Mafia/Activities/DuelVoting.java</url>
+          <line>20</line>
           <properties />
-          <option name="timeStamp" value="78" />
+          <option name="timeStamp" value="102" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/Scriptozavr/Mafia/Activities/MorningActions.java</url>
-          <line>315</line>
+          <url>file://$PROJECT_DIR$/src/Scriptozavr/Mafia/Activities/VoteForElimination.java</url>
+          <line>87</line>
           <properties />
-          <option name="timeStamp" value="79" />
+          <option name="timeStamp" value="104" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/Scriptozavr/Mafia/Activities/DuelVoting.java</url>
+          <line>15</line>
+          <properties />
+          <option name="timeStamp" value="105" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/Scriptozavr/Mafia/Activities/DuelistsSpeech.java</url>
+          <line>133</line>
+          <properties />
+          <option name="timeStamp" value="108" />
         </line-breakpoint>
       </breakpoints>
-      <option name="time" value="100" />
+      <option name="time" value="109" />
     </breakpoint-manager>
     <watches-manager>
       <configuration name="Mafia">
@@ -918,25 +994,12 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/res/layout/main.xml">
-      <provider editor-type-id="android-designer">
-        <state />
-      </provider>
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="306" max-vertical-offset="697">
-          <caret line="18" column="78" selection-start-line="18" selection-start-column="78" selection-end-line="18" selection-end-column="78" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/Scriptozavr/Mafia/Activities/Main.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="1445" max-vertical-offset="1632">
           <caret line="101" column="0" selection-start-line="101" selection-start-column="0" selection-end-line="101" selection-end-column="0" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#3470#4596#0" expanded="true" />
-            <element signature="e#4595#4596#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -960,14 +1023,14 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/res/layout/fullnight.xml">
-      <provider selected="true" editor-type-id="android-designer">
-        <state />
-      </provider>
       <provider editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="391" max-vertical-offset="1445">
           <caret line="23" column="0" selection-start-line="23" selection-start-column="0" selection-end-line="23" selection-end-column="0" />
           <folding />
         </state>
+      </provider>
+      <provider selected="true" editor-type-id="android-designer">
+        <state />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Scriptozavr/Mafia/Activities/Main.java">
@@ -1163,13 +1226,13 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/.navigation/raw/main.nvg.xml">
-      <provider selected="true" editor-type-id="navigationeditor">
-        <state />
-      </provider>
       <provider editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="312">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
         </state>
+      </provider>
+      <provider selected="true" editor-type-id="navigationeditor">
+        <state />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Scriptozavr/Mafia/Helpers/NoDefaultSpinner.java">
@@ -1206,13 +1269,6 @@
         <state />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Scriptozavr/Mafia/Helpers/ArrayHelper.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="338" max-vertical-offset="735">
-          <caret line="4" column="13" selection-start-line="4" selection-start-column="13" selection-end-line="4" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/res/layout/morning.xml">
       <provider editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="816" max-vertical-offset="6069">
@@ -1221,22 +1277,6 @@
       </provider>
       <provider selected="true" editor-type-id="android-designer">
         <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/AndroidManifest.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="158" max-vertical-offset="585">
-          <caret line="30" column="18" selection-start-line="30" selection-start-column="18" selection-end-line="30" selection-end-column="18" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Scriptozavr/Mafia/Activities/DuelistsSpeech.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="1913" max-vertical-offset="2430">
-          <caret line="144" column="13" selection-start-line="144" selection-start-column="13" selection-end-line="144" selection-end-column="13" />
-          <folding />
-        </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Scriptozavr/Mafia/Helpers/Utilities.java">
@@ -1250,15 +1290,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.36645964" vertical-offset="282" max-vertical-offset="952">
           <caret line="27" column="36" selection-start-line="27" selection-start-column="36" selection-end-line="27" selection-end-column="36" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Scriptozavr/Mafia/Activities/MorningActions.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-0.72121215" vertical-offset="3638" max-vertical-offset="6171">
-          <caret line="214" column="24" selection-start-line="214" selection-start-column="24" selection-end-line="214" selection-end-column="24" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1273,18 +1304,6 @@
         <state />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Scriptozavr/Mafia/Activities/Main.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1700">
-          <caret line="19" column="13" selection-start-line="19" selection-start-column="13" selection-end-line="19" selection-end-column="13" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#3470#4596#0" expanded="true" />
-            <element signature="e#4595#4596#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/Scriptozavr/Mafia/Activities/SetNicknames.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="68" max-vertical-offset="1870">
@@ -1293,14 +1312,24 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/Scriptozavr/Mafia/Activities/Main.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1700">
+          <caret line="19" column="13" selection-start-line="19" selection-start-column="13" selection-end-line="19" selection-end-column="13" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/res/layout/fullnight.xml">
-      <provider editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="2125" max-vertical-offset="3196">
-          <caret line="125" column="0" selection-start-line="125" selection-start-column="0" selection-end-line="125" selection-end-column="0" />
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.41525424" vertical-offset="575" max-vertical-offset="3196">
+          <caret line="54" column="44" selection-start-line="54" selection-start-column="44" selection-end-line="54" selection-end-column="44" />
           <folding />
         </state>
       </provider>
-      <provider selected="true" editor-type-id="android-designer">
+      <provider editor-type-id="android-designer">
         <state />
       </provider>
     </entry>
@@ -1316,80 +1345,94 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Scriptozavr/Mafia/Activities/LastMinute.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="2397">
-          <caret line="45" column="0" selection-start-line="45" selection-start-column="0" selection-end-line="45" selection-end-column="0" />
+        <state vertical-scroll-proportion="0.0" vertical-offset="1513" max-vertical-offset="2397">
+          <caret line="132" column="16" selection-start-line="132" selection-start-column="16" selection-end-line="132" selection-end-column="16" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/res/layout/voting.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-20.4" vertical-offset="0" max-vertical-offset="1071">
-          <caret line="36" column="45" selection-start-line="36" selection-start-column="45" selection-end-line="36" selection-end-column="45" />
-          <folding>
-            <element signature="e#468#488#0" expanded="true" />
-            <element signature="e#1118#1130#0" expanded="true" />
-            <element signature="e#1712#1735#0" expanded="true" />
-            <element signature="e#2082#2108#0" expanded="true" />
-          </folding>
+        <state vertical-scroll-proportion="0.84671533" vertical-offset="267" max-vertical-offset="1071">
+          <caret line="43" column="36" selection-start-line="43" selection-start-column="36" selection-end-line="43" selection-end-column="36" />
+          <folding />
         </state>
       </provider>
       <provider editor-type-id="android-designer">
         <state />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Scriptozavr/Mafia/Activities/VoteForElimination.java">
+    <entry file="file://$PROJECT_DIR$/src/Scriptozavr/Mafia/Activities/NightActions.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="134" max-vertical-offset="1275">
-          <caret line="104" column="68" selection-start-line="104" selection-start-column="68" selection-end-line="104" selection-end-column="68" />
+        <state vertical-scroll-proportion="0.0" vertical-offset="1432" max-vertical-offset="4658">
+          <caret line="116" column="35" selection-start-line="116" selection-start-column="35" selection-end-line="116" selection-end-column="35" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="method#onCreate#0;class#VoteForElimination#0" expanded="false" />
-            <element signature="e#4681#4731#0" expanded="true" />
-            <element signature="e#5262#5263#0" expanded="true" />
-            <element signature="e#5327#5328#0" expanded="true" />
+            <element signature="e#4025#5407#0" expanded="true" />
+            <element signature="e#5406#5407#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Scriptozavr/Mafia/Activities/NightActions.java">
+    <entry file="file://$PROJECT_DIR$/src/Scriptozavr/Mafia/Helpers/ArrayHelper.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="1.5573951" vertical-offset="0" max-vertical-offset="4760">
-          <caret line="83" column="49" selection-start-line="83" selection-start-column="49" selection-end-line="83" selection-end-column="49" />
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="833">
+          <caret line="39" column="37" selection-start-line="39" selection-start-column="37" selection-end-line="39" selection-end-column="37" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../android-sdk/sources/android-19/com/android/internal/os/ZygoteInit.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="11951" max-vertical-offset="12835">
+          <caret line="757" column="0" selection-start-line="757" selection-start-column="0" selection-end-line="757" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Scriptozavr/Mafia/Activities/MorningActions.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="3444" max-vertical-offset="6086">
+          <caret line="239" column="46" selection-start-line="239" selection-start-column="46" selection-end-line="239" selection-end-column="46" />
           <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#936#952#0" expanded="true" />
-            <element signature="e#1028#1045#0" expanded="true" />
-            <element signature="e#1116#1125#0" expanded="true" />
-            <element signature="e#2714#3957#0" expanded="true" />
-            <element signature="e#3636#3683#0" expanded="true" />
-            <element signature="e#3956#3957#0" expanded="true" />
-            <element signature="e#4025#5388#0" expanded="true" />
-            <element signature="e#4256#4304#0" expanded="true" />
-            <element signature="e#5387#5388#0" expanded="true" />
-            <element signature="e#5501#5548#0" expanded="true" />
-            <element signature="e#8597#8598#0" expanded="true" />
-            <element signature="e#8643#8644#0" expanded="true" />
-            <element signature="e#9126#9127#0" expanded="true" />
-            <element signature="e#9184#9185#0" expanded="true" />
-            <element signature="e#9276#10074#0" expanded="true" />
-            <element signature="e#10073#10074#0" expanded="true" />
+            <element signature="e#8062#8063#0" expanded="true" />
+            <element signature="e#8125#8126#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/AndroidManifest.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="141" max-vertical-offset="697">
+          <caret line="27" column="52" selection-start-line="27" selection-start-column="52" selection-end-line="27" selection-end-column="52" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Scriptozavr/Mafia/Activities/DuelistsSpeech.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="1.1414027" vertical-offset="1031" max-vertical-offset="2533">
+          <caret line="131" column="0" selection-start-line="131" selection-start-column="0" selection-end-line="131" selection-end-column="0" />
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Scriptozavr/Mafia/Activities/DuelVoting.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.27924946" vertical-offset="2" max-vertical-offset="935">
-          <caret line="25" column="58" selection-start-line="25" selection-start-column="58" selection-end-line="25" selection-end-column="58" />
+        <state vertical-scroll-proportion="0.0" vertical-offset="102" max-vertical-offset="1054">
+          <caret line="12" column="50" selection-start-line="12" selection-start-column="50" selection-end-line="12" selection-end-column="50" />
           <folding>
-            <element signature="e#1187#1523#0" expanded="true" />
-            <element signature="e#1386#1436#0" expanded="true" />
-            <element signature="e#1522#1523#0" expanded="true" />
-            <element signature="e#1568#1991#0" expanded="true" />
-            <element signature="e#1990#1991#0" expanded="true" />
-            <element signature="e#2068#2069#0" expanded="true" />
-            <element signature="e#2119#2120#0" expanded="true" />
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Scriptozavr/Mafia/Activities/VoteForElimination.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.27941176" vertical-offset="25" max-vertical-offset="2363">
+          <caret line="16" column="0" selection-start-line="16" selection-start-column="0" selection-end-line="16" selection-end-column="0" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#3603#3612#0" expanded="true" />
           </folding>
         </state>
       </provider>

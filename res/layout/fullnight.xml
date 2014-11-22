@@ -26,7 +26,7 @@
                 android:layout_width="0dp"
                 android:layout_height="35dp"
                 android:layout_weight="1"
-                android:onClick="onClickStart"
+                android:onClick="onClickDefaultSongs"
                 android:text="@string/sd"
                 android:textSize="12sp">
         </Button>
@@ -35,7 +35,7 @@
                 android:layout_width="0dp"
                 android:layout_height="35dp"
                 android:layout_weight="1"
-                android:onClick="onClickStart"
+                android:onClick="onClickDefaultSongs"
                 android:text="@string/raw"
                 android:textSize="12sp">
         </Button>
@@ -52,7 +52,7 @@
                 android:layout_width="0dp"
                 android:layout_height="35dp"
                 android:layout_weight="1"
-                android:onClick="onClick"
+                android:onClick="onClickPlay"
                 android:text="@string/play"
                 android:textSize="12sp">
         </Button>
@@ -61,7 +61,7 @@
                 android:layout_width="0dp"
                 android:layout_height="35dp"
                 android:layout_weight="1"
-                android:onClick="onClick"
+                android:onClick="onClickPlay"
                 android:text="@string/stop"
                 android:textSize="12sp">
         </Button>

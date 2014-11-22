@@ -14,7 +14,6 @@ import android.widget.NumberPicker;
 import android.widget.TextView;
 
 import java.util.ArrayList;
-import java.util.Arrays;
 
 public class VoteForElimination extends Activity {
     //status of all players
@@ -50,9 +49,16 @@ public class VoteForElimination extends Activity {
             playersLabelsList.addView(votesTextView[i]);
         }
 
-        okButton.setOnClickListener(new View.OnClickListener() {
-            private int currentVotes = 0;
+        okButton.setOnClickListener(getOkListener());
+        updateVotingInfoLabel();
+        updateNumberPicker(0);
+    }
 
+    protected View.OnClickListener getOkListener() {
+        //final VotingActivity t = this;
+        return new View.OnClickListener() {
+            private int currentVotes = 0;
+            //private VotingActivity activity = t;
             @Override
             public void onClick(View v) {
                 votesCount[currentVoteIndex] = numberPicker.getValue();
@@ -85,19 +91,7 @@ public class VoteForElimination extends Activity {
                     }
                 }
             }
-        });
-        updateVotingInfoLabel();
-        updateNumberPicker(0);
-    }
-
-    protected void voteDuel(ArrayList<Integer> duelists) {
-        votedPlayerTextView.setText("DUEL, players are: " + Arrays.toString(duelists.toArray()));
-        Intent i = new Intent(getApplicationContext(), DuelistsSpeech.class);
-        i.putIntegerArrayListExtra("duelists", duelists);
-        i.putExtra("players", players);
-        int currentCircle = getIntent().getIntExtra("currentCircle", 0);
-        i.putExtra("currentCircle", currentCircle);
-        startActivity(i);
+        };
     }
 
     protected void voteSuccessful(int maxVotesIndex) {
@@ -108,6 +102,7 @@ public class VoteForElimination extends Activity {
         int currentCircle = getIntent().getIntExtra("currentCircle", 0);
         i.putExtra("currentCircle", currentCircle);
         startActivity(i);
+        finish();
     }
 
     protected void updateVotingInfoLabel() {
@@ -124,5 +119,17 @@ public class VoteForElimination extends Activity {
             if (((Player) p).getStatus().equals(getResources().getString(R.string.status_alive))) alivePlayers++;
         }
         return alivePlayers;
+    }
+
+    protected void voteDuel(ArrayList<Integer> duelists) {
+        votedPlayerTextView.setText(ArrayHelper.arrayToString("DUEL BETWEEN: ", duelists));
+        Intent i = new Intent(getApplicationContext(), DuelistsSpeech.class);
+        i.putIntegerArrayListExtra("duelists", duelists);
+        i.putExtra("players", players);
+        i.putIntegerArrayListExtra("votingList", duelists);
+        int currentCircle = getIntent().getIntExtra("currentCircle", 0);
+        i.putExtra("currentCircle", currentCircle);
+        startActivity(i);
+        finish();
     }
 }

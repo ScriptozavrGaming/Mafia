@@ -36,7 +36,15 @@ public class DuelVoting extends VoteForElimination {
                 for (int i: duelists){
                     ((Player)players[votingList.get(i)]).setStatus(getResources().getString(R.string.status_banished));
                 }
-                //transfer to last minute?
+
+                Intent i = new Intent(getApplicationContext(),LastMinute.class);
+                i.putExtra("players", players);
+                i.putIntegerArrayListExtra("lastMin", duelists);
+                i.putExtra("ifKilled", false);
+                int currentCircle = getIntent().getIntExtra("currentCircle", 0);
+                i.putExtra("currentCircle", currentCircle);
+                startActivity(i);
+                finish();
             }
         });
 
@@ -48,12 +56,9 @@ public class DuelVoting extends VoteForElimination {
                 int currentCircle = getIntent().getIntExtra("currentCircle", 0);
                 i.putExtra("currentCircle", currentCircle);
                 startActivity(i);
+                finish();
             }
         });
-    }
 
-    @Override
-    protected void voteSuccessful(int maxVotesIndex) {
-        super.voteSuccessful(maxVotesIndex);
     }
 }

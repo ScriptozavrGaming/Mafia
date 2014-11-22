@@ -131,7 +131,7 @@ public class DuelistsSpeech extends MorningActions {
     }
 
     private void finishDuel() {
-        Intent VotingForElimination = new Intent(getApplicationContext(), VoteForElimination.class);
+        Intent VotingForElimination = new Intent(getApplicationContext(), Scriptozavr.Mafia.Activities.DuelVoting.class);
         playersOnVote = duelists;
         VotingForElimination.putIntegerArrayListExtra("votingList", playersOnVote);
         VotingForElimination.putExtra("players", players);

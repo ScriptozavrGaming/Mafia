@@ -101,10 +101,9 @@ public class NightActions extends Activity implements MediaPlayer.OnPreparedList
                 currentCircle++;
                 if (chosenButton != -1) {
                     ((Player) players[chosenButton]).setStatus(getResources().getString(R.string.status_killed));
-                    boolean ifKilled = true;
                     playersForLastMinute.add(chosenButton);
                     Intent LastMinute = new Intent(getApplicationContext(), Scriptozavr.Mafia.Activities.LastMinute.class);
-                    LastMinute.putExtra("ifKilled", ifKilled);
+                    LastMinute.putExtra("ifKilled", true);
                     LastMinute.putExtra("players", players);
                     LastMinute.putExtra("currentCircle", currentCircle);
                     LastMinute.putIntegerArrayListExtra("lastMin", playersForLastMinute);
@@ -115,7 +114,9 @@ public class NightActions extends Activity implements MediaPlayer.OnPreparedList
                     MorningActions.putExtra("players", players);
                     startActivity(MorningActions);
                 }
-                mediaPlayer.stop();
+                if(mediaPlayer.isPlaying()) {
+                    mediaPlayer.stop();
+                }
                 mHandler.removeCallbacks(mUpdateTimeTask);
                 //mUpdateTimeTask;
                 finish();
@@ -153,7 +154,7 @@ public class NightActions extends Activity implements MediaPlayer.OnPreparedList
         //-----------------------------------------
     }
 
-    public void onClickStart(View view) {
+    public void onClickDefaultSongs(View view) {
         releaseMP();
 
         try {
@@ -192,12 +193,15 @@ public class NightActions extends Activity implements MediaPlayer.OnPreparedList
         }
     }
 
-    public void onClick(View view) {
+    public void onClickPlay(View view) {
         if (mediaPlayer == null)
             return;
         switch (view.getId()) {
 
             case R.id.btnPlay:
+                mediaPlayer = MediaPlayer.create(this, R.raw.track1);
+                songStatusBar.setProgress(0);
+                songStatusBar.setMax(100);
                 if (mediaPlayer.isPlaying())
                     mediaPlayer.pause();
                 else {
