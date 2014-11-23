@@ -26,7 +26,6 @@ public class LastMinute extends MorningActions {
 
         playersForLastMinute = getIntent().getIntegerArrayListExtra("lastMin");
         currentCirlce = getIntent().getIntExtra("currentCircle", 0);
-
         timerTextView = (TextView) findViewById(R.id.ourTimer);
 
         final TextView[] playerLabels = {
@@ -77,7 +76,12 @@ public class LastMinute extends MorningActions {
         Circle = (TextView) findViewById(R.id.Circle);
         Circle.setText(getResources().getString(R.string.Circle) + ":" + currentCirlce);
         timerTextView = (TextView) findViewById(R.id.ourTimer);
-        ((TextView) findViewById(R.id.OnVote)).setText(ArrayHelper.arrayToString(getResources().getString(R.string.LastMin), playersForLastMinute));
+        if(playersForLastMinute.size()>1) {
+            ((TextView) findViewById(R.id.OnVote)).setText(ArrayHelper.arrayToString(getResources().getString(R.string.LastMin), playersForLastMinute));
+        }
+        else{
+            ((TextView) findViewById(R.id.OnVote)).setText(ArrayHelper.arrayToString(getResources().getString(R.string.LastMinOne), playersForLastMinute));
+        }
         startTimer(faultsBtns, timer);
         stopTimer(faultsBtns, timer);
         players = getIntent().getParcelableArrayExtra("players");
@@ -108,25 +112,16 @@ public class LastMinute extends MorningActions {
         index++;
         if (index > playersForLastMinute.size() - 1) {
             finishLastMin();
-        } else {
+        }
+        else {
             previousPlayer = currentPlayer;
-            if (((Player) players[playersForLastMinute.get(index)]).getStatus().equals(getResources().getString(R.string.status_alive))) {
-                currentPlayer = playersForLastMinute.get(index);
-                playerLabelsForOnFinish[currentPlayer].setBackgroundColor(Color.GREEN);
-                playerLabelsForOnFinish[previousPlayer].setBackgroundColor(Color.TRANSPARENT);
-            } else {
-                while (index < playersForLastMinute.size() && !((Player) players[playersForLastMinute.get(index)]).getStatus().equals(getResources().getString(R.string.status_alive))) {
-                    index++;
-                }
-                if (index < playersForLastMinute.size()) {
-                    //previousPlayer = currentPlayer;
-                    currentPlayer = playersForLastMinute.get(index);
-                } else {
-                    finishLastMin();
-                }
-            }
+            currentPlayer = playersForLastMinute.get(index);
+            playerLabelsForOnFinish[currentPlayer].setBackgroundColor(Color.GREEN);
+            playerLabelsForOnFinish[previousPlayer].setBackgroundColor(Color.TRANSPARENT);
         }
     }
+
+
 
     private void finishLastMin() {
         boolean ifKilled = getIntent().getBooleanExtra("ifKilled", false);

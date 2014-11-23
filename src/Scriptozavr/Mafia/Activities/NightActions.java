@@ -15,6 +15,7 @@ import android.os.Parcelable;
 import android.util.Log;
 import android.view.View;
 import android.widget.Button;
+import android.widget.ImageButton;
 import android.widget.SeekBar;
 import android.widget.TextView;
 
@@ -45,6 +46,7 @@ public class NightActions extends Activity implements MediaPlayer.OnPreparedList
     private TextView songTotalDurationLabel;
     private Utilities utils;
     private Handler mHandler = new Handler();
+    private boolean audioPlayerIsInit = false;
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
@@ -65,7 +67,9 @@ public class NightActions extends Activity implements MediaPlayer.OnPreparedList
                 (Button) findViewById(R.id.killButton9),
                 (Button) findViewById(R.id.killButton10),
         };
+
         final Parcelable[] players = getIntent().getParcelableArrayExtra("players");
+        setSongStatusBar();
 
         currentCircle = getIntent().getIntExtra("currentCircle", 0);
         for (int i = 0; i < killButtons.length; i++) {
@@ -114,10 +118,10 @@ public class NightActions extends Activity implements MediaPlayer.OnPreparedList
                     MorningActions.putExtra("players", players);
                     startActivity(MorningActions);
                 }
-                if(mediaPlayer.isPlaying()) {
+                if(audioPlayerIsInit) {
                     mediaPlayer.stop();
+                    mHandler.removeCallbacks(mUpdateTimeTask);
                 }
-                mHandler.removeCallbacks(mUpdateTimeTask);
                 //mUpdateTimeTask;
                 finish();
             }
@@ -133,6 +137,33 @@ public class NightActions extends Activity implements MediaPlayer.OnPreparedList
             killButtonToPlayerMap.put(killButtons[i], (Player) players[i]);
             pressedButtonToIntegerMap.put(killButtons[i], i);
         }
+    }
+
+    protected void setSongStatusBar() {
+        songStatusBar.setOnSeekBarChangeListener(new SeekBar.OnSeekBarChangeListener() {
+            @Override
+            public void onProgressChanged(SeekBar seekBar, int progress, boolean fromUser) {
+
+            }
+
+            @Override
+            public void onStartTrackingTouch(SeekBar seekBar) {
+                mHandler.removeCallbacks(mUpdateTimeTask);
+            }
+
+            @Override
+            public void onStopTrackingTouch(SeekBar seekBar) {
+                mHandler.removeCallbacks(mUpdateTimeTask);
+                int totalDuration = mediaPlayer.getDuration();
+                int currentPosition = utils.progressToTimer(seekBar.getProgress(), totalDuration);
+
+                // forward or backward to certain seconds
+                mediaPlayer.seekTo(currentPosition);
+
+                // update timer progress again
+                updateProgressBar();
+            }
+        });
     }
 
     //work with Audio
@@ -165,11 +196,13 @@ public class NightActions extends Activity implements MediaPlayer.OnPreparedList
                     mediaPlayer.setAudioStreamType(AudioManager.STREAM_MUSIC);
                     mediaPlayer.prepare();
                     mediaPlayer.start();
+                    audioPlayerIsInit = true;
                     break;
                 case R.id.btnStartRaw:
                     mediaPlayer = MediaPlayer.create(this, R.raw.track1);
                     songStatusBar.setProgress(0);
                     songStatusBar.setMax(100);
+                    audioPlayerIsInit = true;
                     break;
 
             }
@@ -199,14 +232,13 @@ public class NightActions extends Activity implements MediaPlayer.OnPreparedList
         switch (view.getId()) {
 
             case R.id.btnPlay:
-                mediaPlayer = MediaPlayer.create(this, R.raw.track1);
-                songStatusBar.setProgress(0);
-                songStatusBar.setMax(100);
-                if (mediaPlayer.isPlaying())
+                if (mediaPlayer.isPlaying()) {
                     mediaPlayer.pause();
+                    ((ImageButton) findViewById(R.id.btnPlay)).setImageResource(R.drawable.play);
+                }
                 else {
-
                     mediaPlayer.start();
+                    ((ImageButton)findViewById(R.id.btnPlay)).setImageResource(R.drawable.pause);
                 }
                 updateProgressBar();
                 break;
@@ -233,7 +265,7 @@ public class NightActions extends Activity implements MediaPlayer.OnPreparedList
 
     @Override
     public void onProgressChanged(SeekBar seekBar, int progress, boolean fromUser) {
-
+        am.setStreamVolume(AudioManager.STREAM_MUSIC, seekBar.getProgress(), 0);
     }
 
     @Override

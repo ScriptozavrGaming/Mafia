@@ -44,37 +44,30 @@
             android:id="@+id/linearLayout2"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_marginLeft="5dp"
             android:layout_alignParentLeft="true"
             android:layout_alignParentRight="true"
             android:layout_below="@+id/linearLayout1">
-        <Button
+        <ImageButton
                 android:id="@+id/btnPlay"
-                android:layout_width="0dp"
-                android:layout_height="35dp"
-                android:layout_weight="1"
+                android:layout_width="55dp"
+                android:layout_height="55dp"
+                android:src="@drawable/play"
                 android:onClick="onClickPlay"
                 android:text="@string/play"
                 android:textSize="12sp">
-        </Button>
-        <Button
-                android:id="@+id/btnStop"
-                android:layout_width="0dp"
-                android:layout_height="35dp"
-                android:layout_weight="1"
-                android:onClick="onClickPlay"
-                android:text="@string/stop"
-                android:textSize="12sp">
-        </Button>
+        </ImageButton>
     </LinearLayout>
 
     <LinearLayout
             android:id="@+id/timerDisplay"
-            android:layout_above="@+id/songProgressBar"
+            android:layout_above="@+id/Volume"
             android:layout_width="fill_parent"
             android:layout_height="wrap_content"
             android:layout_marginRight="20dp"
             android:layout_marginLeft="20dp"
             android:layout_marginBottom="10dp">
+
         <!-- Current Duration Label -->
         <TextView
                 android:id="@+id/songCurrentDurationLabel"
@@ -96,9 +89,10 @@
 
     </LinearLayout>
     <SeekBar
-            android:layout_width="match_parent"
+            android:layout_width="fill_parent"
             android:layout_height="wrap_content"
             android:id="@+id/songProgressBar" android:layout_centerVertical="true" android:max="100"
+            android:clickable="false"
             />
     <TextView
             android:layout_width="wrap_content"

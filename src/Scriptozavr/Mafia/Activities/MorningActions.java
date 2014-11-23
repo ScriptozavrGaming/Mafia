@@ -4,6 +4,8 @@ import Scriptozavr.Mafia.Helpers.ArrayHelper;
 import Scriptozavr.Mafia.Models.Player;
 import Scriptozavr.Mafia.R;
 import android.app.Activity;
+import android.app.AlertDialog;
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.graphics.Color;
 import android.os.*;
@@ -42,6 +44,10 @@ public class MorningActions extends Activity {
         setContentView(R.layout.morning);
 
         currentCirlce = getIntent().getIntExtra("currentCircle", 0);
+        if(currentCirlce==10) {
+            currentCirlce = 0;
+        }
+
         final TextView[] playerLabels = {
                 (TextView) findViewById(R.id.number1),
                 (TextView) findViewById(R.id.number2),
@@ -148,19 +154,7 @@ public class MorningActions extends Activity {
                     faultsBtns[buttonInd].setClickable(false);
                     voteBtn.setClickable(false);
                     p.setStatus(getResources().getString(R.string.status_banished));
-                    /*int checkForWin = CheckForWin();
-                    if (checkForWin != 0) {
-                        if (checkForWin == -1) {
-                            Toast toast = Toast.makeText(getApplicationContext(),
-                                    "Mafia win", Toast.LENGTH_SHORT);
-                            toast.show();
-                        } else {
-                            Toast toast = Toast.makeText(getApplicationContext(),
-                                    "Peasants win", Toast.LENGTH_SHORT);
-                            toast.show();
-                        }
-                        finish();
-                    }*/
+                    fullCheckForWin();
                 }
                 playerLabel.setText(p.toString());
             }
@@ -363,15 +357,37 @@ public class MorningActions extends Activity {
         int checkForWin = CheckForWin();
         if (checkForWin != 0) {
             if (checkForWin == -1) {
-                Toast toast = Toast.makeText(getApplicationContext(),
-                        "Mafia win", Toast.LENGTH_SHORT);
-                toast.show();
+                AlertDialog.Builder builder = new AlertDialog.Builder(MorningActions.this);
+                builder.setTitle("В городе:")
+                        .setMessage("Победа мафии!")
+                        //.setIcon(R.drawable.ic_android_cat)
+                        .setCancelable(false)
+                        .setNegativeButton("Закончить игру",
+                                new DialogInterface.OnClickListener() {
+                                    public void onClick(DialogInterface dialog, int id) {
+                                        dialog.cancel();
+                                        finish();
+                                    }
+                                });
+                AlertDialog alert = builder.create();
+                alert.show();
             } else {
-                Toast toast = Toast.makeText(getApplicationContext(),
-                        "Peasants win", Toast.LENGTH_SHORT);
-                toast.show();
+                AlertDialog.Builder builder = new AlertDialog.Builder(MorningActions.this);
+                builder.setTitle("В городе:")
+                        .setMessage("Победа города!")
+                                //.setIcon(R.drawable.ic_android_cat)
+                        .setCancelable(false)
+                        .setNegativeButton("Закончить игру",
+                                new DialogInterface.OnClickListener() {
+                                    public void onClick(DialogInterface dialog, int id) {
+                                        dialog.cancel();
+                                        finish();
+                                    }
+                                });
+                AlertDialog alert = builder.create();
+                alert.show();
             }
-            finish();
+
         }
     }
 }
