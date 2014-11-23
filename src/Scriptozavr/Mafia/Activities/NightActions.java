@@ -35,7 +35,7 @@ public class NightActions extends Activity implements MediaPlayer.OnPreparedList
     private int chosenButton = -1;
     private boolean keyPressed = false;
     final String LOG_TAG = "myLogs";
-    final String DATA_SD = Environment.getExternalStoragePublicDirectory(Environment.DIRECTORY_MUSIC) + "/music.mp3";
+    final String DATA_SD = Environment.getExternalStoragePublicDirectory(Environment.DIRECTORY_MUSIC) + "/";
 
 
     MediaPlayer mediaPlayer;
@@ -153,15 +153,17 @@ public class NightActions extends Activity implements MediaPlayer.OnPreparedList
 
             @Override
             public void onStopTrackingTouch(SeekBar seekBar) {
-                mHandler.removeCallbacks(mUpdateTimeTask);
-                int totalDuration = mediaPlayer.getDuration();
-                int currentPosition = utils.progressToTimer(seekBar.getProgress(), totalDuration);
+                if(audioPlayerIsInit) {
+                    mHandler.removeCallbacks(mUpdateTimeTask);
+                    int totalDuration = mediaPlayer.getDuration();
+                    int currentPosition = utils.progressToTimer(seekBar.getProgress(), totalDuration);
 
-                // forward or backward to certain seconds
-                mediaPlayer.seekTo(currentPosition);
+                    // forward or backward to certain seconds
+                    mediaPlayer.seekTo(currentPosition);
 
-                // update timer progress again
-                updateProgressBar();
+                    // update timer progress again
+                    updateProgressBar();
+                }
             }
         });
     }

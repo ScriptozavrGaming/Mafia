@@ -34,7 +34,7 @@ public class DuelVoting extends VoteForElimination {
             @Override
             public void onClick(View v) {
                 for (int i: duelists){
-                    ((Player)players[votingList.get(i)]).setStatus(getResources().getString(R.string.status_banished));
+                    ((Player)players[i]).setStatus(getResources().getString(R.string.status_banished));
                 }
 
                 Intent i = new Intent(getApplicationContext(),LastMinute.class);

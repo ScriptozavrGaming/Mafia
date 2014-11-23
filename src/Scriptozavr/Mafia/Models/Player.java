@@ -45,7 +45,7 @@ public class Player implements Parcelable {
 
     @Override
     public String toString() {
-        return String.format("%2d%12s%7s%3d", this.position, this.nick, this.status, this.faults);
+        return String.format("%2d%11s%9s%7s%3d", this.position, this.nick,this.role, this.status, this.faults);
     }
 
     public Player() {
