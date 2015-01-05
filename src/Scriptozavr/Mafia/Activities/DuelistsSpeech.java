@@ -24,7 +24,7 @@ public class DuelistsSpeech extends MorningActions {
         setContentView(R.layout.morning);
 
         duelists = getIntent().getIntegerArrayListExtra("duelists");
-        currentCirlce = getIntent().getIntExtra("currentCircle", 0);
+        currentCircle = getIntent().getIntExtra("currentCircle", 0);
 
         timerTextView = (TextView) findViewById(R.id.ourTimer);
         timerTextView.setText(getResources().getString(R.string.StartTimeForDuel));
@@ -75,11 +75,11 @@ public class DuelistsSpeech extends MorningActions {
         }
         timer = new ourCountDownTimer(30000, 100, faultsBtns);
         Circle = (TextView) findViewById(R.id.Circle);
-        Circle.setText(getResources().getString(R.string.Circle) + ":" + currentCirlce);
+        Circle.setText(String.format("%s:%d", getResources().getString(R.string.Circle), currentCircle));
         timerTextView = (TextView) findViewById(R.id.ourTimer);
         ((TextView) findViewById(R.id.OnVote)).setText(ArrayHelper.arrayToString(getResources().getString(R.string.duel), duelists));
-        startTimer(faultsBtns, timer);
-        stopTimer(faultsBtns, timer);
+        startTimer(faultsBtns);
+        stopTimer(faultsBtns);
         players = getIntent().getParcelableArrayExtra("players");
 
         currentPlayer = duelists.get(index);
@@ -135,13 +135,13 @@ public class DuelistsSpeech extends MorningActions {
         playersOnVote = duelists;
         VotingForElimination.putIntegerArrayListExtra("votingList", playersOnVote);
         VotingForElimination.putExtra("players", players);
-        VotingForElimination.putExtra("currentCircle", currentCirlce);
+        VotingForElimination.putExtra("currentCircle", currentCircle);
         startActivity(VotingForElimination);
         finish();
     }
 
     @Override
-    protected void stopTimer(final Button[] butns, ourCountDownTimer t) {
+    protected void stopTimer(final Button[] butns) {
         findViewById(R.id.stopTimer_Btn).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {

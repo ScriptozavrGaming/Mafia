@@ -35,7 +35,7 @@ public class NightActions extends Activity implements MediaPlayer.OnPreparedList
     private int chosenButton = -1;
     private boolean keyPressed = false;
     final String LOG_TAG = "myLogs";
-    final String DATA_SD = Environment.getExternalStoragePublicDirectory(Environment.DIRECTORY_MUSIC) + "/";
+    final String DATA_SD = Environment.getExternalStoragePublicDirectory(Environment.DIRECTORY_MUSIC).getPath();
 
 
     MediaPlayer mediaPlayer;

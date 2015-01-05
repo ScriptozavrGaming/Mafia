@@ -50,4 +50,5 @@
     <string name="play">Play/Pause</string>
     <string name="kill_duelants">Выгнать</string>
     <string name="release_duelants">Освободить</string>
+    <string name="start_stop">Старт/Стоп</string>
 </resources>

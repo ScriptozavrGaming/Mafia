@@ -25,7 +25,7 @@ public class LastMinute extends MorningActions {
         setContentView(R.layout.morning);
 
         playersForLastMinute = getIntent().getIntegerArrayListExtra("lastMin");
-        currentCirlce = getIntent().getIntExtra("currentCircle", 0);
+        currentCircle = getIntent().getIntExtra("currentCircle", 0);
         timerTextView = (TextView) findViewById(R.id.ourTimer);
 
         final TextView[] playerLabels = {
@@ -74,7 +74,7 @@ public class LastMinute extends MorningActions {
         }
         timer = new ourCountDownTimer(60000, 100, faultsBtns);
         Circle = (TextView) findViewById(R.id.Circle);
-        Circle.setText(getResources().getString(R.string.Circle) + ":" + currentCirlce);
+        Circle.setText(String.format("%s:%d", getResources().getString(R.string.Circle), currentCircle));
         timerTextView = (TextView) findViewById(R.id.ourTimer);
         if(playersForLastMinute.size()>1) {
             ((TextView) findViewById(R.id.OnVote)).setText(ArrayHelper.arrayToString(getResources().getString(R.string.LastMin), playersForLastMinute));
@@ -82,8 +82,8 @@ public class LastMinute extends MorningActions {
         else{
             ((TextView) findViewById(R.id.OnVote)).setText(ArrayHelper.arrayToString(getResources().getString(R.string.LastMinOne), playersForLastMinute));
         }
-        startTimer(faultsBtns, timer);
-        stopTimer(faultsBtns, timer);
+        startTimer(faultsBtns);
+        stopTimer(faultsBtns);
         players = getIntent().getParcelableArrayExtra("players");
 
         currentPlayer = playersForLastMinute.get(index);
@@ -128,12 +128,12 @@ public class LastMinute extends MorningActions {
         if (ifKilled) {
             Intent MorningActions = new Intent(getApplicationContext(), MorningActions.class);
             MorningActions.putExtra("players", players);
-            MorningActions.putExtra("currentCircle", currentCirlce);
+            MorningActions.putExtra("currentCircle", currentCircle);
             startActivity(MorningActions);
         } else {
             Intent NightActions = new Intent(getApplicationContext(), NightActions.class);
             NightActions.putExtra("players", players);
-            NightActions.putExtra("currentCircle", currentCirlce);
+            NightActions.putExtra("currentCircle", currentCircle);
             startActivity(NightActions);
         }
         finish();

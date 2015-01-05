@@ -1,6 +1,7 @@
 package Scriptozavr.Mafia.Activities;
 
-import Scriptozavr.Mafia.Helpers.ArrayHelper;
+import Scriptozavr.Mafia.Helpers.*;
+import Scriptozavr.Mafia.Helpers.CountDownTimer;
 import Scriptozavr.Mafia.Models.Player;
 import Scriptozavr.Mafia.R;
 import android.app.Activity;
@@ -12,10 +13,8 @@ import android.os.*;
 import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
-import android.widget.Toast;
 
 import java.util.*;
-import java.util.concurrent.TimeUnit;
 
 
 public class MorningActions extends Activity {
@@ -25,27 +24,42 @@ public class MorningActions extends Activity {
     protected ArrayList<Integer> playersForLastMinute = new ArrayList<Integer>();
     protected TextView timerTextView;
     protected TextView Circle;
-    protected int currentCirlce = 0;
+    protected int currentCircle = 0;
     protected int currentPlayer = 0;
     private int firstAlivePlayer = 0;
     private int lastAlivePlayer = 0;
     private int currPlayerToNull = 0;
     protected int previousPlayer = 0;
     private long currentTime = 0;
-    protected ourCountDownTimer timer;
+    //protected ourCountDownTimer timer;
+    protected CountDownTimer timer;
     protected boolean continuing = false;
     protected TextView[] playerLabelsForOnFinish = new TextView[10];
     private Parcelable[] players;
 
+    protected class ourCountDownTimer extends Scriptozavr.Mafia.Helpers.CountDownTimer {
+
+        private final Button[] mButtons;
+
+        public ourCountDownTimer(long millisInFuture, long countDownInterval, Button[] buttons) {
+            super(millisInFuture, countDownInterval, timerTextView);
+            mButtons = buttons;
+        }
+
+        @Override
+        public void onFinish() {
+            currentPlayersSpeechCalculate(mButtons);
+        }
+    }
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.morning);
 
-        currentCirlce = getIntent().getIntExtra("currentCircle", 0);
-        if(currentCirlce==10) {
-            currentCirlce = 0;
+        currentCircle = getIntent().getIntExtra("currentCircle", 0);
+        if(currentCircle == 10) {
+            currentCircle = 0;
         }
 
         final TextView[] playerLabels = {
@@ -76,15 +90,15 @@ public class MorningActions extends Activity {
 
         playerLabelsForOnFinish = playerLabels;
 
-        timer = new ourCountDownTimer(60000, 100, faultsBtns);
+
         Circle = (TextView) findViewById(R.id.Circle);
-        Circle.setText(getResources().getString(R.string.Circle) + ":" + currentCirlce);
+        Circle.setText(String.format("%s:%d", getResources().getString(R.string.Circle), currentCircle));
         ((TextView) findViewById(R.id.OnVote)).setText(getResources().getString(R.string.Nobody_on_vote));
         timerTextView = (TextView) findViewById(R.id.ourTimer);
+        timer = new ourCountDownTimer(60000, 100, faultsBtns);
 
-
-        startTimer(faultsBtns, timer);
-        stopTimer(faultsBtns, timer);
+        startTimer(faultsBtns);
+        stopTimer(faultsBtns);
 
 
         final Button[] voteBtns = {
@@ -114,7 +128,11 @@ public class MorningActions extends Activity {
         } catch (Exception e) {
             e.printStackTrace();
         }
-        lastAlivePlayer = LastAlivePlayer();
+        try {
+            lastAlivePlayer = LastAlivePlayer();
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
         currentPlayer = firstAlivePlayer;
         previousPlayer = firstAlivePlayer;
         playerLabelsForOnFinish[currentPlayer].setBackgroundColor(Color.GREEN);
@@ -162,38 +180,15 @@ public class MorningActions extends Activity {
     }
 
 
-    protected class ourCountDownTimer extends CountDownTimer {
 
-        private final long mMillisInFuture;
-        private final long mCountdownInterval;
-        private final Button[] mButtons;
-
-        public ourCountDownTimer(long millisInFuture, long countDownInterval, Button[] buttons) {
-            super(millisInFuture, countDownInterval);
-            mMillisInFuture = millisInFuture;
-            mCountdownInterval = countDownInterval;
-            mButtons = buttons;
-        }
-
-
-        @Override
-        public void onTick(long millisUntilFinished) {
-            String ms = String.format("%02d:%02d", TimeUnit.MILLISECONDS.toMinutes(millisUntilFinished),
-                    TimeUnit.MILLISECONDS.toSeconds(millisUntilFinished) - TimeUnit.MINUTES.toSeconds(TimeUnit.MILLISECONDS.toMinutes(millisUntilFinished)));
-            timerTextView.setText(ms);
-        }
-
-        @Override
-        public void onFinish() {
-            currentPlayersSpeechCalculate(mButtons);
-        }
-
-
-    }
 
     protected void currentPlayersSpeechCalculate(Button[] mButtons) {
         currentPlayer++;
-        lastAlivePlayer = LastAlivePlayer();
+        try {
+            lastAlivePlayer = LastAlivePlayer();
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
         if (currentPlayer < 10 && currentPlayer != lastAlivePlayer + 1) {
             if (((Player) players[currentPlayer]).getStatus().equals(getResources().getString(R.string.status_alive))) {
                 playerLabelsForOnFinish[currentPlayer].setBackgroundColor(Color.GREEN);
@@ -223,7 +218,7 @@ public class MorningActions extends Activity {
                 Intent VotingForElimination = new Intent(getApplicationContext(), VoteForElimination.class);
                 VotingForElimination.putIntegerArrayListExtra("votingList", playersOnVote);
                 VotingForElimination.putExtra("players", players);
-                VotingForElimination.putExtra("currentCircle", currentCirlce);
+                VotingForElimination.putExtra("currentCircle", currentCircle);
                 startActivity(VotingForElimination);
                 finish();
             } else if (playersOnVote.size() == 1) {
@@ -237,24 +232,24 @@ public class MorningActions extends Activity {
                 Intent LastMinute = new Intent(getApplicationContext(), Scriptozavr.Mafia.Activities.LastMinute.class);
                 LastMinute.putExtra("ifKilled", ifKilled);
                 LastMinute.putExtra("players", players);
-                LastMinute.putExtra("currentCircle", currentCirlce);
+                LastMinute.putExtra("currentCircle", currentCircle);
                 LastMinute.putIntegerArrayListExtra("lastMin", playersForLastMinute);
                 startActivity(LastMinute);
                 //NightActions.putExtra("players", players);
-                //NightActions.putExtra("currentCircle", currentCirlce);
+                //NightActions.putExtra("currentCircle", currentCircle);
                 //startActivity(NightActions);
                 finish();
             } else {
                 Intent NightActions = new Intent(getApplicationContext(), Scriptozavr.Mafia.Activities.NightActions.class);
                 NightActions.putExtra("players", players);
-                NightActions.putExtra("currentCircle", currentCirlce);
+                NightActions.putExtra("currentCircle", currentCircle);
                 startActivity(NightActions);
                 finish();
             }
         }
     }
 
-    protected void stopTimer(final Button[] buttons, ourCountDownTimer t) {
+    protected void stopTimer(final Button[] buttons) {
         findViewById(R.id.stopTimer_Btn).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -267,7 +262,7 @@ public class MorningActions extends Activity {
         });
     }
 
-    protected void startTimer(final Button[] buttons, ourCountDownTimer t) {
+    protected void startTimer(final Button[] buttons) {
         findViewById(R.id.startTimer_Btn).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -292,7 +287,7 @@ public class MorningActions extends Activity {
     }
 
     private int FirstAlivePlayer() throws Exception {
-        int currPlayer = currentCirlce;
+        int currPlayer = currentCircle;
         for (int i = currPlayer; i < players.length; i++) {
             if (((Player) players[i]).getStatus().equals(getResources().getString(R.string.status_alive))) {
                 return i;
@@ -306,19 +301,33 @@ public class MorningActions extends Activity {
         throw new Exception("No Players Alive");
     }
 
-    private int LastAlivePlayer() {
-        int currPlayer = currentCirlce;
+    private int LastAlivePlayer() throws Exception {
+
+        int currPlayer = currentCircle;
+
         for (int i = currPlayer; i < players.length; i++) {
             if (((Player) players[i]).getStatus().equals(getResources().getString(R.string.status_alive))) {
                 currPlayer = i;
             }
         }
-        for (int i = 0; i < currentCirlce; i++) {
+        for (int i = 0; i < currentCircle; i++) {
             if (((Player) players[i]).getStatus().equals(getResources().getString(R.string.status_alive))) {
                 currPlayer = i;
             }
         }
         return currPlayer;
+
+//        for (int i = currPlayer; i >= 0; i--) {
+//            if (((Player) players[i]).getStatus().equals(getResources().getString(R.string.status_alive))) {
+//                return i;
+//            }
+//        }
+//        for (int i = players.length; i >= currPlayer; i--) {
+//            if (((Player) players[i]).getStatus().equals(getResources().getString(R.string.status_alive))) {
+//                return i;
+//            }
+//        }
+//        throw new Exception("No Players Alive");
     }
 
     // Check, when we need currentPlayer = 0;
@@ -330,33 +339,33 @@ public class MorningActions extends Activity {
         }
         throw new Exception("Error in count of players");
     }
-
-    private int CheckForWin() {
+    private enum winType{gameContinues, peasantsWin, mafiaWin};
+    private winType CheckForWin() {
         int mafiaCount = 0, peasantsCount = 0;
-        for (int i = 0; i < players.length; i++) {
-            if ((((Player) players[i]).getRole().equals(getResources().getString(R.string.mafia)) ||
-                    ((Player) players[i]).getRole().equals(getResources().getString(R.string.don))) &&
-                    ((Player) players[i]).getStatus().equals(getResources().getString(R.string.status_alive))) {
+        for (Parcelable player : players) {
+            if ((((Player) player).getRole().equals(getResources().getString(R.string.mafia)) ||
+                    ((Player) player).getRole().equals(getResources().getString(R.string.don))) &&
+                    ((Player) player).getStatus().equals(getResources().getString(R.string.status_alive))) {
                 mafiaCount++;
-            } else if ((((Player) players[i]).getRole().equals(getResources().getString(R.string.peasant)) ||
-                    ((Player) players[i]).getRole().equals(getResources().getString(R.string.comissar))) &&
-                    ((Player) players[i]).getStatus().equals(getResources().getString(R.string.status_alive))) {
+            } else if ((((Player) player).getRole().equals(getResources().getString(R.string.peasant)) ||
+                    ((Player) player).getRole().equals(getResources().getString(R.string.comissar))) &&
+                    ((Player) player).getStatus().equals(getResources().getString(R.string.status_alive))) {
                 peasantsCount++;
             }
         }
         if (mafiaCount == peasantsCount) {
-            return -1;
+            return winType.mafiaWin;
         }
         if (mafiaCount == 0) {
-            return 1;
+            return winType.peasantsWin;
         }
-        return 0;
+        return winType.gameContinues;
     }
 
     private void fullCheckForWin() {
-        int checkForWin = CheckForWin();
-        if (checkForWin != 0) {
-            if (checkForWin == -1) {
+        winType checkForWin = CheckForWin();
+        if (checkForWin != winType.gameContinues) {
+            if (checkForWin == winType.mafiaWin) {
                 AlertDialog.Builder builder = new AlertDialog.Builder(MorningActions.this);
                 builder.setTitle("В городе:")
                         .setMessage("Победа мафии!")

@@ -51,10 +51,8 @@ public class ChoosingRoles extends Activity {
         findViewById(R.id.continue_btn).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent main = new Intent(getApplicationContext(), MorningActions.class);
-                int currentCirlce = 0;
+                Intent main = new Intent(getApplicationContext(), FirstNightMafia.class);
                 main.putExtra("players", players);
-                main.putExtra("currentCircle", currentCirlce);
                 startActivity(main);
                 finish();
             }
