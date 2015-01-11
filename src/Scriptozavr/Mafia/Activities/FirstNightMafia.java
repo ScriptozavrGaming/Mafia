@@ -41,8 +41,10 @@ public class FirstNightMafia extends Activity{
             public void onClick(View v) {
                 if (!pressed) {
                     timer.start();
+                    pressed = true;
                 }else{
                     timer.cancel();
+                    timer.onFinish();
                 }
             }
         });
